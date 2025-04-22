@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /*Detta tar bort den lilla sido scrollen*/
+}
+
+/*de 3 kan vi kanske ta bort sen*/
+.layout {
+  background-color: white; /*Denna*/
+  display: flex; /*Denna*/
+  flex-direction: column; /*Denna*/
+  width: 100vw;
+  height: 100vh;
+}
