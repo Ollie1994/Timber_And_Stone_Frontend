@@ -4,7 +4,7 @@ function App() {
     <BrowserRouter>
       <div className="layout">
         {/* Header outside of  Routes because we use header and footer on all page */}
-        <Header />{" "}
+        <Header />
         {/* These route ´s are examples and have to be modified accordingly depending on if we need static or dynamic routing */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
