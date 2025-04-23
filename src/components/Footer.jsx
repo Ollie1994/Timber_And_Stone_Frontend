@@ -1,8 +1,9 @@
 const Footer = () => {
   return (
     <footer>
-      <h1>Timber&Stone - to make sure it works - remove whenever</h1>
+      <p>&copy; Timber + Stone, Inc. {' '}{' '}About {' '}{' '}Contact {' '}{' '}English (EN)</p>
     </footer>
+    // Remove all {' '} elements once styling (Bootstrap) is added. Only added for better understanding of separate words
   );
 };
 export default Footer;
