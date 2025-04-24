@@ -1,5 +1,35 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 18rem;
+  width: 100%;
+  /* Added image to .header style as I want it to take up the entire header*/
+  background-image: url('../assets/header-background.jpeg');
+  background-size: cover; 
+  background-position: center; 
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 5rem;
+    height: auto;
+  }
+  .header h1 {
+    color: white;
+    padding: 10px;
+  }
+  .header h2 {
+    color: white;
+  }
