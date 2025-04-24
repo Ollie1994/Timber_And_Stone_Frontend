@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(75, 123, 75)
+}
+.footer-left {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+.second-paragraph {
+    word-spacing: 4rem;
+}
+.footer-right {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+.globe {
+    width: 3rem;
+    height: auto;
+}
