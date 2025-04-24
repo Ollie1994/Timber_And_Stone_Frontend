@@ -2,10 +2,8 @@ import { useState } from "react";
 import "../styles/loginPage.css";
 
 const LoginPage = () => {
-  const [login, setLogin] = useState({
-    username: "",
-    password: "",
-  });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className="gridContainer">
@@ -19,13 +17,48 @@ const LoginPage = () => {
         <div className="icon"></div>
       </div>
       <div className="loginRegisterContainer">
-        <div className="loginRegiser"></div>
+        <div className="loginRegister">
+          <h3>Welcome back!</h3>
+          <div className="betweenButtons">
+            <button className="loginButton">Login</button>
+            <button className="registerButton">Register</button>
+          </div>
+        </div>
       </div>
       <div className="contactUsContainer">
-        <div className="contactUs"></div>
+        <div className="contactUs">
+          <h3>Log in to book your next stay</h3>
+          <p>
+            Please <strong>Contact us</strong> if you have any questions about
+            your account and we will do our best to help you!
+          </p>
+        </div>
       </div>
       <div className="loginFormContainer">
-        <div className="loginForm"></div>
+        <form className="loginForm" onSubmit={""}>
+          {/*exchange for  -    <form onSubmit={handleSubmit}>    - */}
+          <div className="loginFormGroup">
+            <label htmlFor="username">Username</label>
+            <input
+              className="inputGroup"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="loginFormGroup">
+            <label htmlFor="password">Password</label>
+            <input
+              className="inputGroup"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="loginButton" type="submit">
+            Login
+          </button>
+        </form>
       </div>
     </div>
   );
