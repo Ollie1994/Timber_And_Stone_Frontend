@@ -10,10 +10,7 @@ const LoginPage = () => {
   return (
     <div className="gridContainer">
       <div className="pictureContainer">
-        <div className="picture">
-          hasjdasjdjasjdjsadasdasdasdsadsadasdasdasdsad - vet ej varför - ta
-          reda på med handlednign elelr igoogle
-        </div>
+        <div className="picture"></div>
       </div>
       <div className="deadSpaceContainer">
         <div className="deadSpace"></div>

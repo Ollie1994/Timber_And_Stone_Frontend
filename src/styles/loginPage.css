@@ -42,7 +42,7 @@
 
 /*Container Styles*/
 .pictureContainer {
-display: flex;
+  display: flex;
 }
 .deadSpaceContainer {
   display: flex;
@@ -65,6 +65,8 @@ display: flex;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 .deadSpace {
 }
