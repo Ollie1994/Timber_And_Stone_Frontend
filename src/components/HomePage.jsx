@@ -10,7 +10,7 @@ const HomePage = () => {
         See our handpicked recommendations below or use the searchbar
         <br />
         above to find just what you're looking for!
-      </p>{" "}
+      </p>
       <br />
     </div>
   );
