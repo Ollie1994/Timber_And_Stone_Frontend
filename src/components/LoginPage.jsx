@@ -1,9 +1,26 @@
 import { useState } from "react";
 import "../styles/loginPage.css";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+  // konsumerar contexten
+  const { login } = useAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await login(username, password);
+      navigate("/");
+    } catch (err) {
+      console.log("error: " + err);
+    }
+  };
 
   return (
     <div className="gridContainer">
@@ -35,8 +52,7 @@ const LoginPage = () => {
         </div>
       </div>
       <div className="loginFormContainer">
-        <form className="loginForm" onSubmit={""}>
-          {/*exchange for  -    <form onSubmit={handleSubmit}>    - */}
+        <form className="loginForm" onSubmit={handleSubmit}>
           <div className="loginFormGroup">
             <label htmlFor="username">Username</label>
             <input
