@@ -32,6 +32,7 @@
     width: 32%;
     height: 30rem;
     border-radius: 1rem;
+    margin-bottom: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.2s;
@@ -42,12 +43,13 @@
     object-fit: cover;
 }
 .col-text {
+    display: flex;
     height: 30%;
     object-fit: cover;
     background-color: white;
     align-items: center;
     text-align: center;
-    padding-top: 0.5rem;
+    padding:0
 }
 /* As per chatgpt when prompted to help with hover effect */
 .col::before {
