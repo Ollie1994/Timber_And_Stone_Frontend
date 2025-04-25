@@ -7,7 +7,6 @@
 }
 
 .home-text {
-    border: 3px solid white;
     text-align: center;
     margin-top: 3rem;
 }
@@ -21,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 3px solid black;
     width: 70rem;
     padding: 1.5rem;
     gap: 0.6rem;
@@ -32,8 +30,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 32%;
-    height: 20rem;
-    border: 3px solid green;
+    height: 30rem;
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
@@ -64,7 +61,7 @@
     border-radius: inherit; /* Match parent border-radius */
     z-index: 2;
 }
-
 .col:hover::before {
     opacity: 1;
 }
+
