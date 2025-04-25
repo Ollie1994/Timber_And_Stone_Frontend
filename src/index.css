@@ -23,6 +23,6 @@ html {
   display: flex; /*Denna*/
   flex-direction: column; /*Denna*/
   width: 100vw;
-  height: 100vh;
+  height: 750px;
 }
 

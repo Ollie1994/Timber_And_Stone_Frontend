@@ -5,7 +5,7 @@
   height: 100%;
   padding: 2% 2% 2% 2%;
   grid-template-rows: 13.7% 13.7% 13.7% 13.7% 13.7% 13.7%;
-  gap: 1.2rem;
+  gap: 1.5rem;
   background-color: rgb(240, 243, 201);
   grid-template-areas:
     "pic pic pic dS dS iC"
@@ -17,7 +17,7 @@
 }
 .pictureContainer {
   grid-area: pic;
-  background-color: rgb(42, 139, 161);
+ 
 }
 .deadSpaceContainer {
   grid-area: dS;
@@ -71,12 +71,12 @@
 /*Elements Styles*/
 
 .picture {
-  background-image: url("../assets/loginPic.svg");
+  background-image: url("../assets/loginPic3.png");
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .deadSpace {
 }

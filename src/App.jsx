@@ -7,15 +7,17 @@ import RentalPage from "./components/RentalPage";
 function App() {
   return (
     <BrowserRouter>
+    <Header />
       <div className="layout">
-        <Header />
+        
           < Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/loginPage" element={<LoginPage/>} />
           <Route path="/rentalPage/:id" element={<RentalPage/>} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
+
     </BrowserRouter>
   );
 }
