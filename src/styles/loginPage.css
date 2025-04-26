@@ -2,7 +2,7 @@
   display: grid;
   /*   background-color: rgb(200, 160, 210);  -- -- - - Remove post design phase*/
   width: 100%;
-  height: 100%;
+  height: 750px;
   padding: 2% 2% 2% 2%;
   grid-template-rows: 13.7% 13.7% 13.7% 13.7% 13.7% 13.7%;
   gap: 1.5rem;
@@ -17,7 +17,6 @@
 }
 .pictureContainer {
   grid-area: pic;
- 
 }
 .deadSpaceContainer {
   grid-area: dS;
