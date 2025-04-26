@@ -23,6 +23,7 @@ html {
   display: flex; /*Denna*/
   flex-direction: column; /*Denna*/
   width: 100vw;
-  height: 750px;
+  /*Ändrade denna då layouten gjorde så att innehållet på homepage hamnade i footern*/
+  min-height: 750px;
 }
 
