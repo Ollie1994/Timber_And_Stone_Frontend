@@ -1,0 +1,84 @@
+.full-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(240, 243, 201);
+  padding: 20px 80px;
+}
+
+.inner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.address-logo {
+  width: 40px;
+}
+
+.line {
+  width: 100%;
+  height: fit-content;
+}
+
+.horizontal-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.half-container {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  width: fit-content;
+}
+
+.images-container {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  gap: 20px;
+}
+
+.main-image-container {
+  display: flex;
+  width: 50%;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  gap: 20px;
+}
+
+.rental-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.image-flexbox {
+  display: flex;
+  height: 50%;
+  gap: 20px;
+}
+
+.rental-grid-image {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+  border-radius: 10%;
+}
