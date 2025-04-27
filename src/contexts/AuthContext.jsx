@@ -121,6 +121,8 @@ export const AuthProvider = ({ children }) => {
     logout,
     register,
     checkAuthStatus,
+    // La till för att kolla inloggad user i Home page
+    isLoggedIn: !!currentUser,
   };
 
   return (

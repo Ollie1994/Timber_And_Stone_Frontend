@@ -5,10 +5,17 @@ import IMG_3 from "../assets/IMG_3.png";
 import IMG_4 from "../assets/IMG_4.png";
 import IMG_5 from "../assets/IMG_5.png";
 import IMG_6 from "../assets/IMG_6.png";
+// För att kolla om en user är inloggad
+import { useAuth } from "../hooks/useAuth";
 
 const HomePage = () => {
+
+  // Variabel för inloggad user
+  const { isLoggedIn } = useAuth();
+
   return (
     <div className="home-container">
+      <div>{isLoggedIn && <div><h2>Welcome back!</h2></div>}
       <div className="home-text">
         <h2>Your Dream Getaway starts here</h2>
         <br />
@@ -21,6 +28,7 @@ const HomePage = () => {
           above to find just what you're looking for!
         </article>
         <br />
+      </div>
       </div>
       <div className="flex-grid">
         <div className="col">
