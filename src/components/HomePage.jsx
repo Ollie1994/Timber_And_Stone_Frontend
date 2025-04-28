@@ -5,11 +5,11 @@ import IMG_3 from "../assets/IMG_3.png";
 import IMG_4 from "../assets/IMG_4.png";
 import IMG_5 from "../assets/IMG_5.png";
 import IMG_6 from "../assets/IMG_6.png";
-// För att kolla om en user är inloggad
+// To check for logged in user
 import { useAuth } from "../hooks/useAuth";
 
 const HomePage = () => {
-  // Variabel för inloggad user
+  // const for logged in user
   const { isLoggedIn } = useAuth();
 
   return (
