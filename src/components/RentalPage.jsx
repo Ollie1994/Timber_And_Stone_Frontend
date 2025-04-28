@@ -5,7 +5,9 @@ const RentalPage = () => {
     <div className="full-container">
       <div className="inner-container">
         <div className="title-container">
+          <div className="flex-container space"></div>
           <h2 className="rental-title">Title</h2>
+          <div className="flex-container space"></div>
           <div className="address-container">
             <svg
               className="address-logo"
@@ -38,10 +40,10 @@ const RentalPage = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 2H1280" stroke="#3C4634" stroke-width="3" />
+          <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
 
-        <div className="horizontal-container">
+        <div className="flex-container">
           <div className="half-container">
             <svg
               className="review-star"
@@ -133,7 +135,7 @@ const RentalPage = () => {
           </div>
         </div>
 
-        <div className="horizontal-container">
+        <div className="flex-container">
           <div className="half-container vertical left">
             <div className="half-container">
               <h3>hosted by:</h3>
@@ -245,11 +247,11 @@ const RentalPage = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 2H1280" stroke="#3C4634" stroke-width="3" />
+          <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
 
-        <div className="horizontal-container vertical">
-          <p>
+        <div className="flex-container vertical">
+          <p className="description">
             A whimsical treehouse nestled in the forests of Bavaria, Germany.
             The treehouse is elevated in the treetops, with large windows
             offering a view of the dense green canopy below. The design is
@@ -278,7 +280,306 @@ const RentalPage = () => {
             home. You’ll often find me nearby—tending the garden, baking bread,
             or happy to share a story over a warm drink.
           </p>
-          <div className="horizontal-container"></div>
+          <div className="flex-container right">
+            <button className="see-more">Show More...</button>
+          </div>
+        </div>
+
+        <svg
+          className="line"
+          viewBox="0 0 1280 4"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
+        </svg>
+
+        <div className="flex-container">
+          <div className="half-container vertical left">
+            <div className="half-container">
+              <svg
+                width="34"
+                height="34"
+                viewBox="0 0 34 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.2566 2.83331H7.56492C4.46242 2.83331 2.83325 4.46248 2.83325 7.55081V10.2425C2.83325 13.3308 4.46242 14.96 7.55075 14.96H10.2424C13.3308 14.96 14.9599 13.3308 14.9599 10.2425V7.55081C14.9741 4.46248 13.3449 2.83331 10.2566 2.83331Z"
+                  fill="#3C4634"
+                />
+                <path
+                  d="M26.4492 2.83331H23.7575C20.6692 2.83331 19.04 4.46248 19.04 7.55081V10.2425C19.04 13.3308 20.6692 14.96 23.7575 14.96H26.4492C29.5375 14.96 31.1667 13.3308 31.1667 10.2425V7.55081C31.1667 4.46248 29.5375 2.83331 26.4492 2.83331Z"
+                  fill="#3C4634"
+                />
+                <path
+                  d="M26.4492 19.0258H23.7575C20.6692 19.0258 19.04 20.655 19.04 23.7433V26.435C19.04 29.5233 20.6692 31.1525 23.7575 31.1525H26.4492C29.5375 31.1525 31.1667 29.5233 31.1667 26.435V23.7433C31.1667 20.655 29.5375 19.0258 26.4492 19.0258Z"
+                  fill="#3C4634"
+                />
+                <path
+                  d="M10.2566 19.0258H7.56492C4.46242 19.0258 2.83325 20.655 2.83325 23.7433V26.435C2.83325 29.5375 4.46242 31.1667 7.55075 31.1667H10.2424C13.3308 31.1667 14.9599 29.5375 14.9599 26.4492V23.7575C14.9741 20.655 13.3449 19.0258 10.2566 19.0258Z"
+                  fill="#3C4634"
+                />
+              </svg>
+              <h2>What this place offers:</h2>
+            </div>
+
+            <div className="amenities-container">
+              <div className="half-container vertical">
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="half-container vertical">
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-container space"></div>
+
+            <div className="reviews-container vertical left">
+              <div className="half-container reviews-top">
+                <h3>Latest Reviews:</h3>
+                <button className="see-more">See More</button>
+              </div>
+
+              <div className="half-container review-container vertical">
+                <div className="review">
+                  <div className="half-container">
+                    <h3>UserName</h3>
+                    <h3>-</h3>
+                    <h3>5/5</h3>
+                    <h3>-</h3>
+                    <h3>01/01/25</h3>
+                  </div>
+                  <div className="half-container">
+                    <p>
+                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                    </p>
+                  </div>
+                </div>
+                <div className="review">
+                  <div className="half-container">
+                    <h3>UserName</h3>
+                    <h3>-</h3>
+                    <h3>5/5</h3>
+                    <h3>-</h3>
+                    <h3>01/01/25</h3>
+                  </div>
+                  <div className="half-container">
+                    <p>
+                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                    </p>
+                  </div>
+                </div>
+                <div className="review">
+                  <div className="half-container">
+                    <h3>UserName</h3>
+                    <h3>-</h3>
+                    <h3>5/5</h3>
+                    <h3>-</h3>
+                    <h3>01/01/25</h3>
+                  </div>
+                  <div className="half-container">
+                    <p>
+                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                    </p>
+                  </div>
+                </div>
+                <div className="review">
+                  <div className="half-container">
+                    <h3>UserName</h3>
+                    <h3>-</h3>
+                    <h3>5/5</h3>
+                    <h3>-</h3>
+                    <h3>01/01/25</h3>
+                  </div>
+                  <div className="half-container">
+                    <p>
+                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="half-container"></div>
         </div>
       </div>
     </div>

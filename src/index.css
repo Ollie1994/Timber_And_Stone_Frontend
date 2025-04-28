@@ -27,3 +27,8 @@ html {
   min-height: 750px;
 }
 
+/*Button reset ugly black default-edge*/
+button {
+  border: none;
+  outline: none;
+}
