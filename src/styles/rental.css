@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgb(240, 243, 201);
-  padding: 1rem 6rem;
+  background-color: rgb(222, 224, 189);
+  padding: 1rem 8rem;
 }
 
 .inner-container {
@@ -153,41 +153,113 @@
 
 .amenities-container {
   display: flex;
+  justify-content: space-between;
   gap: 5rem;
+}
+
+.inset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 6rem 0px 2rem;
+  gap: 2rem;
 }
 
 .form-container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
-  background-color: #333a2e;
+  justify-content: center;
   flex: 1;
-  padding: 10rem 30rem 0rem 0rem;
+  padding: 10rem 0rem;
 }
 
 .inner-form-container {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 50px;
+  text-align: center;
+  gap: 1rem;
 }
 
 .booking-form {
-  background-color: rgb(102, 206, 171);
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+  width: 30rem;
+}
+
+.input-container {
+  background-color: #7e9c67;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: #7e9c67;
+  border-style: solid;
+  border-radius: 50px;
+  border-width: 2px;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .date-inputs {
   display: flex;
   flex-direction: row;
-}
-
-.guests-input {
+  flex: 1;
+  justify-content: space-between;
   width: 100%;
+  gap: 2rem;
 }
 
+.start-date,
+.end-date,
+.guests-input,
+.start-date input,
+.end-date input,
 .guests-input input {
   width: 100%;
+}
+
+.start-date input,
+.end-date input,
+.guests-input input {
+  border: none;
+  height: 2rem;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+.reservation-button {
+  padding: 0.6rem 1rem;
+  background-color: #7e9c67;
+  border-radius: 50px;
+  font-size: medium;
+}
+
+.booking-summary {
+  display: flex;
+  width: 100%;
+}
+
+.fee {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.sum {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.policy-container {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.policy {
+  text-decoration: underline;
 }

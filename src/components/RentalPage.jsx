@@ -70,7 +70,7 @@ const RentalPage = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_145_870)">
+              <g clipPath="url(#clip0_145_870)">
                 <path
                   d="M20.625 4.68748C20.6249 3.58767 21.0115 2.52282 21.7171 1.67925C22.4228 0.835678 23.4026 0.267098 24.4852 0.0729855C25.5677 -0.121126 26.6841 0.071591 27.6389 0.61742C28.5937 1.16325 29.3262 2.02743 29.7082 3.05877C30.0902 4.09012 30.0974 5.22294 29.7285 6.25905C29.3596 7.29516 28.6382 8.16858 27.6904 8.7265C26.7426 9.28441 25.6288 9.49129 24.5439 9.31095C23.4589 9.13061 22.472 8.57452 21.7556 7.73998L9.15938 13.59C9.44896 14.5077 9.44896 15.4923 9.15938 16.41L21.7556 22.26C22.5128 21.3793 23.57 20.8112 24.7222 20.6656C25.8745 20.52 27.0398 20.8073 27.9922 21.4719C28.9447 22.1365 29.6165 23.131 29.8775 24.2627C30.1385 25.3944 29.9701 26.5827 29.4049 27.5973C28.8396 28.6119 27.9179 29.3805 26.8183 29.7543C25.7186 30.128 24.5194 30.0802 23.453 29.6201C22.3866 29.1601 21.529 28.3205 21.0463 27.2641C20.5637 26.2077 20.4904 25.0098 20.8406 23.9025L8.24438 18.0525C7.62082 18.7792 6.78966 19.2975 5.86272 19.5376C4.93577 19.7778 3.9575 19.7283 3.05952 19.3959C2.16153 19.0634 1.3869 18.4639 0.839835 17.678C0.292769 16.8921 -0.000488281 15.9575 -0.000488281 15C-0.000488281 14.0424 0.292769 13.1078 0.839835 12.3219C1.3869 11.536 2.16153 10.9365 3.05952 10.6041C3.9575 10.2716 4.93577 10.2221 5.86272 10.4623C6.78966 10.7025 7.62082 11.2208 8.24438 11.9475L20.8406 6.09748C20.6972 5.64123 20.6245 5.16573 20.625 4.68748Z"
                   fill="#3C4634"
@@ -296,275 +296,277 @@ const RentalPage = () => {
 
         <div className="flex-container">
           <div className="half-container vertical left">
-            <div className="half-container">
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.2566 2.83331H7.56492C4.46242 2.83331 2.83325 4.46248 2.83325 7.55081V10.2425C2.83325 13.3308 4.46242 14.96 7.55075 14.96H10.2424C13.3308 14.96 14.9599 13.3308 14.9599 10.2425V7.55081C14.9741 4.46248 13.3449 2.83331 10.2566 2.83331Z"
-                  fill="#3C4634"
-                />
-                <path
-                  d="M26.4492 2.83331H23.7575C20.6692 2.83331 19.04 4.46248 19.04 7.55081V10.2425C19.04 13.3308 20.6692 14.96 23.7575 14.96H26.4492C29.5375 14.96 31.1667 13.3308 31.1667 10.2425V7.55081C31.1667 4.46248 29.5375 2.83331 26.4492 2.83331Z"
-                  fill="#3C4634"
-                />
-                <path
-                  d="M26.4492 19.0258H23.7575C20.6692 19.0258 19.04 20.655 19.04 23.7433V26.435C19.04 29.5233 20.6692 31.1525 23.7575 31.1525H26.4492C29.5375 31.1525 31.1667 29.5233 31.1667 26.435V23.7433C31.1667 20.655 29.5375 19.0258 26.4492 19.0258Z"
-                  fill="#3C4634"
-                />
-                <path
-                  d="M10.2566 19.0258H7.56492C4.46242 19.0258 2.83325 20.655 2.83325 23.7433V26.435C2.83325 29.5375 4.46242 31.1667 7.55075 31.1667H10.2424C13.3308 31.1667 14.9599 29.5375 14.9599 26.4492V23.7575C14.9741 20.655 13.3449 19.0258 10.2566 19.0258Z"
-                  fill="#3C4634"
-                />
-              </svg>
-              <h2>What this place offers:</h2>
-            </div>
-
-            <div className="amenities-container">
-              <div className="half-container vertical">
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
-                    </div>
-                  </div>
-                </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
-                    </div>
-                  </div>
-                </div>
+            <div className="inset">
+              <div className="half-container">
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 34 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.2566 2.83331H7.56492C4.46242 2.83331 2.83325 4.46248 2.83325 7.55081V10.2425C2.83325 13.3308 4.46242 14.96 7.55075 14.96H10.2424C13.3308 14.96 14.9599 13.3308 14.9599 10.2425V7.55081C14.9741 4.46248 13.3449 2.83331 10.2566 2.83331Z"
+                    fill="#3C4634"
+                  />
+                  <path
+                    d="M26.4492 2.83331H23.7575C20.6692 2.83331 19.04 4.46248 19.04 7.55081V10.2425C19.04 13.3308 20.6692 14.96 23.7575 14.96H26.4492C29.5375 14.96 31.1667 13.3308 31.1667 10.2425V7.55081C31.1667 4.46248 29.5375 2.83331 26.4492 2.83331Z"
+                    fill="#3C4634"
+                  />
+                  <path
+                    d="M26.4492 19.0258H23.7575C20.6692 19.0258 19.04 20.655 19.04 23.7433V26.435C19.04 29.5233 20.6692 31.1525 23.7575 31.1525H26.4492C29.5375 31.1525 31.1667 29.5233 31.1667 26.435V23.7433C31.1667 20.655 29.5375 19.0258 26.4492 19.0258Z"
+                    fill="#3C4634"
+                  />
+                  <path
+                    d="M10.2566 19.0258H7.56492C4.46242 19.0258 2.83325 20.655 2.83325 23.7433V26.435C2.83325 29.5375 4.46242 31.1667 7.55075 31.1667H10.2424C13.3308 31.1667 14.9599 29.5375 14.9599 26.4492V23.7575C14.9741 20.655 13.3449 19.0258 10.2566 19.0258Z"
+                    fill="#3C4634"
+                  />
+                </svg>
+                <h2>What this place offers:</h2>
               </div>
-              <div className="half-container vertical">
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
+
+              <div className="amenities-container">
+                <div className="half-container vertical">
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
+                <div className="half-container vertical">
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="amenity">
-                  <div className="half-container">
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
-                        stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <div className="amenity-description">
-                      <h4>Garden</h4>
-                      <h5>quiet forest scenery</h5>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="amenity">
+                    <div className="half-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="amenity-description">
+                        <h4>Garden</h4>
+                        <h5>quiet forest scenery</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -665,21 +667,93 @@ const RentalPage = () => {
           </div>
           <div className="form-container">
             <div className="inner-form-container">
-              <h1>£100/night</h1>
+              <h2>£100/night</h2>
               <div className="booking-form">
-                <div className="date-inputs">
-                  <div className="startDate">
-                    <h5>CHECK-IN</h5>
-                    <input type="date" />
+                <div className="input-container">
+                  <div className="date-inputs">
+                    <div className="start-date">
+                      <h5>CHECK-IN</h5>
+                      <input type="date" defaultValue="2026-01-01" />
+                    </div>
+                    <div className="end-date">
+                      <h5>CHECK-OUT</h5>
+                      <input type="date" defaultValue="2026-01-02" />
+                    </div>
                   </div>
-                  <div className="endDate">
-                    <h5>CHECK-OUT</h5>
-                    <input type="date" />
+                  <div className="guests-input">
+                    <h5>GUESTS:</h5>
+                    <input
+                      type="number"
+                      placeholder="Amount of guests (max 2)"
+                    />
                   </div>
                 </div>
-                <div className="guests-input">
-                  <h5>GUESTS:</h5>
-                  <input type="number" />
+                <label className="policy-container">
+                  <input type="checkbox" />
+                  <h5>I accept the</h5>
+                  <h5 className="policy">
+                    <strong>Policy</strong>
+                  </h5>
+                </label>
+                <button className="reservation-button">RESERVE</button>
+                <h4>You won't be charged yet.</h4>
+                <div className="booking-summary vertical">
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>£100</h3>
+                      <h3>x</h3>
+                      <h3>10</h3>
+                      <h3>nights</h3>
+                    </div>
+                    <div className="sum">
+                      <h3>£1000</h3>
+                    </div>
+                  </div>
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>Discount:</h3>
+                    </div>
+                    <div className="sum">
+                      <h3>-</h3>
+                      <h3>£10</h3>
+                    </div>
+                  </div>
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>Cleaning fee</h3>
+                    </div>
+                    <div className="sum">
+                      <h3>£50</h3>
+                    </div>
+                  </div>
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>Service Fee</h3>
+                    </div>
+                    <div className="sum">
+                      <h3>£30</h3>
+                    </div>
+                  </div>
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>Occupancy taxes and fees</h3>
+                    </div>
+                    <div className="sum">
+                      <h3>£20</h3>
+                    </div>
+                  </div>
+                  <div className="flex-container">
+                    <div className="fee">
+                      <h3>
+                        <strong>Total:</strong>
+                      </h3>
+                    </div>
+                    <div className="sum">
+                      <h3>
+                        <strong>£1090</strong>
+                      </h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
