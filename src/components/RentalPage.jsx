@@ -416,8 +416,68 @@ const RentalPage = () => {
                     </div>
                   </div>
                 </div>
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="half-container vertical">
+                <div className="amenity">
+                  <div className="half-container">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.33325 17.3333C6.33325 9.86665 25.6666 6.33331 25.6666 6.33331C25.6666 6.33331 24.3333 25.6666 15.9999 25.6666C10.6666 25.6666 6.33325 22.6666 6.33325 17.3333Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.33325 25.6667C6.33325 25.6667 10.6666 18.6667 16.3333 15.6667"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <div className="amenity-description">
+                      <h4>Garden</h4>
+                      <h5>quiet forest scenery</h5>
+                    </div>
+                  </div>
+                </div>
                 <div className="amenity">
                   <div className="half-container">
                     <svg
@@ -519,7 +579,7 @@ const RentalPage = () => {
                 <button className="see-more">See More</button>
               </div>
 
-              <div className="half-container review-container vertical">
+              <div className="flex-container review-container vertical">
                 <div className="review">
                   <div className="half-container">
                     <h3>UserName</h3>
@@ -530,7 +590,13 @@ const RentalPage = () => {
                   </div>
                   <div className="half-container">
                     <p>
-                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                      Absolutely magical. Waking up with the forest wrapped
+                      around you is something I’ll never forget. The
+                      craftsmanship of the treehouse is unreal—you can feel the
+                      love Fritz poured into it. Every detail feels intentional,
+                      from the curved birch walls to the way the light moves
+                      through the space. If you’re looking to slow down and
+                      reconnect, this is it.
                     </p>
                   </div>
                 </div>
@@ -544,7 +610,13 @@ const RentalPage = () => {
                   </div>
                   <div className="half-container">
                     <p>
-                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                      Absolutely magical. Waking up with the forest wrapped
+                      around you is something I’ll never forget. The
+                      craftsmanship of the treehouse is unreal—you can feel the
+                      love Fritz poured into it. Every detail feels intentional,
+                      from the curved birch walls to the way the light moves
+                      through the space. If you’re looking to slow down and
+                      reconnect, this is it.
                     </p>
                   </div>
                 </div>
@@ -558,7 +630,13 @@ const RentalPage = () => {
                   </div>
                   <div className="half-container">
                     <p>
-                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                      Absolutely magical. Waking up with the forest wrapped
+                      around you is something I’ll never forget. The
+                      craftsmanship of the treehouse is unreal—you can feel the
+                      love Fritz poured into it. Every detail feels intentional,
+                      from the curved birch walls to the way the light moves
+                      through the space. If you’re looking to slow down and
+                      reconnect, this is it.
                     </p>
                   </div>
                 </div>
@@ -572,14 +650,40 @@ const RentalPage = () => {
                   </div>
                   <div className="half-container">
                     <p>
-                    Absolutely magical. Waking up with the forest wrapped around you is something I’ll never forget. The craftsmanship of the treehouse is unreal—you can feel the love Fritz poured into it. Every detail feels intentional, from the curved birch walls to the way the light moves through the space. If you’re looking to slow down and reconnect, this is it.
+                      Absolutely magical. Waking up with the forest wrapped
+                      around you is something I’ll never forget. The
+                      craftsmanship of the treehouse is unreal—you can feel the
+                      love Fritz poured into it. Every detail feels intentional,
+                      from the curved birch walls to the way the light moves
+                      through the space. If you’re looking to slow down and
+                      reconnect, this is it.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="half-container"></div>
+          <div className="form-container">
+            <div className="inner-form-container">
+              <h1>£100/night</h1>
+              <div className="booking-form">
+                <div className="date-inputs">
+                  <div className="startDate">
+                    <h5>CHECK-IN</h5>
+                    <input type="date" />
+                  </div>
+                  <div className="endDate">
+                    <h5>CHECK-OUT</h5>
+                    <input type="date" />
+                  </div>
+                </div>
+                <div className="guests-input">
+                  <h5>GUESTS:</h5>
+                  <input type="number" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

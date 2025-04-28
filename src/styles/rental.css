@@ -155,3 +155,39 @@
   display: flex;
   gap: 5rem;
 }
+
+.form-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: #333a2e;
+  flex: 1;
+  padding: 10rem 30rem 0rem 0rem;
+}
+
+.inner-form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 50px;
+}
+
+.booking-form {
+  background-color: rgb(102, 206, 171);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.guests-input {
+  width: 100%;
+}
+
+.guests-input input {
+  width: 100%;
+}
