@@ -120,7 +120,23 @@
 }
 .loginButton {
   width: 6rem;
+  background-color: rgba(24, 198, 24, 0.555);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  transform: scale(1.5);
+  transition-duration: 100ms;
 }
 .registerButton {
   width: 6rem;
+  border-radius: 50px;
+  background-color: rgba(24, 198, 24, 0.555);
+
+  cursor: pointer;
+}
+.registerButton:hover {
+  transform: scale(1.5);
+  transition-duration: 100ms;
 }
