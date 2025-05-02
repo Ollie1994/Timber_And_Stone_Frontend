@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./components/HomePage";
-import LoginPage from "./components/LoginPage";
-import RentalPage from "./components/RentalPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RentalPage from "./pages/RentalPage";
 import { AuthProvider } from "./contexts/AuthContext";
 function App() {
   return (
