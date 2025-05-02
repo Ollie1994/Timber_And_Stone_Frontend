@@ -14,7 +14,7 @@ const Header = () => {
   // logga ut funktion
   const handleLogout = async () => {
     await logout();
-    navigate("/loginPage");
+    navigate("/loginpage");
   };
 
   return (
@@ -29,7 +29,7 @@ const Header = () => {
             Log out
           </button>
         ) : (
-          <Link className="link" to="/loginPage">
+          <Link className="link" to="/loginpage">
             <button className="logButton">Login</button>
           </Link>
         )}

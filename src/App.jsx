@@ -13,8 +13,8 @@ function App() {
         <div className="layout">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/loginPage" element={<LoginPage />} />
-            <Route path="/rentalPage/:id" element={<RentalPage />} />
+            <Route path="/loginpage" element={<LoginPage />} />
+            <Route path="/rentalpage/:id" element={<RentalPage />} />
           </Routes>
         </div>
         <Footer />
