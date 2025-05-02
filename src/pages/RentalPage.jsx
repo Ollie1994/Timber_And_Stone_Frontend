@@ -1,4 +1,5 @@
 import "../styles/rental.css";
+import Button from "../components/Button";
 
 const RentalPage = () => {
   return (
@@ -281,7 +282,9 @@ const RentalPage = () => {
             or happy to share a story over a warm drink.
           </p>
           <div className="flex-container right">
-            <button className="see-more">Show More...</button>
+            <Button>
+              <h4>Show more...</h4>
+            </Button>
           </div>
         </div>
 
@@ -578,7 +581,9 @@ const RentalPage = () => {
             <div className="reviews-container vertical left">
               <div className="half-container reviews-top">
                 <h3>Latest Reviews:</h3>
-                <button className="see-more">See More</button>
+                <Button>
+                  <h4>Show More...</h4>
+                </Button>
               </div>
 
               <div className="flex-container review-container vertical">
@@ -695,7 +700,9 @@ const RentalPage = () => {
                     <strong>Policy</strong>
                   </h5>
                 </label>
-                <button className="reservation-button">RESERVE</button>
+                <Button>
+                  <h4>RESERVE</h4>
+                </Button>
                 <h4>You won't be charged yet.</h4>
                 <div className="booking-summary vertical">
                   <div className="flex-container">
