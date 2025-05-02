@@ -31,8 +31,21 @@ html {
 Button {
   border: none;
   outline: none;
-  background-color: #7E9C67;
-  color: #FFF;
-  padding: .7rem 1.3rem;
+  background-color: #7e9c67;
+  color: #fff;
+  padding: 0.7rem 1.3rem;
   border-radius: 100px;
+  transition: background-color 0.3s ease;
+  transition: transform 0.1s ease;
+}
+
+Button:hover {
+  background-color: #6b8857;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+Button:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
 }

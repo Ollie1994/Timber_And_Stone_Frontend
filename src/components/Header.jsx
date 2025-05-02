@@ -26,10 +26,14 @@ const Header = () => {
         <h1>TIMBER + STONE</h1>
 
         {isLoggedIn ? (
-          <Button onClick={handleLogout}>Log Out</Button>
+          <Button onClick={handleLogout}>
+            <h3>Log Out</h3>
+          </Button>
         ) : (
           <Link className="link" to="/loginpage">
-            <Button>Log In</Button>
+            <Button>
+              <h3>Log In</h3>
+            </Button>
           </Link>
         )}
       </div>
