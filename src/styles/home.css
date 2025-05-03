@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 6rem;
+  padding-right: 6rem;
   background-color: rgb(240, 243, 201);
 }
 
@@ -44,12 +46,28 @@
 }
 .col-text {
   display: flex;
+  flex-direction: column;
   height: 30%;
   object-fit: cover;
   background-color: white;
-  align-items: center;
-  text-align: center;
-  padding: 0;
+  text-align: left;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.col-location {
+  display: flex;
+  color: rgb(53, 121, 53);
+  font-weight: bold;
+  text-align: left;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.col-title {
+  display: flex;
+  text-align: left;
+  color: rgb(32, 43, 32);
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 /* As per chatgpt when prompted to help with hover effect */
 .col::before {

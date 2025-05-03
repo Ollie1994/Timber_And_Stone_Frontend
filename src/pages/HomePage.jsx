@@ -38,9 +38,10 @@ const HomePage = () => {
           <img className="IMG_1" src={IMG_1} alt="Rental 1" />
           <div style={{ flexGrow: 1 }} />
           <div className="col-text">
+            <div className="col-location">Lake Bled, Slovenia</div>
+            <div className="col-title">Hush Cabin</div>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
+            industry. {" "}
           </div>
         </div>
         <div className="col">
