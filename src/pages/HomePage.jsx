@@ -40,8 +40,8 @@ const HomePage = () => {
           <div className="col-text">
             <div className="col-location">Lake Bled, Slovenia</div>
             <div className="col-title">Hush Cabin</div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. {" "}
+            <div className="col-description">Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. {" "}</div>
           </div>
         </div>
         <div className="col">

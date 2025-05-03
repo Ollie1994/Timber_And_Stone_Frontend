@@ -69,6 +69,11 @@
   font-weight: bolder;
   font-size: 1.5rem;
 }
+.col-description {
+  display: flex;
+  text-align: left;
+  color: rgb(32, 43, 32);
+}
 /* As per chatgpt when prompted to help with hover effect */
 .col::before {
   content: "";
