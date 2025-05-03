@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import { useAuth } from "../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 const Header = () => {
   const { isLoggedIn } = useAuth();
@@ -25,12 +26,14 @@ const Header = () => {
         <h1>TIMBER + STONE</h1>
 
         {isLoggedIn ? (
-          <button className="logButton" onClick={handleLogout}>
-            Log out
-          </button>
+          <Button onClick={handleLogout}>
+            <h3>Log Out</h3>
+          </Button>
         ) : (
           <Link className="link" to="/loginpage">
-            <button className="logButton">Login</button>
+            <Button>
+              <h3>Log In</h3>
+            </Button>
           </Link>
         )}
       </div>
