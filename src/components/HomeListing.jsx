@@ -1,3 +1,5 @@
+import "../styles/home.css";
+
 const HomeListing = ({image, altText, imageClass, location, title, description}) => {
     return (
         <div className="col">
@@ -11,3 +13,5 @@ const HomeListing = ({image, altText, imageClass, location, title, description})
         </div>
     );
 };
+
+export default HomeListing;

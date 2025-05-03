@@ -7,6 +7,7 @@ import IMG_5 from "../assets/IMG_5.png";
 import IMG_6 from "../assets/IMG_6.png";
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
+import HomeListing from "../components/HomeListing";
 
 const HomePage = () => {
   // const for logged in user
@@ -34,63 +35,56 @@ const HomePage = () => {
           </div>
         </div>
       <div className="flex-grid">
-        <div className="col">
-          <img className="IMG_1" src={IMG_1} alt="Rental 1" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            <div className="col-location">Lake Bled, Slovenia</div>
-            <div className="col-title">Hush Cabin</div>
-            <div className="col-description">Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. {" "}</div>
-          </div>
-        </div>
-        <div className="col">
-          <img className="IMG_2" src={IMG_2} alt="Rental 2" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
-          </div>
-        </div>
-        <div className="col">
-          <img className="IMG_3" src={IMG_3} alt="Rental 3" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
-          </div>
-        </div>
-        <div className="col">
-          <img className="IMG_4" src={IMG_4} alt="Rental 4" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
-          </div>
-        </div>
-        <div className="col">
-          <img className="IMG_5" src={IMG_5} alt="Rental 5" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
-          </div>
-        </div>
-        <div className="col">
-          <img className="IMG_6" src={IMG_6} alt="Rental 6" />
-          <div style={{ flexGrow: 1 }} />
-          <div className="col-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.{" "}
-          </div>
+      <HomeListing
+  image={IMG_1}
+  altText="Rental 1"
+  imageClass="IMG_1"
+  location="Lake Bled, Slovenia"
+  title="Hush Cabin"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
+        <HomeListing
+  image={IMG_2}
+  altText="Rental 2"
+  imageClass="IMG_2"
+  location="Abisko, Sweden"
+  title="Midnight Sun Lodge"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
+        <HomeListing
+  image={IMG_3}
+  altText="Rental 3"
+  imageClass="IMG_3"
+  location="Bavaria, Germany"
+  title="Birch and Sky Treehouse"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
+        <HomeListing
+  image={IMG_4}
+  altText="Rental 4"
+  imageClass="IMG_4"
+  location="Kawartha Lakes, Canada"
+  title="Lakewind Lookout"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
+        <HomeListing
+  image={IMG_5}
+  altText="Rental 5"
+  imageClass="IMG_5"
+  location="Cotswolds, England"
+  title="Foxglove Hollow"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
+        <HomeListing
+  image={IMG_6}
+  altText="Rental 6"
+  imageClass="IMG_6"
+  location="Queenstown, New Zealand"
+  title="The Stargazer's Nest"
+  description="Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry."/>
         </div>
       </div>
-    </div>
   );
 };
 export default HomePage;
