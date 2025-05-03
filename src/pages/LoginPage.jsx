@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/loginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import Button from "../components/Button";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -37,8 +38,12 @@ const LoginPage = () => {
         <div className="loginRegister">
           <h3>Welcome back!</h3>
           <div className="betweenButtons">
-            <button className="loginButton">Login</button>
-            <button className="registerButton">Register</button>
+            <Button>
+              <h4>Login</h4>
+            </Button>
+            <Button>
+              <h4>Register</h4>
+            </Button>
           </div>
         </div>
       </div>
@@ -71,9 +76,7 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="loginButton" type="submit">
-            Login
-          </button>
+          <Button type="submit">Login</Button>
         </form>
       </div>
     </div>
