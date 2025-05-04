@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const RentalTitleSection = () => {
-  const [rental, setRental] = useState([]);
+  const [rental, setRental] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
@@ -29,22 +29,47 @@ const RentalTitleSection = () => {
   return (
     <div>
       <div className="flex-container vertical">
-        <h2>{rental.title}</h2>
+        <h2>
+          {
+            //Check that the title exists, if not check loading, else untitled.
+            rental?.title || (loading ? "Loading..." : "Untitled")
+          }
+        </h2>
         <div className="flex-container h-left h-center">
           <img src={locationIcon} alt="Location Icon" />
           <h4>
-            {rental.city}, {rental.country}
+            {
+              //check address exists, else check loading, else unknown if neither existing or loading.
+              rental?.address?.city && rental?.address?.country
+                ? `${rental.address.city}, ${rental.address.country}`
+                : loading
+                ? "Loading..."
+                : "Unknown Location"
+            }
           </h4>
         </div>
       </div>
-
       <Divider />
-
       <div className="flex-container h-space-between">
         <div className="half-container">
           <img src={ratingStar} alt="Star Icon" />
-          <h4>{rental.averageRating}/5</h4>
-          <h4>X Reviews</h4>
+          <h4>
+            {
+              // Check if rating exists
+              rental?.rating
+                ? // Check if there are any ratings
+                  rental.rating.numberOfRatings > 0
+                  ? // If there is, show the rating and average rating
+                    `${rental.rating.averageRating}/5 ${rental.rating.numberOfRatings} Reviews`
+                  : // Else
+                    "No reviews yet"
+                : loading
+                ? // If rating is still loading
+                  "Loading..."
+                : // If rating is finished loading and did not exist.
+                  "N/A"
+            }
+          </h4>
         </div>
         <div className="half-container">
           <img src={shareIcon} alt="Share Icon" />
