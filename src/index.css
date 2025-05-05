@@ -49,3 +49,7 @@ Button:active {
   transform: scale(0.97);
   transition: transform 0.1s ease;
 }
+
+.line {
+  width: 100%;
+}
