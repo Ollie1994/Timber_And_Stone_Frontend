@@ -60,7 +60,7 @@ const RentalTitleSection = () => {
                 ? // Check if there are any ratings
                   rental.rating.numberOfRatings > 0
                   ? // If there is, show the rating and average rating
-                    `${rental.rating.averageRating}/5 ${rental.rating.numberOfRatings} Reviews`
+                    `${rental.rating.averageRating}/5 · ${rental.rating.numberOfRatings} Reviews`
                   : // Else
                     "No reviews yet"
                 : loading

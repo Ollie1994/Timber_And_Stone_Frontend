@@ -96,6 +96,10 @@
   align-items: flex-start;
 }
 
+.gap {
+  gap: 1rem;
+}
+
 .host-image {
   height: 100px;
   border-radius: 100%;
