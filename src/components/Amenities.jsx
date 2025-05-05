@@ -2,17 +2,21 @@ import "../styles/amenities.css";
 import amenityIcon from "../assets/amenity.svg";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 
 const Amenities = () => {
   const [rental, setRental] = useState([]);
   const [amenities, setAmenities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [popup, setPopup] = useState("popupNone");
+  const { id } = useParams();
+
 
   useEffect(() => {
     const fetchRental = async () => {
       try {
-        const data = await getRentalPageById("6816169ac4033371cab39f8e");
+        const data = await getRentalPageById(id);
         setRental(data);
         setAmenities(data.amenities);
       } catch (err) {

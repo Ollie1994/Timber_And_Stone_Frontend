@@ -3,7 +3,7 @@ import Divider from "./Divider";
 import ratingStar from "../assets/rating-star.svg";
 import shareIcon from "../assets/share-icon.svg";
 import favoriteIcon from "../assets/favorite-icon.svg";
-import { getRentalById } from "../api/rentalService";
+import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const RentalTitleSection = () => {
   useEffect(() => {
     const fetchRental = async () => {
       try {
-        const data = await getRentalById(id);
+        const data = await getRentalPageById(id);
         setRental(data);
       } catch (err) {
         console.log("Error " + err);
