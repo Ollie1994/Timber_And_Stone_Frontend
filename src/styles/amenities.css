@@ -1,0 +1,30 @@
+.popupNone {
+  display: none;
+}
+.popupBlock {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(222, 224, 189);
+  bottom: 50%;
+  left: 15%;
+  border: 7px solid #7e9c67;
+  z-index: 9;
+  height: auto;
+  width: 20rem;
+  border-radius: 50px;
+}
+.amenity {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  padding: 0.1rem;
+}
+.amenityTitle {
+  font-weight: 550;
+}
+.amenitiesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+}
