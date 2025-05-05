@@ -2,6 +2,7 @@ import "../styles/rental.css";
 import Button from "../components/Button";
 import IconRow from "../components/IconRow";
 import RentalTitleSection from "../components/RentalTitleSection";
+import ImageGrid from "../components/ImageGrid";
 import Amenities from "../components/Amenities";
 
 const RentalPage = () => {
@@ -10,41 +11,7 @@ const RentalPage = () => {
       <div className="inner-container">
         <RentalTitleSection></RentalTitleSection>
 
-        <div className="images-container">
-          <div className="main-image-container">
-            <img
-              className="rental-image"
-              src="https://i.ibb.co/G4bkw1CK/getimg-ai-img-F6l1-Kz-Tkp-XJXv-Anu-GFB3-I.jpg"
-              alt="Main Image of the rental"
-            />
-          </div>
-          <div className="grid-container">
-            <div className="image-flexbox">
-              <img
-                className="rental-grid-image"
-                src="https://i.ibb.co/G4bkw1CK/getimg-ai-img-F6l1-Kz-Tkp-XJXv-Anu-GFB3-I.jpg"
-                alt="Main Image of the rental"
-              />
-              <img
-                className="rental-grid-image"
-                src="https://i.ibb.co/G4bkw1CK/getimg-ai-img-F6l1-Kz-Tkp-XJXv-Anu-GFB3-I.jpg"
-                alt="Main Image of the rental"
-              />
-            </div>
-            <div className="image-flexbox">
-              <img
-                className="rental-grid-image"
-                src="https://i.ibb.co/G4bkw1CK/getimg-ai-img-F6l1-Kz-Tkp-XJXv-Anu-GFB3-I.jpg"
-                alt="Main Image of the rental"
-              />
-              <img
-                className="rental-grid-image"
-                src="https://i.ibb.co/G4bkw1CK/getimg-ai-img-F6l1-Kz-Tkp-XJXv-Anu-GFB3-I.jpg"
-                alt="Main Image of the rental"
-              />
-            </div>
-          </div>
-        </div>
+        <ImageGrid />
 
         <IconRow></IconRow>
 
