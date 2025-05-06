@@ -71,6 +71,7 @@ const RentalPage = () => {
           <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
         <Amenities></Amenities>
+        <Review></Review>
       </div>
     </div>
   );
