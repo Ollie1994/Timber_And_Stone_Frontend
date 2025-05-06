@@ -13,7 +13,7 @@ const ImageGrid = () => {
   const { id } = useParams();
 
   const images = rental?.photos || [];
-
+  //Set css-class depeding on amount of photos.
   const grid =
     images.length === 1
       ? `single-grid`
@@ -45,11 +45,22 @@ const ImageGrid = () => {
         <h3>Loading...</h3>
       ) : images.length === 0 ? (
         <h3>No images</h3>
-      ) : grid === "single-grid" ? (
+      ) : grid === "single-grid" ? ( //One image
         <div className={grid}>
           <img src={images[0]} alt="" />
         </div>
-      ) : grid === "quad-grid" ? (
+      ) : grid === "double-grid" ? ( //Two images
+        <div className={grid}>
+          <img src={images[0]} alt="" />
+          <img src={images[1]} alt="" />
+        </div>
+      ) : grid === "triple-grid" ? ( //Three images
+        <div className={grid}>
+          <img src={images[0]} alt="" />
+          <img src={images[1]} alt="" />
+          <img src={images[2]} alt="" />
+        </div>
+      ) : grid === "quad-grid" ? ( //Four images
         <div className={grid}>
           <div className="half-quad">
             <img src={images[0]} alt="" />
@@ -60,7 +71,8 @@ const ImageGrid = () => {
             <img src={images[3]} alt="" />
           </div>
         </div>
-      ) : grid === "quint-grid" ? (
+      ) : (
+        // 5 or more (will only show first 5.)
         <div className={grid}>
           <img src={images[0]} alt="" />
           <div className="right-quint">
@@ -73,12 +85,6 @@ const ImageGrid = () => {
               <img src={images[4]} alt="" />
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={grid}>
-          {images.map((src, index) => (
-            <img key={index} src={src} alt={`Image ${index}`} />
-          ))}
         </div>
       )}
     </div>
