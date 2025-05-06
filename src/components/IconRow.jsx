@@ -47,7 +47,9 @@ const IconRow = () => {
 
           <div className="iconContainer">
             <img src={people} alt="People icon"></img>
-            <p className="text">{rental.capacity} guests </p>
+            <p className="text">
+              {rental.capacity} {rental.capacity > 1 ? "guests" : "guest"}
+            </p>
           </div>
 
           <div className="iconContainer">
