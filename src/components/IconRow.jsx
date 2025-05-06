@@ -4,17 +4,19 @@ import people from "../assets/people.svg";
 import calendar from "../assets/calendar-tick.svg";
 import profilePic from "../assets/Small.png";
 import "../styles/iconRow.css";
-import { getRentalById } from "../api/rentalService";
+import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const IconRow = () => {
   const [rental, setRental] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchRental = async () => {
       try {
-        const data = await getRentalById("6816169ac4033371cab39f8e");
+        const data = await getRentalPageById(id);
         setRental(data);
       } catch (err) {
         console.log("Error " + err);
