@@ -6,6 +6,7 @@ import { useAuth } from "../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import Logo from "./Logo";
 
 const Header = () => {
   const { isLoggedIn } = useAuth();
@@ -22,7 +23,7 @@ const Header = () => {
     <header>
       <div className="header">
         <div className="overlay"></div>
-        <img className="logo" src={logo} alt="Timber + Stone Logo" />
+        <Logo />
         <h1>TIMBER + STONE</h1>
 
         {isLoggedIn ? (
