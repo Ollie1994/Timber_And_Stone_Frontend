@@ -1,7 +1,7 @@
 .iconRowContainer {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
 }
 .cont1 {
   display: flex;
@@ -9,12 +9,11 @@
   gap: 2rem;
 }
 .cont2 {
-    padding-left: 13rem;
 }
 
 .iconsContainer {
   display: flex;
-  gap: 5rem;
+  gap: 1.5rem;
 
 }
 .iconContainer {
@@ -31,6 +30,18 @@
   color: rgb(126, 158, 103);
   font-weight: 790;
   font-size:large;
+}
+
+.periodContainer {
+display: flex;
+gap: 0.4rem;
+}
+.startDate {
+
+}
+
+.endDate {
+
 }
 
 

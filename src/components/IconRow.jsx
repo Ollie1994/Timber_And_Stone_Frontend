@@ -9,7 +9,10 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const IconRow = () => {
-  const [rental, setRental] = useState([]);
+  const [rental, setRental] = useState({});
+  const [host, setHost] = useState({});
+  const [availablePeriods, setAvailablePeriods] = useState([]);
+  const [period, setPeriod] = useState({});
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
@@ -18,6 +21,9 @@ const IconRow = () => {
       try {
         const data = await getRentalPageById(id);
         setRental(data);
+        setHost(data.host);
+        setAvailablePeriods(data.availablePeriods);
+        setPeriod(data.availablePeriods.period);
       } catch (err) {
         console.log("Error " + err);
       } finally {
@@ -32,7 +38,7 @@ const IconRow = () => {
       <div className="cont1">
         <div className="hostedByContainer">
           <div className="hostedBy">
-            <h3>Hosted By: DB</h3>
+            <h3>Hosted By: {host.username}</h3>
           </div>
         </div>
 
@@ -56,7 +62,47 @@ const IconRow = () => {
 
           <div className="iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
-            <p className="text">available next: </p>
+            {console.log("Periods: " + JSON.stringify(availablePeriods))}
+            <div className="text">
+              
+
+
+ {availablePeriods.length > 0 ? (
+            availablePeriods.map((period) => (
+              <div key={availablePeriods.indexOf}>
+                {period.startDate && (
+                  <div className="periodContainer">
+                   
+                      <p>available next: </p>
+                      <p className="startDate">{period.startDate}</p>
+                      <p> - </p>
+                      <p className="endDate">
+                        {period.endDate}
+                      </p>
+                    
+                  </div>
+                )}
+              </div>
+            ))
+          ) : (
+            <div>No matching periods</div>
+          )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
           </div>
         </div>
       </div>
