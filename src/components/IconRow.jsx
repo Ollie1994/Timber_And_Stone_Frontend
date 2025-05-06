@@ -1,3 +1,4 @@
+// https://stackoverflow.com/questions/37817334/javascript-bubble-sort
 import house from "../assets/house-2.svg";
 import dollarSign from "../assets/dollar-circle.svg";
 import people from "../assets/people.svg";
@@ -16,6 +17,8 @@ const IconRow = () => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+  const endDates = availablePeriods.map((period) => period.endDate);
+  const startDates = availablePeriods.map((period) => period.startDate);
 
   useEffect(() => {
     const fetchRental = async () => {
@@ -33,6 +36,36 @@ const IconRow = () => {
     };
     fetchRental();
   }, []);
+
+  function bubbleSort(dates) {
+    let sorted = false;
+
+    let counter = 0;
+
+    while (!sorted) {
+      sorted = true;
+      for (let i = 0; i < dates.length - 1 - counter; i++) {
+        if (dates[i] > dates[i + 1]) {
+          helper(i, i + 1, dates);
+          sorted = false;
+        }
+      }
+      counter++;
+    }
+    console.log(dates);
+
+    return dates;
+  }
+
+  //swap function
+  function helper(i, j, dates) {
+    return ([dates[i], dates[j]] = [dates[j], dates[i]]);
+  }
+  const startUseDates = bubbleSort(startDates);
+  const endUseDates = bubbleSort(endDates);
+
+  console.log("startDates: " + startUseDates);
+  console.log("endDates: " + endUseDates);
 
   return (
     <div className="iconRowContainer">
@@ -62,24 +95,13 @@ const IconRow = () => {
 
           <div className="iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
-            {console.log("Periods: " + JSON.stringify(availablePeriods))}
             <div className="text">
-              {availablePeriods.length > 0 ? (
-                availablePeriods.map((period) => (
-                  <div key={availablePeriods.indexOf(period)}>
-                    {period.startDate && (
-                      <div className="periodContainer">
-                        <p>available next: </p>
-                        <p className="startDate">{period.startDate}</p>
-                        <p> - </p>
-                        <p className="endDate"></p>
-                      </div>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <div>No matching periods</div>
-              )}
+              <div className="periodContainer">
+                <p>available next: </p>
+                <p className="startDate">{startUseDates[0]}</p>
+                <p> - </p>
+                <p className="endDate">{endUseDates[0]}</p>
+              </div>
             </div>
           </div>
         </div>
