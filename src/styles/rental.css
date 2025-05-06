@@ -316,13 +316,14 @@
 
 .half-right-quint {
   flex: 1;
-  height: 50%;
+  height: 49%;
   display: flex;
   gap: 1rem;
 }
 
 .half-right-quint img {
-  width: 50%;
+  width: 49%;
+  flex: 1;
   object-fit: cover;
   border-radius: 50px;
 }
