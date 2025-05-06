@@ -17,6 +17,9 @@ const IconRow = () => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+  const profilePhoto = host.profilePhoto;
+
+
   const endDates = availablePeriods.map((period) => period.endDate);
   const startDates = availablePeriods.map((period) => period.startDate);
 
@@ -72,7 +75,7 @@ const IconRow = () => {
       <div className="cont1">
         <div className="hostedByContainer">
           <div className="hostedBy">
-            <h3>Hosted By: {host.username}</h3>
+            <h3 className="hostedBytext">Hosted By: {host.username}</h3>
           </div>
         </div>
         <div className="iconsContainer">
@@ -108,7 +111,7 @@ const IconRow = () => {
       </div>
       <div className="cont2">
         <div className="profilePicContainer">
-          <img src={profilePic} alt="profile pic"></img>
+          <img className="profilePhoto" src={profilePhoto} alt="profile pic"></img>
         </div>
       </div>
     </div>
