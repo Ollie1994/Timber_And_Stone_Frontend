@@ -2,6 +2,7 @@ import "../styles/rental.css";
 import Button from "../components/Button";
 import IconRow from "../components/IconRow";
 import RentalTitleSection from "../components/RentalTitleSection";
+import Review from "../components/Review";
 
 const RentalPage = () => {
   return (
@@ -45,7 +46,7 @@ const RentalPage = () => {
           </div>
         </div>
 
-       <IconRow></IconRow>
+        <IconRow></IconRow>
 
         <svg
           className="line"
@@ -392,86 +393,7 @@ const RentalPage = () => {
               </div>
 
               <div className="flex-container review-container vertical">
-                <div className="review">
-                  <div className="half-container">
-                    <h3>UserName</h3>
-                    <h3>-</h3>
-                    <h3>5/5</h3>
-                    <h3>-</h3>
-                    <h3>01/01/25</h3>
-                  </div>
-                  <div className="half-container">
-                    <p>
-                      Absolutely magical. Waking up with the forest wrapped
-                      around you is something I’ll never forget. The
-                      craftsmanship of the treehouse is unreal—you can feel the
-                      love Fritz poured into it. Every detail feels intentional,
-                      from the curved birch walls to the way the light moves
-                      through the space. If you’re looking to slow down and
-                      reconnect, this is it.
-                    </p>
-                  </div>
-                </div>
-                <div className="review">
-                  <div className="half-container">
-                    <h3>UserName</h3>
-                    <h3>-</h3>
-                    <h3>5/5</h3>
-                    <h3>-</h3>
-                    <h3>01/01/25</h3>
-                  </div>
-                  <div className="half-container">
-                    <p>
-                      Absolutely magical. Waking up with the forest wrapped
-                      around you is something I’ll never forget. The
-                      craftsmanship of the treehouse is unreal—you can feel the
-                      love Fritz poured into it. Every detail feels intentional,
-                      from the curved birch walls to the way the light moves
-                      through the space. If you’re looking to slow down and
-                      reconnect, this is it.
-                    </p>
-                  </div>
-                </div>
-                <div className="review">
-                  <div className="half-container">
-                    <h3>UserName</h3>
-                    <h3>-</h3>
-                    <h3>5/5</h3>
-                    <h3>-</h3>
-                    <h3>01/01/25</h3>
-                  </div>
-                  <div className="half-container">
-                    <p>
-                      Absolutely magical. Waking up with the forest wrapped
-                      around you is something I’ll never forget. The
-                      craftsmanship of the treehouse is unreal—you can feel the
-                      love Fritz poured into it. Every detail feels intentional,
-                      from the curved birch walls to the way the light moves
-                      through the space. If you’re looking to slow down and
-                      reconnect, this is it.
-                    </p>
-                  </div>
-                </div>
-                <div className="review">
-                  <div className="half-container">
-                    <h3>UserName</h3>
-                    <h3>-</h3>
-                    <h3>5/5</h3>
-                    <h3>-</h3>
-                    <h3>01/01/25</h3>
-                  </div>
-                  <div className="half-container">
-                    <p>
-                      Absolutely magical. Waking up with the forest wrapped
-                      around you is something I’ll never forget. The
-                      craftsmanship of the treehouse is unreal—you can feel the
-                      love Fritz poured into it. Every detail feels intentional,
-                      from the curved birch walls to the way the light moves
-                      through the space. If you’re looking to slow down and
-                      reconnect, this is it.
-                    </p>
-                  </div>
-                </div>
+              <Review></Review>
               </div>
             </div>
           </div>

@@ -153,9 +153,8 @@
   height: 9rem;
   width: 100%;
   border-radius: 70px;
-  overflow-y: scroll;
+  overflow-y: auto; /* scroll should only appear if text goes beyond review "box" */
   padding: 20px 40px;
-  border: 3px solid black;
 }
 
 .amenities-container {
