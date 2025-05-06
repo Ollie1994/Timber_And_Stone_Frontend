@@ -2,6 +2,7 @@ import "../styles/rental.css";
 import Button from "../components/Button";
 import IconRow from "../components/IconRow";
 import RentalTitleSection from "../components/RentalTitleSection";
+import Review from "../components/Review";
 import ImageGrid from "../components/ImageGrid";
 import Amenities from "../components/Amenities";
 
@@ -70,6 +71,7 @@ const RentalPage = () => {
           <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
         <Amenities></Amenities>
+        <Review></Review>
       </div>
     </div>
   );
