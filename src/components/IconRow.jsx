@@ -16,6 +16,7 @@ const IconRow = () => {
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
+
   useEffect(() => {
     const fetchRental = async () => {
       try {
@@ -41,7 +42,6 @@ const IconRow = () => {
             <h3>Hosted By: {host.username}</h3>
           </div>
         </div>
-
         <div className="iconsContainer">
           <div className="iconContainer">
             <img src={house} alt="House icon"></img>
@@ -64,44 +64,22 @@ const IconRow = () => {
             <img src={calendar} alt="Calendar icon"></img>
             {console.log("Periods: " + JSON.stringify(availablePeriods))}
             <div className="text">
-              
-
-
- {availablePeriods.length > 0 ? (
-            availablePeriods.map((period) => (
-              <div key={availablePeriods.indexOf}>
-                {period.startDate && (
-                  <div className="periodContainer">
-                   
-                      <p>available next: </p>
-                      <p className="startDate">{period.startDate}</p>
-                      <p> - </p>
-                      <p className="endDate">
-                        {period.endDate}
-                      </p>
-                    
+              {availablePeriods.length > 0 ? (
+                availablePeriods.map((period) => (
+                  <div key={availablePeriods.indexOf(period)}>
+                    {period.startDate && (
+                      <div className="periodContainer">
+                        <p>available next: </p>
+                        <p className="startDate">{period.startDate}</p>
+                        <p> - </p>
+                        <p className="endDate"></p>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))
-          ) : (
-            <div>No matching periods</div>
-          )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                ))
+              ) : (
+                <div>No matching periods</div>
+              )}
             </div>
           </div>
         </div>
