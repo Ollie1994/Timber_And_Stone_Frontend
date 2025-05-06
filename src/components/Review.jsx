@@ -13,6 +13,7 @@ const ReviewCard = ({ username, rating, date, text }) => {
           <h3>-</h3>
           <h3>{date}</h3>
         </div>
+        <br/>
         <div className="half-container">
           <p>{text}</p>
         </div>
@@ -41,6 +42,8 @@ const ReviewCard = ({ username, rating, date, text }) => {
       fetchReviews();
     }, [rentalId]);
 
+    // Checks if there are any reviews and maps over any existing reviews and shows a ReviewCard for it
+    // or will display no reviews if none exist
     return (
       <>
         {loading ? (
@@ -51,7 +54,7 @@ const ReviewCard = ({ username, rating, date, text }) => {
               key={index}
               username={review.reviewer}
               rating={review.rating}
-              date={review.date}
+              date={review.createdAt}
               text={review.review}
             />
           ))
