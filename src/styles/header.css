@@ -1,13 +1,15 @@
 .header {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: space-between;
   height: 18rem;
   width: 100%;
   /* Added image to .header style as I want it to take up the entire header*/
   background-image: url("../assets/header-background.jpeg");
   background-size: cover;
   background-position: center;
+  padding: 0rem 6rem;
+  color: #FFF;
 }
 /* Added overlay above image as image opacity made everyting (including text) inside the header adjust*/
 .overlay {
@@ -21,33 +23,6 @@
   opacity: 0.5;
   z-index: 1;
 }
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  /* Aligning logo at the very top of page*/
-  align-self: flex-start;
-  width: 7rem;
-  height: auto;
-  padding-left: 20px;
-  padding-top: 10px;
-}
-.header h1 {
-  flex: 1;
-  text-align: left;
-  /* Aligning h1 at the very top of page*/
-  align-self: flex-start;
-  color: white;
-  padding-left: 10px;
-  padding-top: 35px;
-}
-
-.header h2 {
-  color: white;
-  padding-right: 40px;
-  padding-top: 35px;
-  /* Aligning h2 at the very top of page*/
-  align-self: flex-start;
-}
 
 .link {
   align-self: flex-start;
@@ -55,4 +30,16 @@
 
 Button {
   margin: 2rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.logo-container h1 {
+  margin-bottom: .5rem;
 }

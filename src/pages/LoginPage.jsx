@@ -3,6 +3,7 @@ import "../styles/loginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import Button from "../components/Button";
+import Logo from "../components/Logo"
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -32,7 +33,7 @@ const LoginPage = () => {
         <div className="deadSpace"></div>
       </div>
       <div className="iconContainer">
-        <div className="icon"></div>
+        <Logo/>
       </div>
       <div className="loginRegisterContainer">
         <div className="loginRegister">
