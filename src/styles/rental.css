@@ -156,7 +156,7 @@
   width: 100%;
   border: #7e9c67;
   border-style: solid;
-  border-radius: 50px;
+  border-radius: 30px;
   border-width: 2px;
   padding: 1rem;
   gap: 1rem;
@@ -328,4 +328,33 @@
 
 Button {
   margin: 0px;
+  width: fit-content;
+}
+
+.validation-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.policy-container {
+  align-self: center;
+}
+
+.reserve-button{
+  justify-self: center;
+  align-self: center;
 }
