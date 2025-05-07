@@ -20,7 +20,6 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <div className="overlay"></div>
 
         <div className="logo-container">
           <Logo color="white" />

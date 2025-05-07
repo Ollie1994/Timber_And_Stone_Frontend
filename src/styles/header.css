@@ -2,26 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 18rem;
+  height: 22rem;
   width: 100%;
   /* Added image to .header style as I want it to take up the entire header*/
-  background-image: url("../assets/header-background.jpeg");
+  background-image: url("../assets/header_image.png");
   background-size: cover;
   background-position: center;
   padding: 0rem 6rem;
-  color: #FFF;
-}
-/* Added overlay above image as image opacity made everyting (including text) inside the header adjust*/
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
-  pointer-events: none;
-  opacity: 0.5;
-  z-index: 1;
+  color: #fff;
 }
 
 .link {
@@ -41,5 +29,5 @@ Button {
 }
 
 .logo-container h1 {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
