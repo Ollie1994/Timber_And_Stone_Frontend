@@ -5,6 +5,7 @@ import RentalTitleSection from "../components/RentalTitleSection";
 import Review from "../components/Review";
 import ImageGrid from "../components/ImageGrid";
 import Amenities from "../components/Amenities";
+import BookingWindow from "../components/BookingWindow";
 
 const RentalPage = () => {
   return (
@@ -70,8 +71,16 @@ const RentalPage = () => {
         >
           <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
-        <Amenities></Amenities>
-        <Review></Review>
+
+        <div className="flex-container">
+          <div className="flex-container vertical">
+            <Amenities></Amenities>
+            <Review></Review>
+          </div>
+          <div className="booking-container flex-container">
+            <BookingWindow></BookingWindow>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -149,16 +149,6 @@
   gap: 1rem;
 }
 
-.booking-form {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 30rem;
-}
-
 .input-container {
   background-color: #7e9c67;
   display: flex;
@@ -199,23 +189,12 @@
   padding: 1rem;
 }
 
-.reservation-button {
-  padding: 0.6rem 1rem;
-  background-color: #7e9c67;
-  border-radius: 50px;
-  font-size: medium;
-}
-
 .booking-summary {
   display: flex;
   width: 100%;
 }
 
-.fee {
-  display: flex;
-  gap: 0.3rem;
-}
-
+.fee,
 .sum {
   display: flex;
   gap: 0.3rem;
@@ -326,4 +305,27 @@
   flex: 1;
   object-fit: cover;
   border-radius: 50px;
+}
+
+/* Booking Window */
+.booking-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 4rem 0rem 4rem;
+}
+
+.booking-window {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50px;
+  gap: 1rem;
+}
+
+Button {
+  margin: 0px;
 }
