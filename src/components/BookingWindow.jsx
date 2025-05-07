@@ -27,6 +27,9 @@ const BookingWindow = () => {
   const [endDate, setEndDate] = useState("");
   const [guestCount, setGuestCount] = useState("");
 
+  const [showPolicyError, setShowPolicyError] = useState(false);
+  const [showDateError, setShowDateError] = useState(false);
+
   // Choose start date
   const startDateChange = (e) => {
     const newStartDate = e.target.value;
@@ -38,6 +41,10 @@ const BookingWindow = () => {
     }
 
     setStartDate(newStartDate);
+
+    if (endDate != "") {
+        setShowDateError(false)
+    }
   };
 
   //Choose end date
@@ -51,9 +58,11 @@ const BookingWindow = () => {
     }
 
     setEndDate(newEndDate);
-  };
 
-  let invalidGuestCount;
+    if (startDate != "") {
+        setShowDateError(false)
+    }
+  };
 
   const guestCountChange = (e) => {
     const newCount = e.target.value;
@@ -83,6 +92,21 @@ const BookingWindow = () => {
   const [policyChecked, setPolicyChecked] = useState(false);
   const handlePolicyCheck = (e) => {
     setPolicyChecked(e.target.checked);
+    setShowPolicyError(false);
+  };
+
+  const handleReserve = () => {
+    if (policyChecked === false) {
+      setShowPolicyError(true);
+    } else {
+      setShowPolicyError(false);
+    }
+
+    if (startDate === "" || endDate === "") {
+      setShowDateError(true);
+    } else {
+      setShowDateError(false);
+    }
   };
 
   return (
@@ -123,9 +147,18 @@ const BookingWindow = () => {
         </h5>
       </label>
       <h5>Checked? {policyChecked ? "true" : "false"}</h5>
-      <Button>
+      <Button onClick={handleReserve}>
         <h4>RESERVE</h4>
       </Button>
+
+      {showPolicyError && (
+        <h4 className="policyError">
+          Accept the policy before placing your reservation.
+        </h4>
+      )}
+
+      {showDateError && <h4 className="dateError">Please enter valid dates to reserve.</h4>}
+
       <h4>You won't be charged yet.</h4>
       <div className="booking-summary vertical">
         <div className="flex-container">
