@@ -6,6 +6,7 @@
   padding-left: 6rem;
   padding-right: 6rem;
   background-color: rgb(240, 243, 201);
+  overflow-y: auto;
 }
 
 .home-text {
@@ -67,7 +68,7 @@
 }
 .col-location {
   display: flex;
-  color: rgb(53, 121, 53);
+  color: #7e9c67;
   font-weight: bold;
   text-align: left;
   padding-top: 0.5rem;
