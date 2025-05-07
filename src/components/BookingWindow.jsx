@@ -23,33 +23,56 @@ const BookingWindow = () => {
   }, []);
 
   //Sets start and end-date.
-  const [startDate, setStartDate] = useState("2026-01-01");
-  const [endDate, setEndDate] = useState("2026-01-02");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [guestCount, setGuestCount] = useState("");
 
-  //Check date order
-  function validDate() {
-    if (new Date(endDate) < new Date(startDate)) {
-      return false;
-    }
-    return true;
-  }
-
+  // Choose start date
   const startDateChange = (e) => {
-    setStartDate(e.target.value);
-    console.log("Selected date:", startDate);
-    validDate() ? null : setEndDate(startDate);
+    const newStartDate = e.target.value;
+
+    // If new start date is after end date
+    // Set end date to the start date.
+    if (new Date(newStartDate) > new Date(endDate)) {
+      setEndDate(newStartDate);
+    }
+
+    setStartDate(newStartDate);
   };
 
+  //Choose end date
   const endDateChange = (e) => {
-    setEndDate(e.target.value);
-    console.log("Selected date:", endDate);
-    validDate() ? null : setEndDate(startDate);
+    const newEndDate = e.target.value;
+
+    // If new end date is before start date
+    // Set startdate to same as enddate
+    if (new Date(newEndDate) < new Date(startDate)) {
+      setStartDate(newEndDate);
+    }
+
+    setEndDate(newEndDate);
+  };
+
+  let invalidGuestCount;
+
+  const guestCountChange = (e) => {
+    const newCount = e.target.value;
+
+    if (newCount > rental.capacity) {
+      const exceedingGuestCount = true;
+      setGuestCount(rental.capacity);
+    } else if (newCount <= 0) {
+      const noGuestCount = true;
+      setGuestCount(1);
+    }
   };
 
   console.log(startDate);
   console.log(endDate);
-  const diffTime = Math.abs(new Date(endDate) - new Date(startDate)); // difference in milliseconds
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // convert to days
+  //Time between the dates in MilliSec
+  const diffTime = Math.abs(new Date(endDate) - new Date(startDate));
+  //Time diff in days (1000ms x 60sec x 60min x 24h)
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   console.log(diffDays);
 
   // calc total price and service fee on 6% (included)
@@ -79,7 +102,12 @@ const BookingWindow = () => {
         </div>
         <div className="guests-input">
           <h5>GUESTS:</h5>
-          <input type="number" placeholder="Enter the number of guests" />
+          <input
+            type="number"
+            value={guestCount}
+            onChange={guestCountChange}
+            placeholder="Enter the amount of guests"
+          />
         </div>
       </div>
 
@@ -103,11 +131,11 @@ const BookingWindow = () => {
         <div className="flex-container">
           <div className="fee">
             <h3>
-              ${rental?.pricePerNight} x {diffDays}:
+              ${rental?.pricePerNight} x {diffDays ? diffDays : 0}:
             </h3>
           </div>
           <div className="sum">
-            <h3>${totalPrice}</h3>
+            <h3>${totalPrice ? totalPrice : 0}</h3>
           </div>
         </div>
         <div className="flex-container">
@@ -115,7 +143,7 @@ const BookingWindow = () => {
             <h3>Including Service Fee:</h3>
           </div>
           <div className="sum">
-            <h3>${serviceFee}</h3>
+            <h3>${serviceFee ? serviceFee : 0}</h3>
           </div>
         </div>
         <div className="flex-container">
@@ -126,7 +154,7 @@ const BookingWindow = () => {
           </div>
           <div className="sum">
             <h3>
-              <strong>${totalPrice}</strong>
+              <strong>${totalPrice ? totalPrice : 0}</strong>
             </h3>
           </div>
         </div>
