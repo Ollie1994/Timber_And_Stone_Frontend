@@ -1,0 +1,58 @@
+.iconRowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cont1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hostedBytext {
+font-size:x-large;
+}
+.cont2 {
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 2rem;
+
+}
+.iconContainer {
+    display: flex;
+    justify-content: left;
+    width: auto;
+
+}
+
+
+.text {
+  padding-top: 7px;
+  padding-left: 5px;
+  color: rgb(126, 158, 103);
+  font-weight: 790;
+  font-size:large;
+}
+
+.periodContainer {
+display: flex;
+gap: 0.4rem;
+}
+.startDate {
+
+}
+
+.endDate {
+
+}
+.profilePicContainer {
+  
+}
+
+.profilePhoto {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
