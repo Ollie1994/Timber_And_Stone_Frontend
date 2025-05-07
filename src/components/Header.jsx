@@ -1,6 +1,4 @@
 import "../styles/header.css";
-// Imported logo as it will only take up part of header
-import logo from "../assets/logo.png";
 // To check if user is logged in
 import { useAuth } from "../hooks/useAuth";
 import { Link } from "react-router-dom";
@@ -22,9 +20,11 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <div className="overlay"></div>
-        <Logo />
-        <h1>TIMBER + STONE</h1>
+
+        <div className="logo-container">
+          <Logo color="white" />
+          <h1>TIMBER + STONE</h1>
+        </div>
 
         {isLoggedIn ? (
           <Button onClick={handleLogout}>
