@@ -22,6 +22,46 @@ const BookingWindow = () => {
     fetchRental();
   }, []);
 
+  //Sets start and end-date.
+  const [startDate, setStartDate] = useState("2026-01-01");
+  const [endDate, setEndDate] = useState("2026-01-02");
+
+  //Check date order
+  function validDate() {
+    if (new Date(endDate) < new Date(startDate)) {
+      return false;
+    }
+    return true;
+  }
+
+  const startDateChange = (e) => {
+    setStartDate(e.target.value);
+    console.log("Selected date:", startDate);
+    validDate() ? null : setEndDate(startDate);
+  };
+
+  const endDateChange = (e) => {
+    setEndDate(e.target.value);
+    console.log("Selected date:", endDate);
+    validDate() ? null : setEndDate(startDate);
+  };
+
+  console.log(startDate);
+  console.log(endDate);
+  const diffTime = Math.abs(new Date(endDate) - new Date(startDate)); // difference in milliseconds
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // convert to days
+  console.log(diffDays);
+
+  // calc total price and service fee on 6% (included)
+  const totalPrice = diffDays * rental?.pricePerNight;
+  const serviceFee = totalPrice * 0.06;
+
+  //Sets policy check to true/false.
+  const [policyChecked, setPolicyChecked] = useState(false);
+  const handlePolicyCheck = (e) => {
+    setPolicyChecked(e.target.checked);
+  };
+
   return (
     <div className="booking-window">
       <h1>${rental?.pricePerNight}/night</h1>
@@ -30,11 +70,11 @@ const BookingWindow = () => {
         <div className="date-inputs">
           <div className="start-date">
             <h5>CHECK-IN</h5>
-            <input type="date" defaultValue="2026-01-01" />
+            <input type="date" value={startDate} onChange={startDateChange} />
           </div>
           <div className="end-date">
             <h5>CHECK-OUT</h5>
-            <input type="date" defaultValue="2026-01-02" />
+            <input type="date" value={endDate} onChange={endDateChange} />
           </div>
         </div>
         <div className="guests-input">
@@ -44,12 +84,17 @@ const BookingWindow = () => {
       </div>
 
       <label className="policy-container">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={policyChecked}
+          onChange={handlePolicyCheck}
+        />
         <h5>I accept the</h5>
         <h5 className="policy">
           <strong>Policy</strong>
         </h5>
       </label>
+      <h5>Checked? {policyChecked ? "true" : "false"}</h5>
       <Button>
         <h4>RESERVE</h4>
       </Button>
@@ -57,46 +102,20 @@ const BookingWindow = () => {
       <div className="booking-summary vertical">
         <div className="flex-container">
           <div className="fee">
-            <h3>£100</h3>
-            <h3>x</h3>
-            <h3>10</h3>
-            <h3>nights</h3>
+            <h3>
+              ${rental?.pricePerNight} x {diffDays}:
+            </h3>
           </div>
           <div className="sum">
-            <h3>£1000</h3>
+            <h3>${totalPrice}</h3>
           </div>
         </div>
         <div className="flex-container">
           <div className="fee">
-            <h3>Discount:</h3>
+            <h3>Including Service Fee:</h3>
           </div>
           <div className="sum">
-            <h3>-</h3>
-            <h3>£10</h3>
-          </div>
-        </div>
-        <div className="flex-container">
-          <div className="fee">
-            <h3>Cleaning fee</h3>
-          </div>
-          <div className="sum">
-            <h3>£50</h3>
-          </div>
-        </div>
-        <div className="flex-container">
-          <div className="fee">
-            <h3>Service Fee</h3>
-          </div>
-          <div className="sum">
-            <h3>£30</h3>
-          </div>
-        </div>
-        <div className="flex-container">
-          <div className="fee">
-            <h3>Occupancy taxes and fees</h3>
-          </div>
-          <div className="sum">
-            <h3>£20</h3>
+            <h3>${serviceFee}</h3>
           </div>
         </div>
         <div className="flex-container">
@@ -107,7 +126,7 @@ const BookingWindow = () => {
           </div>
           <div className="sum">
             <h3>
-              <strong>£1090</strong>
+              <strong>${totalPrice}</strong>
             </h3>
           </div>
         </div>
