@@ -3,7 +3,6 @@ import house from "../assets/house-2.svg";
 import dollarSign from "../assets/dollar-circle.svg";
 import people from "../assets/people.svg";
 import calendar from "../assets/calendar-tick.svg";
-import profilePic from "../assets/Small.png";
 import "../styles/iconRow.css";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
@@ -19,7 +18,7 @@ const IconRow = () => {
 
   const profilePhoto = host.profilePhoto;
 
-
+// maps the avaibleperiods to start and end dates i nseprate lists
   const endDates = availablePeriods.map((period) => period.endDate);
   const startDates = availablePeriods.map((period) => period.startDate);
 
@@ -40,6 +39,7 @@ const IconRow = () => {
     fetchRental();
   }, []);
 
+  // sorts dates into earliest to latest
   function bubbleSort(dates) {
     let sorted = false;
 
@@ -64,6 +64,7 @@ const IconRow = () => {
   function helper(i, j, dates) {
     return ([dates[i], dates[j]] = [dates[j], dates[i]]);
   }
+  // sends in start and end dates to be sorted into earlies to latest
   const startUseDates = bubbleSort(startDates);
   const endUseDates = bubbleSort(endDates);
 
