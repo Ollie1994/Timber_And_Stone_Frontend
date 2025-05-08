@@ -106,6 +106,9 @@
   height: fit-content;
   align-items: flex-start;
   gap: 1rem;
+  height: 28rem;
+  overflow: hidden;
+  border: 3px solid black;
 }
 
 .review {
@@ -115,6 +118,7 @@
   border-radius: 70px;
   overflow-y: auto; /* scroll should only appear if text goes beyond review "box" */
   padding: 20px 40px;
+  margin-top: 20px;
 }
 
 .amenities-container {
