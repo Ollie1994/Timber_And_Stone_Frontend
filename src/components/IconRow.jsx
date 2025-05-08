@@ -18,7 +18,7 @@ const IconRow = () => {
 
   const profilePhoto = host.profilePhoto;
 
-// maps the avaibleperiods to start and end dates i nseprate lists
+  // maps the avaibleperiods to start and end dates i nseprate lists
   const endDates = availablePeriods.map((period) => period.endDate);
   const startDates = availablePeriods.map((period) => period.startDate);
 
@@ -112,7 +112,11 @@ const IconRow = () => {
       </div>
       <div className="cont2">
         <div className="profilePicContainer">
-          <img className="profilePhoto" src={profilePhoto} alt="profile pic"></img>
+          <img
+            className="profilePhoto"
+            src={profilePhoto}
+            alt="profile pic"
+          ></img>
         </div>
       </div>
     </div>
