@@ -23,17 +23,17 @@ const HomePage = () => {
     };
 
     fetchRentals();
-  }, []); 
+  }, []);
 
   return (
     <div className="home-container">
       <div>
         <div className="home-text">
-        {isLoggedIn ? (
-        <h2>Welcome back!</h2>
-        ) : (
-        <h2>Your Dream Getaway starts here</h2>
-         )}
+          {isLoggedIn ? (
+            <h2>Welcome back!</h2>
+          ) : (
+            <h2>Your Dream Getaway starts here</h2>
+          )}
           <br />
           <article>
             Explore our cabins, cottages + off-grid retreats to start your next
@@ -44,14 +44,14 @@ const HomePage = () => {
             above to find just what you're looking for!
           </article>
           <br />
-          </div>
-      <div className="flex-grid">
-      {rentals.map((rental) => (
-          <HomeListingCard key={rental.id} rental={rental} />
-        ))}
+        </div>
+        <div className="flex-grid">
+          {rentals.map((rental) => (
+            <HomeListingCard key={rental.id} rental={rental} />
+          ))}
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   );
 };
 export default HomePage;
