@@ -1,25 +1,25 @@
-.iconsContainer {
+.searchBar-IconsContainer {
   display: flex;
   background-color: white;
   border-radius: 50px;
   width: 550px;
   height: 50px;
-  padding-top: 0.7rem;
   z-index: 7;
   margin-top: -25px;
   justify-content: center;
+  gap: 1.8rem;
 }
-img:hover {
+.searchBar-img:hover {
   cursor: pointer;
 }
-.iconContainer {
+.searchBar-IconContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 0.1rem;
 }
 
-.iconFlex {
+.searchBar-iconFlex {
   display: flex;
   justify-content: center;
 }
@@ -111,6 +111,7 @@ img:hover {
 /* -------------------------------------- */
 
 .categoryWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -123,6 +124,9 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .dollarWindow {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -135,6 +139,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .calendarWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -147,6 +152,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .ratingWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -159,6 +165,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .locationWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -171,6 +178,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .guestsWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -183,6 +191,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .amenitiesWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -195,6 +204,7 @@ img:hover {
   transform: translate(-50%, -50%);
 }
 .searchWindow {
+  margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
@@ -205,4 +215,12 @@ img:hover {
   right: 50%;
   top: 22px;
   transform: translate(-50%, -50%);
+}
+/* -------------------------------------- */
+.minPrice {
+
+}
+
+.maxPrice {
+
 }

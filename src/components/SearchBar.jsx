@@ -8,6 +8,7 @@ import amenityIcon from "../assets/AMENITIES24.svg";
 import calendarIcon from "../assets/AVAILABILTY24.svg";
 import categoryIcon from "../assets/CATEGORIES.svg";
 import dollarIcon from "../assets/dollar-circle24.svg";
+import Button from "../components/Button";
 import { useState, useEffect } from "react";
 
 const SearchBar = () => {
@@ -127,8 +128,8 @@ const SearchBar = () => {
 
   return (
     <div>
-      <div className="iconsContainer">
-        <div className="iconContainer">
+      <div className="searchBar-IconsContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -138,8 +139,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={categoryIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={categoryIcon} alt=""></img>
             </div>
           </div>
           <div className={categoryArrowContainer}>
@@ -149,7 +150,7 @@ const SearchBar = () => {
             <div className="categoryWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -159,18 +160,26 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={dollarIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={dollarIcon} alt=""></img>
             </div>
           </div>
           <div className={dollarArrowContainer}>
             <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={dollarWindowContainer}>
-            <div className="dollarWindow"></div>
+            <div className="dollarWindow">
+              <input className="minPrice"
+                
+                />
+               <input className="maxPrice"
+                  
+                />
+              <Button>Search</Button>
+            </div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -180,8 +189,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={calendarIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={calendarIcon} alt=""></img>
             </div>
           </div>
           <div className={calendarArrowContainer}>
@@ -191,7 +200,7 @@ const SearchBar = () => {
             <div className="calendarWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -201,8 +210,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={ratingIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={ratingIcon} alt=""></img>
             </div>
           </div>
           <div className={ratingArrowContainer}>
@@ -212,7 +221,7 @@ const SearchBar = () => {
             <div className="ratingWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -222,8 +231,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={locationIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={locationIcon} alt=""></img>
             </div>
           </div>
           <div className={locationArrowContainer}>
@@ -233,7 +242,7 @@ const SearchBar = () => {
             <div className="locationWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -243,8 +252,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={guestIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={guestIcon} alt=""></img>
             </div>
           </div>
           <div className={guestsArrowContainer}>
@@ -254,7 +263,7 @@ const SearchBar = () => {
             <div className="guestsWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -264,8 +273,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={amenityIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={amenityIcon} alt=""></img>
             </div>
           </div>
           <div className={amenitiesArrowContainer}>
@@ -275,7 +284,7 @@ const SearchBar = () => {
             <div className="amenitiesWindow"></div>
           </div>
         </div>
-        <div className="iconContainer">
+        <div className="searchBar-IconContainer">
           <div
             onClick={() =>
               handleButtonClick(
@@ -285,8 +294,8 @@ const SearchBar = () => {
               )
             }
           >
-            <div className="iconFlex">
-              <img src={searchIcon} alt=""></img>
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={searchIcon} alt=""></img>
             </div>
           </div>
           <div className={searchArrowContainer}>
