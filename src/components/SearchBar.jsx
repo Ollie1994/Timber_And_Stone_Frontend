@@ -169,13 +169,23 @@ const SearchBar = () => {
           </div>
           <div className={dollarWindowContainer}>
             <div className="dollarWindow">
-              <input className="minPrice"
-                
+              <div className="searchBar-MinPriceContainer">
+                <input
+                  className="searchBar-MinPrice"
+                  placeholder="min-price..."
                 />
-               <input className="maxPrice"
-                  
+              </div>
+              <div className="searchBar-MaxPriceContainer">
+                <input
+                  className="searchBar-MaxPrice"
+                  placeholder="max-price..."
                 />
-              <Button>Search</Button>
+              </div>
+              <div className="searchBar-ButtonContainer">
+                <button className="searchBar-Button">
+                  <h4>Search</h4>
+                </button>
+              </div>
             </div>
           </div>
         </div>

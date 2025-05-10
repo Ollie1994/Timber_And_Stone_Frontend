@@ -124,14 +124,14 @@
   transform: translate(-50%, -50%);
 }
 .dollarWindow {
-  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-top: 13px;
   background-color: #7e9c67;
   z-index: 7;
   border-radius: 50px;
-  height: 35px;
-  width: 250px;
+  height: 40px; /*ÄNDRA DESSA testar nu*/
+  width: 350px;
   position: absolute;
   left: 50%;
   right: 50%;
@@ -217,10 +217,46 @@
   transform: translate(-50%, -50%);
 }
 /* -------------------------------------- */
-.minPrice {
+.searchBar-ButtonContainer {
+display: flex;
+flex-direction: column;
+justify-content: center;  
 
 }
-
-.maxPrice {
-
+.searchBar-Button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 23px;
+  background-color: rgb(60, 70, 52);
+}
+.searchBar-Button:hover {
+  cursor: pointer;
+  background-color: rgb(60, 70, 52);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.searchBar-MinPriceContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchBar-MinPrice {
+  margin: auto;
+  border-style: none;
+  width: 100px;
+  height: 23px;
+  border-radius: 50px;
+  padding: 10px;
+}
+.searchBar-MaxPriceContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchBar-MaxPrice {
+  margin: auto;
+  border-style: none;
+  width: 100px;
+  height: 23px;
+  border-radius: 50px;
+  padding: 10px;
 }
