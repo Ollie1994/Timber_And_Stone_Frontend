@@ -2,43 +2,207 @@
   display: flex;
   background-color: white;
   border-radius: 50px;
-  width: 600px;
-  height: 60px;
-  padding: 0.8rem;
-  justify-content: center;
+  width: 550px;
+  height: 50px;
+  padding-top: 0.7rem;
   z-index: 7;
-  margin-top: -30px;
+  margin-top: -25px;
+  justify-content: center;
+}
+img:hover {
+  cursor: pointer;
 }
 .iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
 }
 
-.arrowNone {
+.iconFlex {
+  display: flex;
+  justify-content: center;
+}
+.arrowContainerNone {
+  display: none;
+}
+.windowContainerNone {
   display: none;
 }
 .arrow {
+  width: 15px;
+  height: 8px;
+}
+/* -------------------------------------- */
+
+.categoryArrowContainer {
   display: flex;
-  flex-direction: column;
-  background-color: rgb(222, 224, 189);
-  bottom: 50%;
-  left: 15%;
-  border: 7px solid #7e9c67;
-  z-index: 9;
-  height: auto;
-  width: 20rem;
-  border-radius: 50px;
+  justify-content: center;
 }
-.windowNone {
-  display: none;
+.dollarArrowContainer {
+  display: flex;
+  justify-content: center;
 }
+.calendarArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.ratingArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.locationArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.guestsArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.amenitiesArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+/* -------------------------------------- */
+.categoryWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.dollarWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.calendarWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.ratingWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.locationWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.guestsWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.amenitiesWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.searchWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+/* -------------------------------------- */
+
 .categoryWindow {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(222, 224, 189);
-  bottom: 50%;
-  left: 15%;
-  border: 7px solid #7e9c67;
-  z-index: 9;
-  height: auto;
-  width: 20rem;
+  background-color: #7e9c67;
+  z-index: 7;
   border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.dollarWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.calendarWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.ratingWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.locationWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.guestsWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.amenitiesWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.searchWindow {
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
 }
