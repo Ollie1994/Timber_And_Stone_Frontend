@@ -1,0 +1,44 @@
+.iconsContainer {
+  display: flex;
+  background-color: white;
+  border-radius: 50px;
+  width: 600px;
+  height: 60px;
+  padding: 0.8rem;
+  justify-content: center;
+  z-index: 7;
+  margin-top: -30px;
+}
+.iconContainer {
+}
+
+.arrowNone {
+  display: none;
+}
+.arrow {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(222, 224, 189);
+  bottom: 50%;
+  left: 15%;
+  border: 7px solid #7e9c67;
+  z-index: 9;
+  height: auto;
+  width: 20rem;
+  border-radius: 50px;
+}
+.windowNone {
+  display: none;
+}
+.categoryWindow {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(222, 224, 189);
+  bottom: 50%;
+  left: 15%;
+  border: 7px solid #7e9c67;
+  z-index: 9;
+  height: auto;
+  width: 20rem;
+  border-radius: 50px;
+}

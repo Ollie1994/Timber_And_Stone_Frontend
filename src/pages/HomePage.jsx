@@ -2,6 +2,7 @@ import "../styles/home.css";
 import { useEffect, useState } from "react";
 import { getAllRentalPages } from "../api/homeService";
 import { HomeListingCard } from "../components/HomeListing";
+import SearchBar from "../components/SearchBar";
 
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
@@ -27,6 +28,9 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
+        <div className="searchBarContainer">
+        <SearchBar></SearchBar>
+      </div>
       <div>
         <div className="home-text">
           {isLoggedIn ? (
