@@ -1,9 +1,9 @@
 import "../styles/home.css";
 import { useEffect, useState } from "react";
 import { getAllRentalPages } from "../api/homeService";
-import { HomeListingCard } from "../components/HomeListing";
 import SearchBar from "../components/SearchBar";
-
+import HomeListing from "../components/HomeListing";
+import { getAllRentalPagesByPriceRange } from "../api/homeService";
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
 
@@ -12,6 +12,34 @@ const HomePage = () => {
   const { isLoggedIn } = useAuth();
   // const for list of all rentals
   const [rentals, setRentals] = useState([]);
+  const [dataFromChild, setDataFromChild] = useState(0);
+
+  const handleDataFromChild = (data) => {
+    console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice)
+    const minData = data.newMinPrice
+    const maxData = data.newMaxPrice
+    /* const newData = data
+    setDataFromChild(newData); */
+    fetchRentalsByPriceRange(minData, maxData);
+  };
+
+  const fetchRentalsByPriceRange = async (minData, maxData) => {
+   /*  const minData = dataFromChild.newMinPrice;
+    const maxData = dataFromChild.newMaxPrice; */
+    try {
+      const data = await getAllRentalPagesByPriceRange(minData, maxData);
+      console.log(data);
+      setRentals(data);
+    } catch (error) {
+      console.error("Error fetching rentals:", error);
+    }
+  };
+
+
+
+
+
+
 
   useEffect(() => {
     const fetchRentals = async () => {
@@ -22,14 +50,15 @@ const HomePage = () => {
         console.error("Error fetching rentals:", error);
       }
     };
-
     fetchRentals();
   }, []);
 
+  
+
   return (
     <div className="home-container">
-        <div className="searchBarContainer">
-        <SearchBar></SearchBar>
+      <div className="searchBarContainer">
+        <SearchBar sendDataToParent={handleDataFromChild}></SearchBar>
       </div>
       <div>
         <div className="home-text">
@@ -51,11 +80,12 @@ const HomePage = () => {
         </div>
         <div className="flex-grid">
           {rentals.map((rental) => (
-            <HomeListingCard key={rental.id} rental={rental} />
+            <HomeListing key={rental.id} rental={rental} />
           ))}
         </div>
       </div>
     </div>
   );
 };
+
 export default HomePage;

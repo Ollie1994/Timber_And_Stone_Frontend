@@ -1,10 +1,8 @@
 import "../styles/home.css";
-import { getAllRentalPages } from "../api/homeService";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+
 
 // Single HomeListing and what it should contain
-export const HomeListingCard = ({ rental }) => {
+const HomeListing = ({ rental }) => {
   const rentalImage = rental.photos?.[0];
 
   return (
@@ -21,34 +19,34 @@ export const HomeListingCard = ({ rental }) => {
   ); 
 };
 
-const HomeListing = () => {
-  const { id } = useParams();
-  const [rental, setRental] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  // Only the first image in the array of photos will show
-  const rentalImage = rental.photos?.[0];
-
-  useEffect(() => {
-    const fetchRental = async () => {
-      try {
-        const data = await getAllRentalPages();
-        setRental(data);
-      } catch (err) {
-        console.error("Error fetching listing:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchRental();
-  }, []);
-  return (
-    <HomeListingCard></HomeListingCard>
-    
-  );
-};
 
 export default HomeListing;
+
+
+
+
+/* const { id } = useParams();
+const [rental, setRental] = useState(null);
+const [loading, setLoading] = useState(true);
+
+// Only the first image in the array of photos will show
+const rentalImage = rental.photos?.[0];
+
+useEffect(() => {
+  const fetchRental = async () => {
+    try {
+      const data = await getAllRentalPages();
+      setRental(data);
+    } catch (err) {
+      console.error("Error fetching listing:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchRental();
+}, []);
+ */
 
 
 /* 

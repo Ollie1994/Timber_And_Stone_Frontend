@@ -1,3 +1,5 @@
+// https://chatgpt.com/share/6821027e-ff24-800b-aede-ef5d2aaeba7d
+
 import "../styles/searchBar.css";
 import searchIcon from "../assets/search.svg";
 import ratingIcon from "../assets/RATING.svg";
@@ -11,12 +13,38 @@ import dollarIcon from "../assets/dollar-circle24.svg";
 import Button from "../components/Button";
 import { useState, useEffect } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ sendDataToParent }) => {
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
+  /* const [searchState, setSearchState] = useState({}); */
+  const searchStateObject = {
+    state: "price",
+    newMinPrice: minPrice,
+    newMaxPrice: maxPrice,
+  };
 
+  const handleClick = () => {
+/*     setSearchState(searchStateObject);
+ */    sendDataToParent(searchStateObject);
+    console.log("? : " + searchStateObject.newMinPrice + "-" + searchStateObject.newMaxPrice);
+  };
 
+  const minPriceChange = (e) => {
+    const newMinPrice = e.target.value;
+    setMinPrice(newMinPrice);
+  };
 
-    /*Window states*/
+  const maxPriceChange = (e) => {
+    const newMaxPrice = e.target.value;
+    setMaxPrice(newMaxPrice);
+  };
+
+  const searchForRentalsByPricerange = () => {
+    console.log(minPrice + "-" + maxPrice);
+  };
+
+  /*Window states*/
   const [categoryArrowContainer, setCategoryArrowContainer] =
     useState("arrowContainerNone");
   const [categoryWindowContainer, setCategoryWindowContainer] = useState(
@@ -170,17 +198,23 @@ const SearchBar = () => {
               <div className="searchBar-MinPriceContainer">
                 <input
                   className="searchBar-MinPrice"
+                  type="number"
+                  value={minPrice}
+                  onChange={minPriceChange}
                   placeholder="min-price..."
                 />
               </div>
               <div className="searchBar-MaxPriceContainer">
                 <input
                   className="searchBar-MaxPrice"
+                  type="number"
+                  value={maxPrice}
+                  onChange={maxPriceChange}
                   placeholder="max-price..."
                 />
               </div>
               <div className="searchBar-ButtonContainer">
-                <button className="searchBar-Button">
+                <button className="searchBar-Button" onClick={handleClick}>
                   <h4>Search</h4>
                 </button>
               </div>
