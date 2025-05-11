@@ -43,7 +43,16 @@ const HomeListing = () => {
     fetchRental();
   }, []);
   return (
-    <div className="col">
+    <HomeListingCard></HomeListingCard>
+    
+  );
+};
+
+export default HomeListing;
+
+
+/* 
+<div className="col">
       <img className="rentalImage" src={rentalImage} alt="RentalImage" />
       <div style={{ flexGrow: 1 }} />
       <div className="col-text">
@@ -53,8 +62,4 @@ const HomeListing = () => {
         <div className="col-rating">Rating: {rental.rating}</div>
         <div className="col-description">{rental.description}</div>
       </div>
-    </div>
-  );
-};
-
-export default HomeListing;
+    </div> */

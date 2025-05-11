@@ -12,6 +12,11 @@ import Button from "../components/Button";
 import { useState, useEffect } from "react";
 
 const SearchBar = () => {
+
+
+
+
+    /*Window states*/
   const [categoryArrowContainer, setCategoryArrowContainer] =
     useState("arrowContainerNone");
   const [categoryWindowContainer, setCategoryWindowContainer] = useState(
@@ -67,25 +72,18 @@ const SearchBar = () => {
     ) {
       setCategoryArrowContainer("arrowContainerNone");
       setCategoryWindowContainer("windowContainerNone");
-
       setDollarArrowContainer("arrowContainerNone");
       setDollarWindowContainer("windowContainerNone");
-
       setCalendarArrowContainer("arrowContainerNone");
       setCalendarWindowContainer("windowContainerNone");
-
       setRatingArrowContainer("arrowContainerNone");
       setRatingWindowContainer("arrowContainerNone");
-
       setLocationArrowContainer("arrowContainerNone");
       setLocationWindowContainer("arrowContainerNone");
-
       setGuestsArrowContainer("arrowContainerNone");
       setGuestsWindowContainer("arrowContainerNone");
-
       setAmenitiesArrowContainer("arrowContainerNone");
       setAmenitiesWindowContainer("arrowContainerNone");
-
       setSearchArrowContainer("arrowContainerNone");
       setSearchWindowContainer("arrowContainerNone");
     } else {

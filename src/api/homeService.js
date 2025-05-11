@@ -10,3 +10,13 @@ export const getAllRentalPages = async () => {
   }
 };
 
+
+export const getAllRentalPagesByPriceRange = async (minPrice, maxPrice) => {
+  try {
+      const response = await api.get(`/rental/page/pricepernight?minPrice=${minPrice}&maxPrice=${maxPrice}`);
+  return response.data;
+} catch (error) {
+  console.error("Error:", error);
+  throw error;
+}
+};
