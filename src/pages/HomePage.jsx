@@ -12,7 +12,6 @@ const HomePage = () => {
   const { isLoggedIn } = useAuth();
   // const for list of all rentals
   const [rentals, setRentals] = useState([]);
-  const [dataFromChild, setDataFromChild] = useState(0);
 
   const handleDataFromChild = (data) => {
     console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice)
