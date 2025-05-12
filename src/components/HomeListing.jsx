@@ -1,13 +1,23 @@
 import "../styles/home.css";
-
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Single HomeListing and what it should contain
 const HomeListing = ({ rental }) => {
   const rentalImage = rental.photos?.[0];
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const handleNavigate = () => {
+    navigate(`/rentalpage/${rental.id}`)
+  }
+
+
+
 
   return (
     <div className="col">
-      <img className="rentalImage" src={rentalImage} alt={rental.title} />
+      <img className="rentalImage" onClick={handleNavigate} src={rentalImage} alt={rental.title} />
       <div className="col-text">
         <div className="col-location">{rental.city}, {rental.country}</div>
         <div className="col-title">{rental.title}</div>
