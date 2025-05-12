@@ -6,6 +6,7 @@ import Review from "../components/Review";
 import ImageGrid from "../components/ImageGrid";
 import Amenities from "../components/Amenities";
 import BookingWindow from "../components/BookingWindow";
+import Divider from "../components/Divider";
 
 const RentalPage = () => {
   return (
@@ -17,14 +18,7 @@ const RentalPage = () => {
 
         <IconRow></IconRow>
 
-        <svg
-          className="line"
-          viewBox="0 0 1280 4"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
-        </svg>
+        <Divider></Divider>
 
         <div className="flex-container vertical">
           <p className="description">
@@ -63,14 +57,7 @@ const RentalPage = () => {
           </div>
         </div>
 
-        <svg
-          className="line"
-          viewBox="0 0 1280 4"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
-        </svg>
+        <Divider></Divider>
 
         <div className="flex-container">
           <div className="flex-container vertical">
