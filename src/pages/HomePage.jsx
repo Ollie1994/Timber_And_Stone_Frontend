@@ -7,11 +7,17 @@ import { getAllRentalPagesByPriceRange } from "../api/homeService";
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
 
+
+
+
 const HomePage = () => {
   // const for logged in user
   const { isLoggedIn } = useAuth();
   // const for list of all rentals
   const [rentals, setRentals] = useState([]);
+
+  
+
 
   const handleDataFromChild = (data) => {
     console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice)
