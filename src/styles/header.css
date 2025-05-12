@@ -1,23 +1,31 @@
-.header {
+.headerContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   height: 22rem;
   width: 100%;
   /* Added image to .header style as I want it to take up the entire header*/
   background-image: url("../assets/header_image.png");
   background-size: cover;
   background-position: center;
-  padding: 0rem 6rem;
+  padding: 0rem 3rem;
   color: #fff;
+  gap:14.5rem
+}
+
+.headerTopContainer {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .link {
   align-self: flex-start;
 }
 
-Button {
-  margin: 2rem 2rem;
+
+.buttonContainer {
+  padding-top: 2.7rem;
+  
 }
 
 .logo-container {

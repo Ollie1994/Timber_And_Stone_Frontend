@@ -1,0 +1,262 @@
+.searchBar-IconsContainer {
+  display: flex;
+  background-color: white;
+  border-radius: 50px;
+  width: 550px;
+  height: 50px;
+  z-index: 7;
+  margin-top: -25px;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.searchBar-img:hover {
+  cursor: pointer;
+}
+.searchBar-IconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.searchBar-iconFlex {
+  display: flex;
+  justify-content: center;
+}
+.arrowContainerNone {
+  display: none;
+}
+.windowContainerNone {
+  display: none;
+}
+.arrow {
+  width: 15px;
+  height: 8px;
+}
+/* -------------------------------------- */
+
+.categoryArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.dollarArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.calendarArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.ratingArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.locationArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.guestsArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.amenitiesArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchArrowContainer {
+  display: flex;
+  justify-content: center;
+}
+/* -------------------------------------- */
+.categoryWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.dollarWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.calendarWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.ratingWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.locationWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.guestsWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.amenitiesWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+.searchWindowContainer {
+  justify-content: center;
+  z-index: 7;
+  position: relative;
+}
+/* -------------------------------------- */
+
+.categoryWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.dollarWindow {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 40px; /*ÄNDRA DESSA testar nu*/
+  width: 350px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.calendarWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.ratingWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.locationWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.guestsWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.amenitiesWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+.searchWindow {
+  margin-top: 10px;
+  background-color: #7e9c67;
+  z-index: 7;
+  border-radius: 50px;
+  height: 35px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 22px;
+  transform: translate(-50%, -50%);
+}
+/* -------------------------------------- */
+.searchBar-ButtonContainer {
+display: flex;
+flex-direction: column;
+justify-content: center;  
+
+}
+.searchBar-Button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 23px;
+  background-color: rgb(60, 70, 52);
+}
+.searchBar-Button:hover {
+  cursor: pointer;
+  background-color: rgb(60, 70, 52);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.searchBar-MinPriceContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchBar-MinPrice {
+  margin: auto;
+  border-style: none;
+  width: 100px;
+  height: 23px;
+  border-radius: 50px;
+  padding: 10px;
+}
+.searchBar-MaxPriceContainer {
+  display: flex;
+  justify-content: center;
+}
+.searchBar-MaxPrice {
+  margin: auto;
+  border-style: none;
+  width: 100px;
+  height: 23px;
+  border-radius: 50px;
+  padding: 10px;
+}
