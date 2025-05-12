@@ -13,13 +13,9 @@ const RentalPage = () => {
     <div className="full-container">
       <div className="inner-container">
         <RentalTitleSection></RentalTitleSection>
-
         <ImageGrid />
-
         <IconRow></IconRow>
-
         <Divider></Divider>
-
         <div className="flex-container vertical">
           <p className="description">
             A whimsical treehouse nestled in the forests of Bavaria, Germany.
@@ -56,9 +52,7 @@ const RentalPage = () => {
             </Button>
           </div>
         </div>
-
         <Divider></Divider>
-
         <div className="flex-container">
           <div className="flex-container vertical">
             <Amenities></Amenities>
