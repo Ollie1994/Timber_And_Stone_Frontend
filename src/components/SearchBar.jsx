@@ -1,4 +1,5 @@
 // https://chatgpt.com/share/6821027e-ff24-800b-aede-ef5d2aaeba7d
+// https://medium.com/@ozhanli/passing-data-from-child-to-parent-components-in-react-e347ea60b1bb
 
 import "../styles/searchBar.css";
 import searchIcon from "../assets/search.svg";
