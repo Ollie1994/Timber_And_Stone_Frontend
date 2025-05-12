@@ -87,6 +87,8 @@
 .reviews-container {
   width: 40rem;
   display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
 }
 
 .reviews-top {
@@ -100,6 +102,11 @@
   height: fit-content;
   align-items: flex-start;
   gap: 1rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+.review-container.collapsed {
+  max-height: 21rem; /* only shows reviews that fit inside 22rem box */
 }
 
 .review {
@@ -109,6 +116,7 @@
   border-radius: 70px;
   overflow-y: auto; /* scroll should only appear if text goes beyond review "box" */
   padding: 20px 40px;
+  margin-top: 20px;
 }
 
 .amenities-container {
