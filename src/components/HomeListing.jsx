@@ -1,40 +1,32 @@
 import "../styles/home.css";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 // Single HomeListing and what it should contain
 const HomeListing = ({ rental }) => {
   const rentalImage = rental.photos?.[0];
   const navigate = useNavigate();
-  const { id } = useParams();
 
   const handleNavigate = () => {
-    navigate(`/rentalpage/${rental.id}`)
-  }
-
-
-
+    navigate(`/rentalpage/${rental.id}`);
+  };
 
   return (
-    <div className="col">
-      <img className="rentalImage" onClick={handleNavigate} src={rentalImage} alt={rental.title} />
+    <div className="col" onClick={handleNavigate}>
+      <img className="rentalImage" src={rentalImage} alt={rental.title} />
       <div className="col-text">
-        <div className="col-location">{rental.city}, {rental.country}</div>
+        <div className="col-location">
+          {rental.city}, {rental.country}
+        </div>
         <div className="col-title">{rental.title}</div>
         <div className="col-category">{rental.category}</div>
         <div className="col-rating">Rating: {rental.averageRating}</div>
         <div className="col-description">{rental.description}</div>
       </div>
     </div>
-  ); 
+  );
 };
 
-
-
 export default HomeListing;
-
-
-
 
 /* const { id } = useParams();
 const [rental, setRental] = useState(null);
@@ -57,7 +49,6 @@ useEffect(() => {
   fetchRental();
 }, []);
  */
-
 
 /* 
 <div className="col">
