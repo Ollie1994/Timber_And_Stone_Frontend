@@ -2,9 +2,8 @@ import { useState } from "react";
 import "../styles/loginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import Button from "../components/Button";
-import Logo from "../components/Logo"
 import LeftLogin from "../components/LeftLogin";
+import RightLogin from "../components/RightLogin";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -28,7 +27,19 @@ const LoginPage = () => {
   return (
     <div className="gridContainer">
       <LeftLogin/>
-      <div className="deadSpaceContainer">
+      <RightLogin
+      username={username}
+        password={password}
+        setUsername={setUsername}
+        setPassword={setPassword}
+        handleSubmit={handleSubmit}
+      />
+    </div>
+  );
+};
+export default LoginPage;
+
+/* <div className="deadSpaceContainer">
         <div className="deadSpace"></div>
       </div>
       <div className="iconContainer">
@@ -78,8 +89,4 @@ const LoginPage = () => {
           </div>
           <Button type="submit">Login</Button>
         </form>
-      </div>
-    </div>
-  );
-};
-export default LoginPage;
+      </div> */
