@@ -17,49 +17,35 @@
 }
 .pictureContainer {
   grid-area: pic;
-}
-.deadSpaceContainer {
-  grid-area: dS;
-}
-.iconContainer {
-  grid-area: iC;
-}
-.loginRegisterContainer {
-  grid-area: lR;
-}
-.contactUsContainer {
-  grid-area: cU;
-}
-.loginFormContainer {
-  grid-area: lF;
-}
-
-/*Container Styles*/
-.pictureContainer {
   height: 100%;
   width: 36rem;
 }
 .deadSpaceContainer {
+  grid-area: dS;
   height: 100%;
   width: 100%;
 }
 .iconContainer {
+  grid-area: iC;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: end;
 }
 .loginRegisterContainer {
+  grid-area: lR;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .contactUsContainer {
+  grid-area: cU;
   height: 100%;
   width: 100%;
 }
 .loginFormContainer {
+  grid-area: lF;
   height: 100%;
   width: 100%;
   display: flex;
@@ -140,3 +126,36 @@
   transform: scale(1.5);
   transition-duration: 100ms;
 }
+/*Container Styles
+.pictureContainer {
+  height: 100%;
+  width: 36rem;
+  border: 2px solid black;
+}
+.deadSpaceContainer {
+  height: 100%;
+  width: 100%;
+}
+.iconContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.loginRegisterContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contactUsContainer {
+  height: 100%;
+  width: 100%;
+}
+.loginFormContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+} */
