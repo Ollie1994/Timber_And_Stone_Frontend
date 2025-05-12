@@ -1,14 +1,17 @@
 import "../styles/home.css";
-import { getAllRentalPages } from "../api/homeService";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Single HomeListing and what it should contain
-export const HomeListingCard = ({ rental }) => {
+const HomeListing = ({ rental }) => {
   const rentalImage = rental.photos?.[0];
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`/rentalpage/${rental.id}`);
+  };
 
   return (
-    <div className="col">
+    <div className="col" onClick={handleNavigate}>
       <img className="rentalImage" src={rentalImage} alt={rental.title} />
       <div className="col-text">
         <div className="col-location">
@@ -23,29 +26,32 @@ export const HomeListingCard = ({ rental }) => {
   );
 };
 
-const HomeListing = () => {
-  const { id } = useParams();
-  const [rental, setRental] = useState(null);
-  const [loading, setLoading] = useState(true);
+export default HomeListing;
 
-  // Only the first image in the array of photos will show
-  const rentalImage = rental.photos?.[0];
+/* const { id } = useParams();
+const [rental, setRental] = useState(null);
+const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchRental = async () => {
-      try {
-        const data = await getAllRentalPages();
-        setRental(data);
-      } catch (err) {
-        console.error("Error fetching listing:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchRental();
-  }, []);
-  return (
-    <div className="col">
+// Only the first image in the array of photos will show
+const rentalImage = rental.photos?.[0];
+
+useEffect(() => {
+  const fetchRental = async () => {
+    try {
+      const data = await getAllRentalPages();
+      setRental(data);
+    } catch (err) {
+      console.error("Error fetching listing:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchRental();
+}, []);
+ */
+
+/* 
+<div className="col">
       <img className="rentalImage" src={rentalImage} alt="RentalImage" />
       <div style={{ flexGrow: 1 }} />
       <div className="col-text">
@@ -57,8 +63,4 @@ const HomeListing = () => {
         <div className="col-rating">Rating: {rental.rating}</div>
         <div className="col-description">{rental.description}</div>
       </div>
-    </div>
-  );
-};
-
-export default HomeListing;
+    </div> */

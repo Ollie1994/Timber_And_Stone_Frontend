@@ -1,0 +1,355 @@
+// https://chatgpt.com/share/6821027e-ff24-800b-aede-ef5d2aaeba7d
+// https://medium.com/@ozhanli/passing-data-from-child-to-parent-components-in-react-e347ea60b1bb
+
+import "../styles/searchBar.css";
+import searchIcon from "../assets/search.svg";
+import ratingIcon from "../assets/RATING.svg";
+import guestIcon from "../assets/CAPACITY24.svg";
+import arrowIcon from "../assets/ArrowSmaller.svg";
+import locationIcon from "../assets/CITY24.svg";
+import amenityIcon from "../assets/AMENITIES24.svg";
+import calendarIcon from "../assets/AVAILABILTY24.svg";
+import categoryIcon from "../assets/CATEGORIES.svg";
+import dollarIcon from "../assets/dollar-circle24.svg";
+import Button from "../components/Button";
+import { useState, useEffect } from "react";
+
+const SearchBar = ({ sendDataToParent }) => {
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+
+  /* const [searchState, setSearchState] = useState({}); */
+  const searchStateObject = {
+    state: "price",
+    newMinPrice: minPrice,
+    newMaxPrice: maxPrice,
+  };
+
+  const handleClick = () => {
+/*     setSearchState(searchStateObject);
+ */    sendDataToParent(searchStateObject);
+    console.log("? : " + searchStateObject.newMinPrice + "-" + searchStateObject.newMaxPrice);
+  };
+
+  const minPriceChange = (e) => {
+    const newMinPrice = e.target.value;
+    setMinPrice(newMinPrice);
+  };
+
+  const maxPriceChange = (e) => {
+    const newMaxPrice = e.target.value;
+    setMaxPrice(newMaxPrice);
+  };
+
+  const searchForRentalsByPricerange = () => {
+    console.log(minPrice + "-" + maxPrice);
+  };
+
+  /*Window states*/
+  const [categoryArrowContainer, setCategoryArrowContainer] =
+    useState("arrowContainerNone");
+  const [categoryWindowContainer, setCategoryWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [dollarArrowContainer, setDollarArrowContainer] =
+    useState("arrowContainerNone");
+  const [dollarWindowContainer, setDollarWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [calendarArrowContainer, setCalendarArrowContainer] =
+    useState("arrowContainerNone");
+  const [calendarWindowContainer, setCalendarWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [ratingArrowContainer, setRatingArrowContainer] =
+    useState("arrowContainerNone");
+  const [ratingWindowContainer, setRatingWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [locationArrowContainer, setLocationArrowContainer] =
+    useState("arrowContainerNone");
+  const [locationWindowContainer, setLocationWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [guestsArrowContainer, setGuestsArrowContainer] =
+    useState("arrowContainerNone");
+  const [guestsWindowContainer, setGuestsWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [amenitiesArrowContainer, setAmenitiesArrowContainer] =
+    useState("arrowContainerNone");
+  const [amenitiesWindowContainer, setAmenitiesWindowContainer] = useState(
+    "windowContainerNone"
+  );
+  const [searchArrowContainer, setSearchArrowContainer] =
+    useState("arrowContainerNone");
+  const [searchWindowContainer, setSearchWindowContainer] = useState(
+    "windowContainerNone"
+  );
+
+  // handles the states of the searchAndFilter popups
+  function handleButtonClick(arrow, window, state) {
+    if (
+      categoryArrowContainer === "categoryArrowContainer" ||
+      dollarArrowContainer === "dollarArrowContainer" ||
+      calendarArrowContainer === "calendarArrowContainer" ||
+      ratingArrowContainer === "ratingArrowContainer" ||
+      locationArrowContainer === "locationArrowContainer" ||
+      guestsArrowContainer === "guestsArrowContainer" ||
+      amenitiesArrowContainer === "amenitiesArrowContainer" ||
+      searchArrowContainer === "searchArrowContainer"
+    ) {
+      setCategoryArrowContainer("arrowContainerNone");
+      setCategoryWindowContainer("windowContainerNone");
+      setDollarArrowContainer("arrowContainerNone");
+      setDollarWindowContainer("windowContainerNone");
+      setCalendarArrowContainer("arrowContainerNone");
+      setCalendarWindowContainer("windowContainerNone");
+      setRatingArrowContainer("arrowContainerNone");
+      setRatingWindowContainer("arrowContainerNone");
+      setLocationArrowContainer("arrowContainerNone");
+      setLocationWindowContainer("arrowContainerNone");
+      setGuestsArrowContainer("arrowContainerNone");
+      setGuestsWindowContainer("arrowContainerNone");
+      setAmenitiesArrowContainer("arrowContainerNone");
+      setAmenitiesWindowContainer("arrowContainerNone");
+      setSearchArrowContainer("arrowContainerNone");
+      setSearchWindowContainer("arrowContainerNone");
+    } else {
+      switch (state) {
+        case "category":
+          setCategoryArrowContainer(arrow);
+          setCategoryWindowContainer(window);
+          break;
+        case "dollar":
+          setDollarArrowContainer(arrow);
+          setDollarWindowContainer(window);
+          break;
+        case "calendar":
+          setCalendarArrowContainer(arrow);
+          setCalendarWindowContainer(window);
+          break;
+        case "rating":
+          setRatingArrowContainer(arrow);
+          setRatingWindowContainer(window);
+          break;
+        case "location":
+          setLocationArrowContainer(arrow);
+          setLocationWindowContainer(window);
+          break;
+        case "guests":
+          setGuestsArrowContainer(arrow);
+          setGuestsWindowContainer(window);
+          break;
+        case "amenities":
+          setAmenitiesArrowContainer(arrow);
+          setAmenitiesWindowContainer(window);
+          break;
+        case "search":
+          setSearchArrowContainer(arrow);
+          setSearchWindowContainer(window);
+          break;
+      }
+    }
+  }
+
+  return (
+    <div>
+      <div className="searchBar-IconsContainer">
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "categoryArrowContainer",
+                "categoryWindowContainer",
+                "category"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={categoryIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={categoryArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={categoryWindowContainer}>
+            <div className="categoryWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "dollarArrowContainer",
+                "dollarWindowContainer",
+                "dollar"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={dollarIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={dollarArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={dollarWindowContainer}>
+            <div className="dollarWindow">
+              <div className="searchBar-MinPriceContainer">
+                <input
+                  className="searchBar-MinPrice"
+                  type="number"
+                  value={minPrice}
+                  onChange={minPriceChange}
+                  placeholder="min-price..."
+                />
+              </div>
+              <div className="searchBar-MaxPriceContainer">
+                <input
+                  className="searchBar-MaxPrice"
+                  type="number"
+                  value={maxPrice}
+                  onChange={maxPriceChange}
+                  placeholder="max-price..."
+                />
+              </div>
+              <div className="searchBar-ButtonContainer">
+                <button className="searchBar-Button" onClick={handleClick}>
+                  <h4>Search</h4>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "calendarArrowContainer",
+                "calendarWindowContainer",
+                "calendar"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={calendarIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={calendarArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={calendarWindowContainer}>
+            <div className="calendarWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "ratingArrowContainer",
+                "ratingWindowContainer",
+                "rating"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={ratingIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={ratingArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={ratingWindowContainer}>
+            <div className="ratingWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "locationArrowContainer",
+                "locationWindowContainer",
+                "location"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={locationIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={locationArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={locationWindowContainer}>
+            <div className="locationWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "guestsArrowContainer",
+                "guestsWindowContainer",
+                "guests"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={guestIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={guestsArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={guestsWindowContainer}>
+            <div className="guestsWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "amenitiesArrowContainer",
+                "amenitiesWindowContainer",
+                "amenities"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={amenityIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={amenitiesArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={amenitiesWindowContainer}>
+            <div className="amenitiesWindow"></div>
+          </div>
+        </div>
+        <div className="searchBar-IconContainer">
+          <div
+            onClick={() =>
+              handleButtonClick(
+                "searchArrowContainer",
+                "searchWindowContainer",
+                "search"
+              )
+            }
+          >
+            <div className="searchBar-iconFlex">
+              <img className="searchBar-img" src={searchIcon} alt=""></img>
+            </div>
+          </div>
+          <div className={searchArrowContainer}>
+            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+          </div>
+          <div className={searchWindowContainer}>
+            <div className="searchWindow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default SearchBar;

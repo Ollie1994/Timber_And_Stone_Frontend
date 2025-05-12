@@ -91,7 +91,7 @@
   white-space: wrap;
   text-overflow: ellipsis;
   display: -webkit-box;
- -webkit-line-clamp: 2;             /* Show only 2 lines */
+  -webkit-line-clamp: 2; /* Show only 2 lines */
   -webkit-box-orient: vertical;
   text-align: left;
   color: rgb(32, 43, 32);
@@ -110,4 +110,7 @@
 }
 .col:hover::before {
   opacity: 1;
+}
+.col:hover {
+  cursor: pointer;
 }
