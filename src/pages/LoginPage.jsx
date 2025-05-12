@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import Button from "../components/Button";
 import Logo from "../components/Logo"
+import LeftLogin from "../components/LeftLogin";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -26,9 +27,7 @@ const LoginPage = () => {
 
   return (
     <div className="gridContainer">
-      <div className="pictureContainer">
-        <div className="picture"></div>
-      </div>
+      <LeftLogin/>
       <div className="deadSpaceContainer">
         <div className="deadSpace"></div>
       </div>
