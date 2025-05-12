@@ -28,6 +28,7 @@ const LoginPage = () => {
     <div className="gridContainer">
       <LeftLogin/>
       <RightLogin
+      /* props for username, password, setUsername, setPassword, handleSubmit to RightLogin */
       username={username}
         password={password}
         setUsername={setUsername}
