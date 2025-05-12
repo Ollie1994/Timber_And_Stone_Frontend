@@ -78,12 +78,12 @@ const RentalPage = () => {
             <Amenities></Amenities>
             <ReviewBox>
           <Review></Review>
+          </ReviewBox>
           </div>
           <div className="booking-container flex-container">
             <BookingWindow></BookingWindow>
           </div>
         </div>
-        </ReviewBox>
       </div>
     </div>
   );
