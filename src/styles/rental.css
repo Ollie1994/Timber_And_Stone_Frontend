@@ -153,16 +153,6 @@
   gap: 1rem;
 }
 
-.booking-form {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 30rem;
-}
-
 .input-container {
   background-color: #7e9c67;
   display: flex;
@@ -170,7 +160,7 @@
   width: 100%;
   border: #7e9c67;
   border-style: solid;
-  border-radius: 50px;
+  border-radius: 30px;
   border-width: 2px;
   padding: 1rem;
   gap: 1rem;
@@ -203,23 +193,12 @@
   padding: 1rem;
 }
 
-.reservation-button {
-  padding: 0.6rem 1rem;
-  background-color: #7e9c67;
-  border-radius: 50px;
-  font-size: medium;
-}
-
 .booking-summary {
   display: flex;
   width: 100%;
 }
 
-.fee {
-  display: flex;
-  gap: 0.3rem;
-}
-
+.fee,
 .sum {
   display: flex;
   gap: 0.3rem;
@@ -330,4 +309,56 @@
   flex: 1;
   object-fit: cover;
   border-radius: 50px;
+}
+
+/* Booking Window */
+.booking-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 4rem 0rem 4rem;
+}
+
+.booking-window {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 50px;
+  gap: 1rem;
+}
+
+Button {
+  margin: 0px;
+  width: fit-content;
+}
+
+.validation-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.policy-container {
+  align-self: center;
+}
+
+.reserve-button{
+  justify-self: center;
+  align-self: center;
 }

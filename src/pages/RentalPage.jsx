@@ -6,6 +6,7 @@ import ImageGrid from "../components/ImageGrid";
 import Review from "../components/Review";
 import Amenities from "../components/Amenities";
 import ReviewBox from "../components/ReviewBox";
+import BookingWindow from "../components/BookingWindow";
 
 const RentalPage = () => {
   return (
@@ -71,9 +72,17 @@ const RentalPage = () => {
         >
           <path d="M0 2H1280" stroke="#3C4634" strokeWidth="3" />
         </svg>
-        <Amenities></Amenities>
-        <ReviewBox>
+
+        <div className="flex-container">
+          <div className="flex-container vertical">
+            <Amenities></Amenities>
+            <ReviewBox>
           <Review></Review>
+          </div>
+          <div className="booking-container flex-container">
+            <BookingWindow></BookingWindow>
+          </div>
+        </div>
         </ReviewBox>
       </div>
     </div>
