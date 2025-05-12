@@ -104,6 +104,8 @@
   width: 15rem;
   height: 1.5rem;
 }
+
+/*
 .loginButton {
   width: 6rem;
   background-color: rgba(24, 198, 24, 0.555);
@@ -125,7 +127,7 @@
 .registerButton:hover {
   transform: scale(1.5);
   transition-duration: 100ms;
-}
+} */
 /*Container Styles
 .pictureContainer {
   height: 100%;
