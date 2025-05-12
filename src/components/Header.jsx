@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Logo from "./Logo";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const { isLoggedIn } = useAuth();
@@ -18,27 +19,31 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div className="header">
-
+    <div className="headerContainer">
+      <div className="headerTopContainer">
         <div className="logo-container">
           <Logo color="white" />
           <h1>TIMBER + STONE</h1>
         </div>
 
         {isLoggedIn ? (
-          <Button onClick={handleLogout}>
-            <h3>Log Out</h3>
-          </Button>
-        ) : (
-          <Link className="link" to="/loginpage">
-            <Button>
-              <h3>Log In</h3>
+          <div className="buttonContainer">
+            <Button onClick={handleLogout}>
+              <h3>Log Out</h3>
             </Button>
+          </div>
+        ) : (
+          <Link to="/loginpage">
+            <div className="buttonContainer">
+              <Button>
+                <h3>Log In</h3>
+              </Button>
+            </div>
           </Link>
         )}
       </div>
-    </header>
+    
+    </div>
   );
 };
 export default Header;
