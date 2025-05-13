@@ -7,6 +7,7 @@ import "../styles/iconRow.css";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { mapPeriodDates } from "../helpers/HelpFunctions";
 
 const IconRow = () => {
   const [rental, setRental] = useState({});
