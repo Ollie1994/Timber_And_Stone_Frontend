@@ -18,10 +18,13 @@ const IconRow = () => {
   const { id } = useParams();
 
   const profilePhoto = host.profilePhoto;
+ 
+  // calling mapPeriodDates function in HelpFunctions.js
+  const { startUseDates, endUseDates } = mapPeriodDates(availablePeriods);
 
-  // maps the avaibleperiods to start and end dates i nseprate lists
+  /* maps the avaibleperiods to start and end dates i nseprate lists
   const endDates = availablePeriods.map((period) => period.endDate);
-  const startDates = availablePeriods.map((period) => period.startDate);
+  const startDates = availablePeriods.map((period) => period.startDate);*/
 
   useEffect(() => {
     const fetchRental = async () => {
@@ -55,13 +58,13 @@ const IconRow = () => {
         }
       }
       counter++;
-    }
+    } 
     console.log(dates);
 
     return dates;
   }
 
-  //swap function
+   swap function
   function helper(i, j, dates) {
     return ([dates[i], dates[j]] = [dates[j], dates[i]]);
   }
