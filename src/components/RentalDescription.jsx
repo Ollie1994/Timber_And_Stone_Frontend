@@ -5,7 +5,7 @@ import { getRentalPageById } from "../api/rentalService";
 
 const Description = () => {
   const textRef = useRef(null);
-  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const maxLines = 6;
 
