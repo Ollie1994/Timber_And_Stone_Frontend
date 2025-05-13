@@ -49,7 +49,7 @@ const RentalPage = () => {
           </p>
           <div className="flex-container right">
             <Button>
-              <h4>Show more...</h4>
+              <h6>Show more...</h6>
             </Button>
           </div>
         </div>

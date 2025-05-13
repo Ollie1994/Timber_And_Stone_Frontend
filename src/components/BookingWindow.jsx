@@ -158,7 +158,7 @@ const BookingWindow = () => {
 
   return (
     <div className="booking-window">
-      <h1>${rental?.pricePerNight}/night</h1>
+      <h2>${rental?.pricePerNight}/night</h2>
 
       {showInputForm && (
         <div className="top-container">

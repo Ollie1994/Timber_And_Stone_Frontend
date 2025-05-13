@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 // Single HomeListing and what it should contain
 const HomeListing = ({ rental }) => {
@@ -12,15 +13,17 @@ const HomeListing = ({ rental }) => {
 
   return (
     <div className="col" onClick={handleNavigate}>
+      <Button className="category-btn">
+        <h6>{rental.category}</h6>
+      </Button>
       <img className="rentalImage" src={rentalImage} alt={rental.title} />
       <div className="col-text">
-        <div className="col-location">
+        <h5 className="col-location">
           {rental.city}, {rental.country}
-        </div>
-        <div className="col-title">{rental.title}</div>
-        <div className="col-category">{rental.category}</div>
-        <div className="col-rating">Rating: {rental.averageRating}</div>
-        <div className="col-description">{rental.description}</div>
+        </h5>
+        <h4 className="col-title">{rental.title}</h4>
+        <h5 className="col-rating">Rating: {rental.averageRating}</h5>
+        <p className="col-description">{rental.description}</p>
       </div>
     </div>
   );

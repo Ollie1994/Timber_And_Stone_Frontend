@@ -29,12 +29,12 @@ const RentalTitleSection = () => {
   return (
     <div>
       <div className="flex-container vertical">
-        <h2>
+        <h1>
           {
             //Check that the title exists, if not check loading, else untitled.
             rental?.title || (loading ? "Loading..." : "Untitled")
           }
-        </h2>
+        </h1>
         <div className="flex-container h-left h-center">
           <img src={locationIcon} alt="Location Icon" />
           <h4>

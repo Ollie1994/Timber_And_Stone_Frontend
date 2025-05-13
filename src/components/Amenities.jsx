@@ -31,7 +31,7 @@ const Amenities = () => {
   return (
     <div className="Container">
       <button className="openButton" onClick={() => setPopup("popupBlock")}>
-        Amenities
+        <h6>Amenities</h6>
       </button>
 
       <div className={popup}>
