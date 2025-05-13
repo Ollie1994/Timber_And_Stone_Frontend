@@ -39,7 +39,7 @@ const IconRow = () => {
     fetchRental();
   }, []);
 
-  // sorts dates into earliest to latest
+  /* sorts dates into earliest to latest
   function bubbleSort(dates) {
     let sorted = false;
 
@@ -66,7 +66,7 @@ const IconRow = () => {
   }
   // sends in start and end dates to be sorted into earlies to latest
   const startUseDates = bubbleSort(startDates);
-  const endUseDates = bubbleSort(endDates);
+  const endUseDates = bubbleSort(endDates); */
 
   console.log("startDates: " + startUseDates);
   console.log("endDates: " + endUseDates);
