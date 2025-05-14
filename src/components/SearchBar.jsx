@@ -47,74 +47,74 @@ const SearchBar = ({ sendDataToParent }) => {
 
   /*Window states*/
   const [categoryArrowContainer, setCategoryArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [categoryWindowContainer, setCategoryWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [dollarArrowContainer, setDollarArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [dollarWindowContainer, setDollarWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [calendarArrowContainer, setCalendarArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [calendarWindowContainer, setCalendarWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [ratingArrowContainer, setRatingArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [ratingWindowContainer, setRatingWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [locationArrowContainer, setLocationArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [locationWindowContainer, setLocationWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [guestsArrowContainer, setGuestsArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [guestsWindowContainer, setGuestsWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [amenitiesArrowContainer, setAmenitiesArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [amenitiesWindowContainer, setAmenitiesWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
   const [searchArrowContainer, setSearchArrowContainer] =
-    useState("arrowContainerNone");
+    useState("searchBar-arrowContainerNone");
   const [searchWindowContainer, setSearchWindowContainer] = useState(
-    "windowContainerNone"
+    "searchBar-windowContainerNone"
   );
 
   // handles the states of the searchAndFilter popups
   function handleButtonClick(arrow, window, state) {
     if (
-      categoryArrowContainer === "categoryArrowContainer" ||
-      dollarArrowContainer === "dollarArrowContainer" ||
-      calendarArrowContainer === "calendarArrowContainer" ||
-      ratingArrowContainer === "ratingArrowContainer" ||
-      locationArrowContainer === "locationArrowContainer" ||
-      guestsArrowContainer === "guestsArrowContainer" ||
-      amenitiesArrowContainer === "amenitiesArrowContainer" ||
-      searchArrowContainer === "searchArrowContainer"
+      categoryArrowContainer === "searchBar-categoryArrowContainer" ||
+      dollarArrowContainer === "searchBar-dollarArrowContainer" ||
+      calendarArrowContainer === "searchBar-calendarArrowContainer" ||
+      ratingArrowContainer === "searchBar-ratingArrowContainer" ||
+      locationArrowContainer === "searchBar-locationArrowContainer" ||
+      guestsArrowContainer === "searchBar-guestsArrowContainer" ||
+      amenitiesArrowContainer === "searchBar-amenitiesArrowContainer" ||
+      searchArrowContainer === "searchBar-searchArrowContainer"
     ) {
-      setCategoryArrowContainer("arrowContainerNone");
-      setCategoryWindowContainer("windowContainerNone");
-      setDollarArrowContainer("arrowContainerNone");
-      setDollarWindowContainer("windowContainerNone");
-      setCalendarArrowContainer("arrowContainerNone");
-      setCalendarWindowContainer("windowContainerNone");
-      setRatingArrowContainer("arrowContainerNone");
-      setRatingWindowContainer("arrowContainerNone");
-      setLocationArrowContainer("arrowContainerNone");
-      setLocationWindowContainer("arrowContainerNone");
-      setGuestsArrowContainer("arrowContainerNone");
-      setGuestsWindowContainer("arrowContainerNone");
-      setAmenitiesArrowContainer("arrowContainerNone");
-      setAmenitiesWindowContainer("arrowContainerNone");
-      setSearchArrowContainer("arrowContainerNone");
-      setSearchWindowContainer("arrowContainerNone");
+      setCategoryArrowContainer("searchBar-arrowContainerNone");
+      setCategoryWindowContainer("searchBar-windowContainerNone");
+      setDollarArrowContainer("searchBar-arrowContainerNone");
+      setDollarWindowContainer("searchBar-windowContainerNone");
+      setCalendarArrowContainer("searchBar-arrowContainerNone");
+      setCalendarWindowContainer("searchBar-windowContainerNone");
+      setRatingArrowContainer("searchBar-arrowContainerNone");
+      setRatingWindowContainer("searchBar-arrowContainerNone");
+      setLocationArrowContainer("searchBar-arrowContainerNone");
+      setLocationWindowContainer("searchBar-arrowContainerNone");
+      setGuestsArrowContainer("searchBar-arrowContainerNone");
+      setGuestsWindowContainer("searchBar-arrowContainerNone");
+      setAmenitiesArrowContainer("searchBar-arrowContainerNone");
+      setAmenitiesWindowContainer("searchBar-arrowContainerNone");
+      setSearchArrowContainer("searchBar-arrowContainerNone");
+      setSearchWindowContainer("searchBar-arrowContainerNone");
     } else {
       switch (state) {
         case "category":
@@ -155,13 +155,13 @@ const SearchBar = ({ sendDataToParent }) => {
 
   return (
     <div>
-      <div className="searchBar-IconsContainer">
-        <div className="searchBar-IconContainer">
+      <div className="searchBar-iconsContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "categoryArrowContainer",
-                "categoryWindowContainer",
+                "searchBar-categoryArrowContainer",
+                "searchBar-categoryWindowContainer",
                 "category"
               )
             }
@@ -171,18 +171,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={categoryArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={categoryWindowContainer}>
-            <div className="categoryWindow"></div>
+            <div className="searchBar-categoryWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "dollarArrowContainer",
-                "dollarWindowContainer",
+                "searchBar-dollarArrowContainer",
+                "searchBar-dollarWindowContainer",
                 "dollar"
               )
             }
@@ -192,42 +192,42 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={dollarArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={dollarWindowContainer}>
-            <div className="dollarWindow">
-              <div className="searchBar-MinPriceContainer">
+            <div className="searchBar-dollarWindow">
+              <div className="searchBar-minPriceContainer">
                 <input
-                  className="searchBar-MinPrice"
+                  className="searchBar-minPrice"
                   type="number"
                   value={minPrice}
                   onChange={minPriceChange}
                   placeholder="min-price..."
                 />
               </div>
-              <div className="searchBar-MaxPriceContainer">
+              <div className="searchBar-maxPriceContainer">
                 <input
-                  className="searchBar-MaxPrice"
+                  className="searchBar-maxPrice"
                   type="number"
                   value={maxPrice}
                   onChange={maxPriceChange}
                   placeholder="max-price..."
                 />
               </div>
-              <div className="searchBar-ButtonContainer">
-                <button className="searchBar-Button" onClick={handleClick}>
+              <div className="searchBar-buttonContainer">
+                <button className="searchBar-button" onClick={handleClick}>
                   <h4>Search</h4>
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "calendarArrowContainer",
-                "calendarWindowContainer",
+                "searchBar-calendarArrowContainer",
+                "searchBar-calendarWindowContainer",
                 "calendar"
               )
             }
@@ -237,18 +237,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={calendarArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={calendarWindowContainer}>
-            <div className="calendarWindow"></div>
+            <div className="searchBar-calendarWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "ratingArrowContainer",
-                "ratingWindowContainer",
+                "searchBar-ratingArrowContainer",
+                "searchBar-ratingWindowContainer",
                 "rating"
               )
             }
@@ -258,18 +258,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={ratingArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={ratingWindowContainer}>
-            <div className="ratingWindow"></div>
+            <div className="searchBar-ratingWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "locationArrowContainer",
-                "locationWindowContainer",
+                "searchBar-locationArrowContainer",
+                "searchBar-locationWindowContainer",
                 "location"
               )
             }
@@ -279,18 +279,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={locationArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={locationWindowContainer}>
-            <div className="locationWindow"></div>
+            <div className="searchBar-locationWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "guestsArrowContainer",
-                "guestsWindowContainer",
+                "searchBar-guestsArrowContainer",
+                "searchBar-guestsWindowContainer",
                 "guests"
               )
             }
@@ -300,18 +300,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={guestsArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={guestsWindowContainer}>
-            <div className="guestsWindow"></div>
+            <div className="searchBar-guestsWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "amenitiesArrowContainer",
-                "amenitiesWindowContainer",
+                "searchBar-amenitiesArrowContainer",
+                "searchBar-amenitiesWindowContainer",
                 "amenities"
               )
             }
@@ -321,18 +321,18 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={amenitiesArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={amenitiesWindowContainer}>
-            <div className="amenitiesWindow"></div>
+            <div className="searchBar-amenitiesWindow"></div>
           </div>
         </div>
-        <div className="searchBar-IconContainer">
+        <div className="searchBar-iconContainer">
           <div
             onClick={() =>
               handleButtonClick(
-                "searchArrowContainer",
-                "searchWindowContainer",
+                "searchBar-searchArrowContainer",
+                "searchBar-searchWindowContainer",
                 "search"
               )
             }
@@ -342,10 +342,10 @@ const SearchBar = ({ sendDataToParent }) => {
             </div>
           </div>
           <div className={searchArrowContainer}>
-            <img className="arrow" src={arrowIcon} alt="arrow Icon"></img>
+            <img className="searchBar-arrow" src={arrowIcon} alt="arrow Icon"></img>
           </div>
           <div className={searchWindowContainer}>
-            <div className="searchWindow"></div>
+            <div className="searchBar-searchWindow"></div>
           </div>
         </div>
       </div>

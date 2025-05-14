@@ -72,48 +72,48 @@ const IconRow = () => {
   console.log("endDates: " + endUseDates);
 
   return (
-    <div className="iconRowContainer">
-      <div className="cont1">
-        <div className="hostedByContainer">
-          <div className="hostedBy">
-            <h3 className="hostedBytext">Hosted By: {host.username}</h3>
+    <div className="iconRow-iconRowContainer">
+      <div className="iconRow-cont1">
+        <div className="iconRow-hostedByContainer">
+          <div className="iconRow-hostedBy">
+            <h3 className="iconRow-hostedBytext">Hosted By: {host.username}</h3>
           </div>
         </div>
         <div className="iconRow-iconsContainer">
           <div className="iconRow-iconContainer">
             <img src={house} alt="House icon"></img>
-            <p className="text">{rental.category} </p>
+            <p className="iconRow-text">{rental.category} </p>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={dollarSign} alt="DollarSign icon"></img>
-            <p className="text">${rental.pricePerNight}/night</p>
+            <p className="iconRow-text">${rental.pricePerNight}/night</p>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={people} alt="People icon"></img>
-            <p className="text">
+            <p className="iconRow-text">
               {rental.capacity} {rental.capacity > 1 ? "guests" : "guest"}
             </p>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
-            <div className="text">
-              <div className="periodContainer">
+            <div className="iconRow-text">
+              <div className="iconRow-periodContainer">
                 <p>available next: </p>
-                <p className="startDate">{startUseDates[0]}</p>
+                <p className="iconRow-startDate">{startUseDates[0]}</p>
                 <p> - </p>
-                <p className="endDate">{endUseDates[0]}</p>
+                <p className="iconRow-endDate">{endUseDates[0]}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="cont2">
-        <div className="profilePicContainer">
+      <div className="iconRow-cont2">
+        <div className="iconRow-profilePicContainer">
           <img
-            className="profilePhoto"
+            className="iconRow-profilePhoto"
             src={profilePhoto}
             alt="profile pic"
           ></img>

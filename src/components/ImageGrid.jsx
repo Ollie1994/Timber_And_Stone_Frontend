@@ -17,14 +17,14 @@ const ImageGrid = () => {
   //Set css-class depeding on amount of photos.
   const grid =
     images.length === 1
-      ? `single-grid`
+      ? `imageGrid-singleGrid`
       : images.length === 2
-      ? "double-grid"
+      ? "imageGrid-doubleGrid"
       : images.length === 3
-      ? "triple-grid"
+      ? "imageGrid-tripleGrid"
       : images.length === 4
-      ? "quad-grid"
-      : "quint-grid";
+      ? "imageGrid-quadGrid"
+      : "imageGrid-quintGrid";
 
   useEffect(() => {
     const fetchRental = async () => {
@@ -41,33 +41,33 @@ const ImageGrid = () => {
   }, []);
 
   return (
-    <div className="image-container">
+    <div className="imageGrid-imageContainer">
       {loading ? (
         <h3>Loading...</h3>
       ) : images.length === 0 ? (
         <h3>No images</h3>
-      ) : grid === "single-grid" ? ( //One image
+      ) : grid === "imageGrid-singleGrid" ? ( //One image
         <div className={grid}>
           <img src={images[0]} alt="" />
         </div>
-      ) : grid === "double-grid" ? ( //Two images
+      ) : grid === "imageGrid-doubleGrid" ? ( //Two images
         <div className={grid}>
           <img src={images[0]} alt="" />
           <img src={images[1]} alt="" />
         </div>
-      ) : grid === "triple-grid" ? ( //Three images
+      ) : grid === "imageGrid-tripleGrid" ? ( //Three images
         <div className={grid}>
           <img src={images[0]} alt="" />
           <img src={images[1]} alt="" />
           <img src={images[2]} alt="" />
         </div>
-      ) : grid === "quad-grid" ? ( //Four images
+      ) : grid === "imageGrid-quadGrid" ? ( //Four images
         <div className={grid}>
-          <div className="half-quad">
+          <div className="imageGrid-halfQuad">
             <img src={images[0]} alt="" />
             <img src={images[1]} alt="" />
           </div>
-          <div className="half-quad">
+          <div className="imageGrid-halfQuad">
             <img src={images[2]} alt="" />
             <img src={images[3]} alt="" />
           </div>
@@ -76,12 +76,12 @@ const ImageGrid = () => {
         // 5 or more (will only show first 5.)
         <div className={grid}>
           <img src={images[0]} alt="" />
-          <div className="right-quint">
-            <div className="half-right-quint">
+          <div className="imageGrid-rightQuint">
+            <div className="imageGrid-halfRightQuint">
               <img src={images[1]} alt="" />
               <img src={images[2]} alt="" />
             </div>
-            <div className="half-right-quint">
+            <div className="imageGrid-halfRightQuint">
               <img src={images[3]} alt="" />
               <img src={images[4]} alt="" />
             </div>

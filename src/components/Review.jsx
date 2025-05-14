@@ -6,8 +6,8 @@ import "../styles/review.css"
 // One review and what is included in it
 const ReviewCard = ({ username, rating, date, text }) => {
     return (
-      <div className="review">
-        <div className="half-container">
+      <div className="reviewCard-reviewCardContainer">
+        <div className="reviewCard-halfContainer">
           <h3>{username}</h3>
           <h3>-</h3>
           <h3>{rating}/5</h3>
@@ -15,7 +15,7 @@ const ReviewCard = ({ username, rating, date, text }) => {
           <h3>{date}</h3>
         </div>
         <br/>
-        <div className="half-container">
+        <div className="reviewCard-halfContainer">
           <p>{text}</p>
         </div>
       </div>

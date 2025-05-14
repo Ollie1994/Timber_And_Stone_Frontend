@@ -29,14 +29,14 @@ const TitleSection = () => {
 
   return (
     <div>
-      <div className="flex-container vertical">
+      <div className="titleSection-flexContainer titleSection-vertical">
         <h2>
           {
             //Check that the title exists, if not check loading, else untitled.
             rental?.title || (loading ? "Loading..." : "Untitled")
           }
         </h2>
-        <div className="flex-container h-left h-center">
+        <div className="titleSection-flexContainer titleSection-hLeft titleSection-hCenter">
           <img src={locationIcon} alt="Location Icon" />
           <h4>
             {
@@ -51,8 +51,8 @@ const TitleSection = () => {
         </div>
       </div>
       <Divider />
-      <div className="flex-container h-space-between">
-        <div className="half-container">
+      <div className="titleSection-flexContainer titleSection-hSpaceBetween">
+        <div className="titleSection-halfContainer">
           <img src={ratingStar} alt="Star Icon" />
           <h4>
             {
@@ -72,7 +72,7 @@ const TitleSection = () => {
             }
           </h4>
         </div>
-        <div className="half-container">
+        <div className="titleSection-halfContainer">
           <img src={shareIcon} alt="Share Icon" />
           <h4>SHARE</h4>
           <img src={favoriteIcon} alt="Favorite Icon" />
