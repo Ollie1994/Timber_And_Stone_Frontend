@@ -3,15 +3,22 @@ import Logo from "./Logo";
 import Button from "./Button";
 
 const RightLogin = ({
-    username, password, setUsername, setPassword, handleSubmit,
+  username,
+  password,
+  handleUsernameCheck,
+  handlePasswordCheck,
+  handleSubmit,
+  displayEmptyUsername,
+  displayEmptyPassword,
+  displayLoginError,
 }) => {
-    return (
-        <>
-        <div className="deadSpaceContainer">
+  return (
+    <>
+      <div className="deadSpaceContainer">
         <div className="deadSpace"></div>
       </div>
       <div className="iconContainer">
-        <Logo/>
+        <Logo />
       </div>
       <div className="loginRegisterContainer">
         <div className="loginRegister">
@@ -43,23 +50,28 @@ const RightLogin = ({
               className="inputGroup"
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => handleUsernameCheck(e.target.value)}
+              placeholder="Enter your username"
             />
           </div>
+          {displayEmptyUsername && <h5>Username can not be empty.</h5>}
           <div className="loginFormGroup">
             <label htmlFor="password">Password</label>
             <input
               className="inputGroup"
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handlePasswordCheck(e.target.value)}
+              placeholder="Enter your password"
             />
           </div>
+          {displayEmptyPassword && <h5>Password can not be empty.</h5>}
           <Button type="submit">Login</Button>
+          {displayLoginError && <h5>Incorrect username or password.</h5>}
         </form>
       </div>
-</>
-    );
+    </>
+  );
 };
 
-export default RightLogin; 
+export default RightLogin;
