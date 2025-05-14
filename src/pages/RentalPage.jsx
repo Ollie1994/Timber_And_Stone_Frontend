@@ -1,7 +1,7 @@
-import "../styles/rental.css";
+import "../styles/rentalPage.css";
 import Button from "../components/Button";
 import IconRow from "../components/IconRow";
-import RentalTitleSection from "../components/RentalTitleSection";
+import TitleSection from "../components/TitleSection";
 import ImageGrid from "../components/ImageGrid";
 import Review from "../components/Review";
 import Amenities from "../components/Amenities";
@@ -13,7 +13,7 @@ const RentalPage = () => {
   return (
     <div className="full-container">
       <div className="inner-container">
-        <RentalTitleSection></RentalTitleSection>
+        <TitleSection></TitleSection>
         <ImageGrid />
         <IconRow></IconRow>
         <Divider></Divider>

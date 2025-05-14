@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getRentalReviewByRentalId } from "../api/rentalReviewService";
+import "../styles/review.css"
 
 // One review and what is included in it
 const ReviewCard = ({ username, rating, date, text }) => {

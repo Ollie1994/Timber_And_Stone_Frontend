@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/homelisting.css";
 import { useNavigate } from "react-router-dom";
 
 // Single HomeListing and what it should contain

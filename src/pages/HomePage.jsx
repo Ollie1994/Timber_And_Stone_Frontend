@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/homePage.css";
 import { useEffect, useState } from "react";
 import { getAllRentalPages } from "../api/homeService";
 import SearchBar from "../components/SearchBar";

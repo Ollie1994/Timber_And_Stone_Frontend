@@ -79,25 +79,25 @@ const IconRow = () => {
             <h3 className="hostedBytext">Hosted By: {host.username}</h3>
           </div>
         </div>
-        <div className="iconsContainer">
-          <div className="iconContainer">
+        <div className="iconRow-iconsContainer">
+          <div className="iconRow-iconContainer">
             <img src={house} alt="House icon"></img>
             <p className="text">{rental.category} </p>
           </div>
 
-          <div className="iconContainer">
+          <div className="iconRow-iconContainer">
             <img src={dollarSign} alt="DollarSign icon"></img>
             <p className="text">${rental.pricePerNight}/night</p>
           </div>
 
-          <div className="iconContainer">
+          <div className="iconRow-iconContainer">
             <img src={people} alt="People icon"></img>
             <p className="text">
               {rental.capacity} {rental.capacity > 1 ? "guests" : "guest"}
             </p>
           </div>
 
-          <div className="iconContainer">
+          <div className="iconRow-iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
             <div className="text">
               <div className="periodContainer">

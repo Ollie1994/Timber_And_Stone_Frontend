@@ -1,3 +1,4 @@
+import "../styles/bookingWindow.css"
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";

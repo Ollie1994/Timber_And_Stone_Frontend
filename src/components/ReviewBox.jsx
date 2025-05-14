@@ -1,6 +1,7 @@
 import Review from "./Review";
 import Button from "./Button";
 import { useState } from "react";
+import "../styles/reviewBox.css"
 
 const ReviewBox = () => {
   // Make the reviewbox hide some reviews

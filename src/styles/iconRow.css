@@ -14,12 +14,12 @@ font-size:x-large;
 .cont2 {
 }
 
-.iconsContainer {
+.iconRow-iconsContainer {
   display: flex;
   gap: 2rem;
 
 }
-.iconContainer {
+.iconRow-iconContainer {
     display: flex;
     justify-content: left;
     width: auto;

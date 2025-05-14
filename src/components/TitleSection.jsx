@@ -1,3 +1,4 @@
+import "../styles/titleSection.css"
 import locationIcon from "../assets/location-icon.svg";
 import Divider from "./Divider";
 import ratingStar from "../assets/rating-star.svg";
@@ -7,7 +8,7 @@ import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const RentalTitleSection = () => {
+const TitleSection = () => {
   const [rental, setRental] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -82,4 +83,4 @@ const RentalTitleSection = () => {
   );
 };
 
-export default RentalTitleSection;
+export default TitleSection;

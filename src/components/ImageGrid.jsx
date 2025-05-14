@@ -1,3 +1,4 @@
+import "../styles/imageGrid.css"
 import locationIcon from "../assets/location-icon.svg";
 import Divider from "./Divider";
 import ratingStar from "../assets/rating-star.svg";
