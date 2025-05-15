@@ -3,6 +3,8 @@ import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Button from "./Button";
+import axios from "axios";
+import api from "../api/axios";
 
 const BookingWindow = () => {
   const [rental, setRental] = useState(null);
@@ -138,20 +140,16 @@ const BookingWindow = () => {
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
       try {
         const bookingForm = {
-          rental: {
-            id: rental.id,
-          },
+          rental: {id: rental.id},
           numberOfGuests: guestCount,
           startDate,
           endDate
         };
-        const response = await axios.post(
-                "http://localhost:8080/booking",
-                bookingForm);
+        const response = await api.post("/booking", bookingForm);
             console.log(response.data);
     // Reset form if all fields are valid and a booking has been made
     resetForm();
-        } catch {
+        } catch (error) {
           console.error("Booking failed!", error);
         }
     }  
