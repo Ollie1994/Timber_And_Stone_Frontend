@@ -135,10 +135,9 @@ const BookingWindow = () => {
     } else {
       setShowGuestError(false);
     }
-
+    // https://www.dhiwise.com/post/a-step-by-step-guide-to-understanding-react-post-request
     // If all fields are valid, send a booking request to our API
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
-      
       try {
         // Values needed for our booking request in backend
         const bookingForm = {
