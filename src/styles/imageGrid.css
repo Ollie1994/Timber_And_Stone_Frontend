@@ -1,0 +1,100 @@
+
+  
+  /* IMAGE GRID */
+  
+  .imageGrid-imageContainer {
+    width: 100%;
+    height: 40rem;
+    margin: 1rem 0rem;
+  }
+  
+  .imageGrid-singleGrid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .imageGrid-singleGrid img {
+    flex: 1;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+  
+  .imageGrid-doubleGrid,
+  .imageGrid-tripleGrid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .imageGrid-doubleGrid img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  
+  .imageGrid-tripleGrid img {
+    width: 33.3333333%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  
+  .imageGrid-quadGrid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .imageGrid-halfQuad {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .imageGrid-halfQuad img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  
+  .imageGrid-quintGrid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .imageGrid-quintGrid img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  
+  .imageGrid-rightQuint {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .imageGrid-halfRightQuint {
+    flex: 1;
+    height: 49%;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .imageGrid-halfRightQuint img {
+    width: 49%;
+    flex: 1;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  

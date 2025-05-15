@@ -1,4 +1,4 @@
-.footer {
+.footer-footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +12,7 @@
     gap: 4rem;
     align-items: center;
 }
-.second-paragraph {
+.footer-secondParagraph {
     word-spacing: 4rem;
 }
 .footer-right {
@@ -20,7 +20,7 @@ display: flex;
 align-items: center;
 gap: 1rem;
 }
-.globe {
+.footer-globe {
     width: 3rem;
     height: auto;
 }

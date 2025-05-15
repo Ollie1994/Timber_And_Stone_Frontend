@@ -19,22 +19,22 @@ const Header = () => {
   };
 
   return (
-    <div className="headerContainer">
-      <div className="headerTopContainer">
-        <div className="logo-container">
+    <div className="header-headerContainer">
+      <div className="header-topContainer">
+        <div className="header-logoContainer">
           <Logo color="white" />
           <h1>TIMBER + STONE</h1>
         </div>
 
         {isLoggedIn ? (
-          <div className="buttonContainer">
+          <div className="header-buttonContainer">
             <Button onClick={handleLogout}>
               <h3>Log Out</h3>
             </Button>
           </div>
         ) : (
           <Link to="/loginpage">
-            <div className="buttonContainer">
+            <div className="header-buttonContainer">
               <Button>
                 <h3>Log In</h3>
               </Button>
