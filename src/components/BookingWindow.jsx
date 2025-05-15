@@ -138,13 +138,16 @@ const BookingWindow = () => {
 
     // If all fields are valid, send a booking request to our API
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
+      
       try {
+        // Values needed for our booking request in backend
         const bookingForm = {
           rental: {id: rental.id},
           numberOfGuests: guestCount,
           startDate,
           endDate
         };
+        // Sending the booking request to our api
         const response = await api.post("/booking", bookingForm);
             console.log(response.data);
     // Reset form if all fields are valid and a booking has been made
