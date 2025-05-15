@@ -1,7 +1,7 @@
-import "../styles/rental.css";
+import "../styles/rentalPage.css";
 import Button from "../components/Button";
 import IconRow from "../components/IconRow";
-import RentalTitleSection from "../components/RentalTitleSection";
+import TitleSection from "../components/TitleSection";
 import ImageGrid from "../components/ImageGrid";
 import Review from "../components/Review";
 import Amenities from "../components/Amenities";
@@ -11,14 +11,14 @@ import Divider from "../components/Divider";
 
 const RentalPage = () => {
   return (
-    <div className="full-container">
-      <div className="inner-container">
-        <RentalTitleSection></RentalTitleSection>
+    <div className="rentalPage-fullContainer">
+      <div className="rentalPage-innerContainer">
+        <TitleSection></TitleSection>
         <ImageGrid />
         <IconRow></IconRow>
         <Divider></Divider>
-        <div className="flex-container vertical">
-          <p className="description">
+        <div className="rentalPage-flexContainer rentalPage-vertical">
+          <p className="rentalPage-description">
             A whimsical treehouse nestled in the forests of Bavaria, Germany.
             The treehouse is elevated in the treetops, with large windows
             offering a view of the dense green canopy below. The design is
@@ -47,21 +47,21 @@ const RentalPage = () => {
             home. You’ll often find me nearby—tending the garden, baking bread,
             or happy to share a story over a warm drink.
           </p>
-          <div className="flex-container right">
+          <div className="rentalPage-flexContainer rentalPage-right">
             <Button>
               <h4>Show more...</h4>
             </Button>
           </div>
         </div>
         <Divider></Divider>
-        <div className="flex-container">
-          <div className="flex-container vertical">
+        <div className="rentalPage-flexContainer">
+          <div className="rentalPage-flexContainer rentalPage-vertical">
             <Amenities></Amenities>
             <ReviewBox>
           <Review></Review>
           </ReviewBox>
           </div>
-          <div className="booking-container flex-container">
+          <div className="rentalPage-bookingContainer rentalPage-flexContainer">
             <BookingWindow></BookingWindow>
           </div>
         </div>

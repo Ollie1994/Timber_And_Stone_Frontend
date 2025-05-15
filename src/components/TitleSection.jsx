@@ -1,3 +1,4 @@
+import "../styles/titleSection.css"
 import locationIcon from "../assets/location-icon.svg";
 import Divider from "./Divider";
 import ratingStar from "../assets/rating-star.svg";
@@ -7,7 +8,7 @@ import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const RentalTitleSection = () => {
+const TitleSection = () => {
   const [rental, setRental] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -28,14 +29,14 @@ const RentalTitleSection = () => {
 
   return (
     <div>
-      <div className="flex-container vertical">
+      <div className="titleSection-flexContainer titleSection-vertical">
         <h2>
           {
             //Check that the title exists, if not check loading, else untitled.
             rental?.title || (loading ? "Loading..." : "Untitled")
           }
         </h2>
-        <div className="flex-container h-left h-center">
+        <div className="titleSection-flexContainer titleSection-hLeft titleSection-hCenter">
           <img src={locationIcon} alt="Location Icon" />
           <h4>
             {
@@ -50,8 +51,8 @@ const RentalTitleSection = () => {
         </div>
       </div>
       <Divider />
-      <div className="flex-container h-space-between">
-        <div className="half-container">
+      <div className="titleSection-flexContainer titleSection-hSpaceBetween">
+        <div className="titleSection-halfContainer">
           <img src={ratingStar} alt="Star Icon" />
           <h4>
             {
@@ -71,7 +72,7 @@ const RentalTitleSection = () => {
             }
           </h4>
         </div>
-        <div className="half-container">
+        <div className="titleSection-halfContainer">
           <img src={shareIcon} alt="Share Icon" />
           <h4>SHARE</h4>
           <img src={favoriteIcon} alt="Favorite Icon" />
@@ -82,4 +83,4 @@ const RentalTitleSection = () => {
   );
 };
 
-export default RentalTitleSection;
+export default TitleSection;

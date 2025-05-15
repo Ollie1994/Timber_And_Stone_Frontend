@@ -1,0 +1,20 @@
+
+  
+  .reviewCard-halfContainer {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: fit-content;
+  }
+  
+  
+  .reviewCard-reviewCardContainer {
+    background-color: #ffffff;
+    height: 9rem;
+    width: 100%;
+    border-radius: 70px;
+    overflow-y: auto; /* scroll should only appear if text goes beyond review "box" */
+    padding: 20px 40px;
+    margin-top: 20px;
+  }
+  

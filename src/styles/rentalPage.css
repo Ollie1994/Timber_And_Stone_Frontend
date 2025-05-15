@@ -1,0 +1,57 @@
+.rentalPage-fullContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(222, 224, 189);
+    padding: 1rem 6rem;
+  }
+  
+  .rentalPage-innerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  
+  
+  .rentalPage-flexContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+
+  
+  .rentalPage-vertical {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.3rem;
+  }
+  
+
+  
+  .rentalPage-description {
+    justify-content: flex-start;
+    overflow-y: hidden;
+    height: 190px;
+  }
+  
+  .rentalPage-right {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  
+
+
+  .rentalPage-bookingContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 4rem 0rem 4rem;
+  }
+  

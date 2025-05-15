@@ -3,13 +3,13 @@ import globe from "../assets/globe.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer-footerContainer">
       <div className="footer-left">
       <p>&copy; Timber + Stone, Inc.</p>
-      <p className="second-paragraph">About Contact</p>
+      <p className="footer-secondParagraph">About Contact</p>
       </div>
       <div className="footer-right">
-      <img className="globe" src={globe} alt="Globe" />
+      <img className="footer-globe" src={globe} alt="Globe" />
       <p>English (EN)</p>
       </div>
     </footer>
