@@ -1,5 +1,5 @@
 // sorts dates into earliest to latest
-export function bubbleSort(dates) {
+function bubbleSort(dates) {
     let sorted = false;
 
     let counter = 0;

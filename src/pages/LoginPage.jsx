@@ -8,86 +8,75 @@ import RightLogin from "../components/RightLogin";
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [displayLoginError, setDisplayLoginError] = useState(false);
+  const [displayEmptyUsername, setDisplayEmptyUsername] = useState(false);
+  const [displayEmptyPassword, setDisplayEmptyPassword] = useState(false);
 
   const navigate = useNavigate();
   // konsumerar contexten
   const { login } = useAuth();
 
+  // Hides errors when values are entered.
+  const handlePasswordCheck = (enteredPassword) => {
+    setDisplayLoginError(false);
+    setPassword(enteredPassword);
+    if (enteredPassword) {
+      setDisplayEmptyPassword(false);
+    }
+  };
+
+  const handleUsernameCheck = (enteredUsername) => {
+    setDisplayLoginError(false);
+    setUsername(enteredUsername);
+    if (enteredUsername) {
+      setDisplayEmptyUsername(false);
+    }
+  };
+
+  // When submit button is clicked
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await login(username, password);
-      navigate("/");
-    } catch (err) {
-      console.log("error: " + err);
+    //Check if empty
+    if (!username) {
+      setDisplayEmptyUsername(true);
+    }
+    if (!password) {
+      setDisplayEmptyPassword(true);
+    }
+
+    // Call API, catch error by displaying an error message.
+    if (password && username) {
+      try {
+        await login(username, password);
+        console.log("Navigating");
+        navigate("/");
+      } catch (err) {
+        console.log("Login error:", err);
+        setDisplayLoginError(true);
+      }
     }
   };
 
   return (
     <div className="gridContainer">
-      <LeftLogin/>
+      <LeftLogin />
       <RightLogin
-      /* props for username, password, setUsername, setPassword, handleSubmit to RightLogin */
-      username={username}
+        /* props for login form*/
+        username={username}
         password={password}
         setUsername={setUsername}
+        handleUsernameCheck={handleUsernameCheck}
         setPassword={setPassword}
+        handlePasswordCheck={handlePasswordCheck}
         handleSubmit={handleSubmit}
+        displayEmptyUsername={displayEmptyUsername}
+        displayEmptyPassword={displayEmptyPassword}
+        displayLoginError={displayLoginError}
       />
     </div>
   );
 };
+
 export default LoginPage;
 
-/* <div className="deadSpaceContainer">
-        <div className="deadSpace"></div>
-      </div>
-      <div className="iconContainer">
-        <Logo/>
-      </div>
-      <div className="loginRegisterContainer">
-        <div className="loginRegister">
-          <h3>Welcome back!</h3>
-          <div className="betweenButtons">
-            <Button>
-              <h4>Login</h4>
-            </Button>
-            <Button>
-              <h4>Register</h4>
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="contactUsContainer">
-        <div className="contactUs">
-          <h3>Log in to book your next stay</h3>
-          <p>
-            Please <strong>Contact us</strong> if you have any questions about
-            your account and we will do our best to help you!
-          </p>
-        </div>
-      </div>
-      <div className="loginFormContainer">
-        <form className="loginForm" onSubmit={handleSubmit}>
-          <div className="loginFormGroup">
-            <label htmlFor="username">Username</label>
-            <input
-              className="inputGroup"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="loginFormGroup">
-            <label htmlFor="password">Password</label>
-            <input
-              className="inputGroup"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <Button type="submit">Login</Button>
-        </form>
-      </div> */

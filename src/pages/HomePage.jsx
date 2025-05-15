@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles/homePage.css";
 import { useEffect, useState } from "react";
 import { getAllRentalPages } from "../api/homeService";
 import SearchBar from "../components/SearchBar";
@@ -7,29 +7,23 @@ import { getAllRentalPagesByPriceRange } from "../api/homeService";
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
 
-
-
-
 const HomePage = () => {
   // const for logged in user
   const { isLoggedIn } = useAuth();
   // const for list of all rentals
   const [rentals, setRentals] = useState([]);
 
-  
-
-
   const handleDataFromChild = (data) => {
-    console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice)
-    const minData = data.newMinPrice
-    const maxData = data.newMaxPrice
+    console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice);
+    const minData = data.newMinPrice;
+    const maxData = data.newMaxPrice;
     /* const newData = data
     setDataFromChild(newData); */
     fetchRentalsByPriceRange(minData, maxData);
   };
 
   const fetchRentalsByPriceRange = async (minData, maxData) => {
-   /*  const minData = dataFromChild.newMinPrice;
+    /*  const minData = dataFromChild.newMinPrice;
     const maxData = dataFromChild.newMaxPrice; */
     try {
       const data = await getAllRentalPagesByPriceRange(minData, maxData);
@@ -39,12 +33,6 @@ const HomePage = () => {
       console.error("Error fetching rentals:", error);
     }
   };
-
-
-
-
-
-
 
   useEffect(() => {
     const fetchRentals = async () => {
@@ -58,15 +46,13 @@ const HomePage = () => {
     fetchRentals();
   }, []);
 
-  
-
   return (
-    <div className="home-container">
-      <div className="searchBarContainer">
+    <div className="homePage-homeContainer">
+      <div className="homePage-searchBarContainer">
         <SearchBar sendDataToParent={handleDataFromChild}></SearchBar>
       </div>
       <div>
-        <div className="home-text">
+        <div className="homePage-homeText">
           {isLoggedIn ? (
             <h2>Welcome back!</h2>
           ) : (
@@ -83,7 +69,7 @@ const HomePage = () => {
           </article>
           <br />
         </div>
-        <div className="flex-grid">
+        <div className="homePage-flexGrid">
           {rentals.map((rental) => (
             <HomeListing key={rental.id} rental={rental} />
           ))}

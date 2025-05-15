@@ -1,18 +1,19 @@
 import Review from "./Review";
 import Button from "./Button";
 import { useState } from "react";
+import "../styles/reviewBox.css"
 
 const ReviewBox = () => {
   // Make the reviewbox hide some reviews
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="reviews-container">
-      <div className="review-container">
-        <div className="reviews-top">
+    <div className="reviewBox-reviewsContainer">
+      <div className="reviewBox-reviewContainer">
+        <div className="reviewBox-reviewsTop">
           <h2>Latest Reviews:</h2>
         </div>
         <div
-          className={`review-container ${expanded ? "expanded" : "collapsed"}`}
+          className={`reviewBox-reviewContainer ${expanded ? "expanded" : "collapsed"}`}
         >
           <Review />
         </div>
