@@ -136,8 +136,9 @@ const BookingWindow = () => {
 
     // Reset form if all fields are valid.
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
-      resetForm();
+      
     }
+    resetForm();
   };
 
   //Reset the form and show success response.
