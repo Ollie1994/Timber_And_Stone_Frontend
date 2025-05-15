@@ -3,6 +3,7 @@ import amenityIcon from "../assets/amenity.svg";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Button from "../components/Button"
 
 
 const Amenities = () => {
@@ -59,13 +60,12 @@ const Amenities = () => {
           )}
         </div>
 
-        <button
-          type="button"
-          className="amenities-closeButton"
-          onClick={() => setPopup("popupNone")}
-        >
-          Close
-        </button>
+        
+        <Button
+        type="button"
+        className="amenities-closeButton"
+        onClick={() => setPopup("amenities-popupNone")}
+        ><h5 className="amenties-h5">Close</h5></Button>
       </div>
     </div>
   );
