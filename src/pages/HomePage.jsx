@@ -7,29 +7,23 @@ import { getAllRentalPagesByPriceRange } from "../api/homeService";
 // To check for logged in user
 import { useAuth } from "../hooks/useAuth";
 
-
-
-
 const HomePage = () => {
   // const for logged in user
   const { isLoggedIn } = useAuth();
   // const for list of all rentals
   const [rentals, setRentals] = useState([]);
 
-  
-
-
   const handleDataFromChild = (data) => {
-    console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice)
-    const minData = data.newMinPrice
-    const maxData = data.newMaxPrice
+    console.log("Home: " + data.newMinPrice + "-" + data.newMaxPrice);
+    const minData = data.newMinPrice;
+    const maxData = data.newMaxPrice;
     /* const newData = data
     setDataFromChild(newData); */
     fetchRentalsByPriceRange(minData, maxData);
   };
 
   const fetchRentalsByPriceRange = async (minData, maxData) => {
-   /*  const minData = dataFromChild.newMinPrice;
+    /*  const minData = dataFromChild.newMinPrice;
     const maxData = dataFromChild.newMaxPrice; */
     try {
       const data = await getAllRentalPagesByPriceRange(minData, maxData);
@@ -39,12 +33,6 @@ const HomePage = () => {
       console.error("Error fetching rentals:", error);
     }
   };
-
-
-
-
-
-
 
   useEffect(() => {
     const fetchRentals = async () => {
@@ -57,8 +45,6 @@ const HomePage = () => {
     };
     fetchRentals();
   }, []);
-
-  
 
   return (
     <div className="homePage-homeContainer">
