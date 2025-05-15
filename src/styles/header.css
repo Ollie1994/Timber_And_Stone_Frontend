@@ -1,4 +1,4 @@
-.headerContainer {
+.header-headerContainer {
   display: flex;
   flex-direction: column;
   height: 22rem;
@@ -12,7 +12,7 @@
   gap:14.5rem
 }
 
-.headerTopContainer {
+.header-topContainer {
   display: flex;
   justify-content: space-between;
 
@@ -23,12 +23,12 @@
 }
 
 
-.buttonContainer {
+.header-buttonContainer {
   padding-top: 2.7rem;
   
 }
 
-.logo-container {
+.header-logoContainer {
   display: flex;
   align-items: flex-end;
   align-self: flex-start;
@@ -36,6 +36,6 @@
   padding-top: 1rem;
 }
 
-.logo-container h1 {
+.header-logoContainer h1 {
   margin-bottom: 0.5rem;
 }

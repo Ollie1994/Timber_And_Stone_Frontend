@@ -1,0 +1,36 @@
+
+  
+  .titleSection-flexContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .titleSection-halfContainer {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: fit-content;
+  }
+  
+  .titleSection-vertical {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.3rem;
+  }
+  
+  .titleSection-hLeft {
+    justify-content: flex-start;
+  }
+  
+  .titleSection-hCenter {
+    align-items: center;
+  }
+  
+  .titleSection-hSpaceBetween {
+    justify-content: space-between;
+  }
+  
+  

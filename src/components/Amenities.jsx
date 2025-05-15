@@ -3,13 +3,14 @@ import amenityIcon from "../assets/amenity.svg";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Button from "../components/Button"
 
 
 const Amenities = () => {
   const [rental, setRental] = useState([]);
   const [amenities, setAmenities] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [popup, setPopup] = useState("popupNone");
+  const [popup, setPopup] = useState("amenities-popupNone");
   const { id } = useParams();
 
 
@@ -29,24 +30,24 @@ const Amenities = () => {
   }, []);
 
   return (
-    <div className="Container">
-      <button className="openButton" onClick={() => setPopup("popupBlock")}>
+    <div>
+      <button className="amenities-openButton" onClick={() => setPopup("amenities-popupBlock")}>
         Amenities
       </button>
 
       <div className={popup}>
-        <div className="amenitiesContainer">
+        <div className="amenities-amenitiesContainer">
           {amenities.length > 0 ? (
             amenities.map((amenity) => (
               <div key={amenity.amenityTitle}>
                 {amenity.amenityTitle && (
-                  <div className="amenity">
-                    <div className="amenityIcon">
+                  <div className="amenities-amenity">
+                    <div className="amenities-amenityIcon">
                       <img src={amenityIcon} alt="Amenity icon"></img>
                     </div>
-                    <div className="textContainer">
-                      <p className="amenityTitle">{amenity.amenityTitle}</p>
-                      <p className="amentiyDescription">
+                    <div className="amenities-textContainer">
+                      <p className="amenities-amenityTitle">{amenity.amenityTitle}</p>
+                      <p className="amenities-amentiyDescription">
                         {amenity.description}
                       </p>
                     </div>
@@ -59,13 +60,12 @@ const Amenities = () => {
           )}
         </div>
 
-        <button
-          type="button"
-          className="closeButton"
-          onClick={() => setPopup("popupNone")}
-        >
-          Close
-        </button>
+        
+        <Button
+        type="button"
+        className="amenities-closeButton"
+        onClick={() => setPopup("amenities-popupNone")}
+        ><h5 className="amenties-h5">Close</h5></Button>
       </div>
     </div>
   );

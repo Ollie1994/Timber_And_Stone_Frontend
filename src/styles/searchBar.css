@@ -1,4 +1,4 @@
-.searchBar-IconsContainer {
+.searchBar-iconsContainer {
   display: flex;
   background-color: white;
   border-radius: 50px;
@@ -12,7 +12,7 @@
 .searchBar-img:hover {
   cursor: pointer;
 }
-.searchBar-IconContainer {
+.searchBar-iconContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,94 +23,94 @@
   display: flex;
   justify-content: center;
 }
-.arrowContainerNone {
+.searchBar-arrowContainerNone {
   display: none;
 }
-.windowContainerNone {
+.searchBar-windowContainerNone {
   display: none;
 }
-.arrow {
+.searchBar-arrow {
   width: 15px;
   height: 8px;
 }
 /* -------------------------------------- */
 
-.categoryArrowContainer {
+.searchBar-categoryArrowContainer {
   display: flex;
   justify-content: center;
 }
-.dollarArrowContainer {
+.searchBar-dollarArrowContainer {
   display: flex;
   justify-content: center;
 }
-.calendarArrowContainer {
+.searchBar-calendarArrowContainer {
   display: flex;
   justify-content: center;
 }
-.ratingArrowContainer {
+.searchBar-ratingArrowContainer {
   display: flex;
   justify-content: center;
 }
-.locationArrowContainer {
+.searchBar-locationArrowContainer {
   display: flex;
   justify-content: center;
 }
-.guestsArrowContainer {
+.searchBar-guestsArrowContainer {
   display: flex;
   justify-content: center;
 }
-.amenitiesArrowContainer {
+.searchBar-amenitiesArrowContainer {
   display: flex;
   justify-content: center;
 }
-.searchArrowContainer {
+.searchBar-searchArrowContainer {
   display: flex;
   justify-content: center;
 }
 /* -------------------------------------- */
-.categoryWindowContainer {
+.searchBar-categoryWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.dollarWindowContainer {
+.searchBar-dollarWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.calendarWindowContainer {
+.searchBar-calendarWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.ratingWindowContainer {
+.searchBar-ratingWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.locationWindowContainer {
+.searchBar-locationWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.guestsWindowContainer {
+.searchBar-guestsWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.amenitiesWindowContainer {
+.searchBar-amenitiesWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
-.searchWindowContainer {
+.searchBar-searchWindowContainer {
   justify-content: center;
   z-index: 7;
   position: relative;
 }
 /* -------------------------------------- */
 
-.categoryWindow {
+.searchBar-categoryWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -123,7 +123,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.dollarWindow {
+.searchBar-dollarWindow {
   display: flex;
   justify-content: space-evenly;
   margin-top: 13px;
@@ -138,7 +138,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.calendarWindow {
+.searchBar-calendarWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -151,7 +151,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.ratingWindow {
+.searchBar-ratingWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -164,7 +164,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.locationWindow {
+.searchBar-locationWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -177,7 +177,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.guestsWindow {
+.searchBar-guestsWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -190,7 +190,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.amenitiesWindow {
+.searchBar-amenitiesWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -203,7 +203,7 @@
   top: 22px;
   transform: translate(-50%, -50%);
 }
-.searchWindow {
+.searchBar-searchWindow {
   margin-top: 10px;
   background-color: #7e9c67;
   z-index: 7;
@@ -217,30 +217,30 @@
   transform: translate(-50%, -50%);
 }
 /* -------------------------------------- */
-.searchBar-ButtonContainer {
+.searchBar-buttonContainer {
 display: flex;
 flex-direction: column;
 justify-content: center;  
 
 }
-.searchBar-Button {
+.searchBar-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 23px;
   background-color: rgb(60, 70, 52);
 }
-.searchBar-Button:hover {
+.searchBar-button:hover {
   cursor: pointer;
   background-color: rgb(60, 70, 52);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.searchBar-MinPriceContainer {
+.searchBar-minPriceContainer {
   display: flex;
   justify-content: center;
 }
-.searchBar-MinPrice {
+.searchBar-minPrice {
   margin: auto;
   border-style: none;
   width: 100px;
@@ -248,11 +248,11 @@ justify-content: center;
   border-radius: 50px;
   padding: 10px;
 }
-.searchBar-MaxPriceContainer {
+.searchBar-maxPriceContainer {
   display: flex;
   justify-content: center;
 }
-.searchBar-MaxPrice {
+.searchBar-maxPrice {
   margin: auto;
   border-style: none;
   width: 100px;

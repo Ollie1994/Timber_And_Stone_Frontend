@@ -1,25 +1,25 @@
-.iconRowContainer {
+.iconRow-iconRowContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.cont1 {
+.iconRow-cont1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.hostedBytext {
+.iconRow-hostedBytext {
 font-size:x-large;
 }
-.cont2 {
+.iconRow-cont2 {
 }
 
-.iconsContainer {
+.iconRow-iconsContainer {
   display: flex;
   gap: 2rem;
 
 }
-.iconContainer {
+.iconRow-iconContainer {
     display: flex;
     justify-content: left;
     width: auto;
@@ -27,7 +27,7 @@ font-size:x-large;
 }
 
 
-.text {
+.iconRow-text {
   padding-top: 7px;
   padding-left: 5px;
   color: rgb(126, 158, 103);
@@ -35,22 +35,13 @@ font-size:x-large;
   font-size:large;
 }
 
-.periodContainer {
+.iconRow-periodContainer {
 display: flex;
 gap: 0.4rem;
 }
-.startDate {
 
-}
 
-.endDate {
-
-}
-.profilePicContainer {
-  
-}
-
-.profilePhoto {
+.iconRow-profilePhoto {
   height: 100px;
   width: 100px;
   border-radius: 50px;
