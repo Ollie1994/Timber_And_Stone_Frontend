@@ -1,4 +1,4 @@
-import "../styles/homelisting.css";
+import "../styles/homeListing.css";
 import { useNavigate } from "react-router-dom";
 
 // Single HomeListing and what it should contain
@@ -12,7 +12,7 @@ const HomeListing = ({ rental }) => {
 
   return (
     <div className="homeListing-col" onClick={handleNavigate}>
-      <img className="rentalImage" src={rentalImage} alt={rental.title} />
+      <img src={rentalImage} alt={rental.title} />
       <div className="homeListing-colText">
         <div className="homeListing-colLocation">
           {rental.city}, {rental.country}
