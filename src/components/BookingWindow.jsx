@@ -109,7 +109,7 @@ const BookingWindow = () => {
   };
 
   //When attempting to reserve:
-  const handleReserve = () => {
+  const handleReserve = async () => {
     if (policyChecked === false) {
       setShowPolicyError(true);
     } else {
@@ -134,11 +134,27 @@ const BookingWindow = () => {
       setShowGuestError(false);
     }
 
-    // Reset form if all fields are valid.
+    // If all fields are valid, send a booking request to our API
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
-      
-    }
+      try {
+        const bookingForm = {
+          rental: {
+            id: rental.id,
+          },
+          numberOfGuests: guestCount,
+          startDate,
+          endDate
+        };
+        const response = await axios.post(
+                "http://localhost:8080/booking",
+                bookingForm);
+            console.log(response.data);
+    // Reset form if all fields are valid and a booking has been made
     resetForm();
+        } catch {
+          console.error("Booking failed!", error);
+        }
+    }  
   };
 
   //Reset the form and show success response.
