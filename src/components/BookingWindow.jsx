@@ -3,6 +3,8 @@ import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Button from "./Button";
+import axios from "axios";
+import api from "../api/axios";
 
 const BookingWindow = () => {
   const [rental, setRental] = useState(null);
@@ -109,7 +111,7 @@ const BookingWindow = () => {
   };
 
   //When attempting to reserve:
-  const handleReserve = () => {
+  const handleReserve = async () => {
     if (policyChecked === false) {
       setShowPolicyError(true);
     } else {
@@ -133,11 +135,26 @@ const BookingWindow = () => {
     } else {
       setShowGuestError(false);
     }
-
-    // Reset form if all fields are valid.
+    // https://www.dhiwise.com/post/a-step-by-step-guide-to-understanding-react-post-request
+    // If all fields are valid, send a booking request to our API
     if (policyChecked && !isDateMissing && !isDateInvalid && guestCount) {
-      resetForm();
-    }
+      try {
+        // Values needed for our booking request in backend
+        const bookingForm = {
+          rental: {id: rental.id},
+          numberOfGuests: guestCount,
+          startDate,
+          endDate
+        };
+        // Sending the booking request to our api
+        const response = await api.post("/booking", bookingForm);
+            console.log(response.data);
+    // Reset form if all fields are valid and a booking has been made
+    resetForm();
+        } catch (error) {
+          console.error("Booking failed!", error);
+        }
+    }  
   };
 
   //Reset the form and show success response.
