@@ -5,11 +5,13 @@ import { getUserProfileById } from "../api/userService";
 import { getBookingsForProfileByUserId } from "../api/bookingService";
 import Divider from "../components/Divider";
 import Button from "../components/Button";
+import ProfileBookingTemplate from "./ProfileBookingTemplate";
 
 const MiddleProfile = () => {
   // General States
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const [expanded, setExpanded] = useState(false);
 
   // User States
   const [user, setUser] = useState({});
@@ -18,7 +20,11 @@ const MiddleProfile = () => {
   // Booking States
   const [bookings, setBookings] = useState({});
 
-
+  const handleClick = () => {
+    const bookingsSorted = bookings.map((booking) =>
+      console.log(booking.createdAt)
+    );
+  };
 
   // for booking
   useEffect(() => {
@@ -65,11 +71,12 @@ const MiddleProfile = () => {
       </div>
       <div className="middleProfile-bookingsBarContainer">
         <h3 className="middleProfile-bookingsText">My Bookings:</h3>
-        <h3 className="middleProfile-bookings">{bookings.length} total bookings</h3>
-        <Button className="middleProfile-seeMyBookingsButton">
-          <h3>See my bookings</h3>
-        </Button>
+        <h3 className="middleProfile-bookings">
+          {bookings.length} total bookings
+        </h3>
+        <Button className="middleProfile-seeMyBookingsButton"><h3>See my bookings</h3></Button>
       </div>
+      <div></div>
 
       <Divider></Divider>
     </div>
