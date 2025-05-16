@@ -2,10 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import Button from "./Button";
 import { useParams } from "react-router-dom";
 import { getRentalPageById } from "../api/rentalService";
+import "../styles/rentalDescription.css";
 
 const Description = () => {
   const textRef = useRef(null);
-  const [isOverflowing, setIsOverflowing] = useState(true);
+  const [isOverflowing, setIsOverflowing] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const maxLines = 6;
 
@@ -33,7 +34,8 @@ const Description = () => {
       const element = textRef.current;
       if (element && rental?.description) {
         const style = window.getComputedStyle(element);
-        const lineHeight = parseFloat(style.lineHeight);
+        const lineHeight =
+          parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.2;
         const totalLines = element.scrollHeight / lineHeight;
         setIsOverflowing(totalLines > maxLines);
       }
@@ -53,15 +55,15 @@ const Description = () => {
     : "collapsed-description";
 
   return (
-    <div className="flex-container vertical">
+    <div className="RentalDescription-descrCont">
       <p ref={textRef} className={descrClass}>
         {rental?.description || "No description provided."}
       </p>
 
       {isOverflowing && (
-        <div className="flex-container right">
+        <div className="RentalDescription-buttonCont">
           <Button onClick={toggleExpanded}>
-            <h4>{expanded ? "Show Less" : "Show More"}</h4>
+            <h5>{expanded ? "Show Less" : "Show More"}</h5>
           </Button>
         </div>
       )}
