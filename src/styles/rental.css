@@ -65,12 +65,6 @@
   border-radius: 100%;
 }
 
-.description {
-  justify-content: flex-start;
-  overflow-y: hidden;
-  height: 190px;
-}
-
 .right {
   flex-direction: column;
   align-items: flex-end;
@@ -362,7 +356,23 @@ Button {
   align-self: center;
 }
 
-.reserve-button{
+.reserve-button {
   justify-self: center;
   align-self: center;
+}
+
+.collapsed-description {
+  justify-content: flex-start;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  white-space: pre-line;
+}
+
+.expanded-description {
+  justify-content: flex-start;
+  overflow-y: hidden;
+  height: fit-content;
+  white-space: pre-line;
 }

@@ -1,4 +1,4 @@
-import "../styles/bookingWindow.css"
+import "../styles/bookingWindow.css";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -141,25 +141,24 @@ const BookingWindow = () => {
       try {
         // Values needed for our booking request in backend
         const bookingForm = {
-          rental: {id: rental.id},
+          rental: { id: rental.id },
           numberOfGuests: guestCount,
           startDate,
-          endDate
+          endDate,
         };
         // Sending the booking request to our api
         const response = await api.post("/booking", bookingForm);
-            console.log(response.data);
-    // Reset form if all fields are valid and a booking has been made
-    resetForm();
-        } catch (error) {
-          console.error("Booking failed!", error);
-        }
-    }  
+        console.log(response.data);
+        // Reset form if all fields are valid and a booking has been made
+        resetForm();
+      } catch (error) {
+        console.error("Booking failed!", error);
+      }
+    }
   };
 
   //Reset the form and show success response.
   const resetForm = () => {
-
     setShowSucccessMessage(true);
     setShowInputForm(false);
 
@@ -217,7 +216,10 @@ const BookingWindow = () => {
               <strong>Policy</strong>
             </h5>
           </label>
-          <Button className="bookingWindow-reserveButton" onClick={handleReserve}>
+          <Button
+            className="bookingWindow-reserveButton"
+            onClick={handleReserve}
+          >
             <h4>RESERVE</h4>
           </Button>
         </div>
@@ -247,9 +249,7 @@ const BookingWindow = () => {
         )}
 
         {showPolicyError && ( // Show policy error if not clicked
-          <h6>
-            Accept the policy before placing your reservation.
-          </h6>
+          <h6>Accept the policy before placing your reservation.</h6>
         )}
       </div>
 
