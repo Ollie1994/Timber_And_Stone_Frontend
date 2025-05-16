@@ -17,6 +17,9 @@ const Header = () => {
     await logout();
     navigate("/loginpage");
   };
+  const handleNavigate = async () => {
+    navigate(`/profilepage/${currentUser.id}`);
+  };
 
   return (
     <div className="header-headerContainer">
@@ -25,7 +28,15 @@ const Header = () => {
           <Logo color="white" />
           <h1>TIMBER + STONE</h1>
         </div>
-
+        {isLoggedIn ? (
+          <div className="header-buttonContainer">
+            <Button onClick={handleNavigate}>
+              <h3>Profile Page</h3>
+            </Button>
+          </div>
+        ) : (
+         <Button>Not logged in </Button>
+        )}
         {isLoggedIn ? (
           <div className="header-buttonContainer">
             <Button onClick={handleLogout}>

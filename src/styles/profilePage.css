@@ -1,0 +1,9 @@
+.profilePage-profilePageContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 243, 201);
+    padding: 1rem 6rem;
+    min-height: 750px;
+}
+
+
