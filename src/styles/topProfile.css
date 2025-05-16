@@ -1,0 +1,39 @@
+.topProfile-topProfileContainer{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.topProfile-nameContainer{
+display: flex;
+justify-content: center;
+}
+.topProfile-profilePhotoContainer {
+    display: flex;
+    justify-content: center;
+}
+.topProfile-profilePhoto {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+   
+  }
+
+  .topProfile-userInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .topProfile-username {
+    display: flex;
+    justify-content: center;
+  }
+  .topProfile-email {
+    display: flex;
+    justify-content: center;
+  }
+  .topProfile-phoneNumber {
+    display: flex;
+    justify-content: center;
+  }

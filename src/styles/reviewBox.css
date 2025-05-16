@@ -24,5 +24,3 @@
   .reviewBox-reviewContainer.collapsed {
     max-height: 21rem; /* only shows reviews that fit inside 22rem box */
   }
-  
-  

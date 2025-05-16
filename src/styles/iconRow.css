@@ -8,42 +8,34 @@
   flex-direction: column;
   gap: 2rem;
 }
-.iconRow-hostedBytext {
-font-size:x-large;
-}
-.iconRow-cont2 {
+
+.iconRow-iconsContainer h5 {
+  color: #7E9C67;
 }
 
 .iconRow-iconsContainer {
   display: flex;
   gap: 2rem;
-
 }
 .iconRow-iconContainer {
-    display: flex;
-    justify-content: left;
-    width: auto;
-
+  display: flex;
+  justify-content: left;
+  width: auto;
 }
-
 
 .iconRow-text {
   padding-top: 7px;
   padding-left: 5px;
-  color: rgb(126, 158, 103);
   font-weight: 790;
-  font-size:large;
 }
 
 .iconRow-periodContainer {
-display: flex;
-gap: 0.4rem;
+  display: flex;
+  gap: 0.4rem;
 }
-
 
 .iconRow-profilePhoto {
   height: 100px;
   width: 100px;
   border-radius: 50px;
 }
-

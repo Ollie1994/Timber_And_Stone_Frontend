@@ -1,0 +1,38 @@
+.middleProfile-middleProfileContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+.middleProfile-ratingBarContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.middleProfile-ratingText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middleProfile-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.middleProfile-bookingsBarContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.middleProfile-bookingsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.middleProfile-bookings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

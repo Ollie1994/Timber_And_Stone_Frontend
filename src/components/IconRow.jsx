@@ -7,6 +7,7 @@ import "../styles/iconRow.css";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { mapPeriodDates } from "../helpers/HelpFunctions";
 
 const IconRow = () => {
   const [rental, setRental] = useState({});
@@ -17,10 +18,9 @@ const IconRow = () => {
   const { id } = useParams();
 
   const profilePhoto = host.profilePhoto;
-
-  // maps the avaibleperiods to start and end dates i nseprate lists
-  const endDates = availablePeriods.map((period) => period.endDate);
-  const startDates = availablePeriods.map((period) => period.startDate);
+ 
+  // calling mapPeriodDates function in HelpFunctions.js
+  const { startUseDates, endUseDates } = mapPeriodDates(availablePeriods);
 
   useEffect(() => {
     const fetchRental = async () => {
@@ -39,35 +39,6 @@ const IconRow = () => {
     fetchRental();
   }, []);
 
-  // sorts dates into earliest to latest
-  function bubbleSort(dates) {
-    let sorted = false;
-
-    let counter = 0;
-
-    while (!sorted) {
-      sorted = true;
-      for (let i = 0; i < dates.length - 1 - counter; i++) {
-        if (dates[i] > dates[i + 1]) {
-          helper(i, i + 1, dates);
-          sorted = false;
-        }
-      }
-      counter++;
-    }
-    console.log(dates);
-
-    return dates;
-  }
-
-  //swap function
-  function helper(i, j, dates) {
-    return ([dates[i], dates[j]] = [dates[j], dates[i]]);
-  }
-  // sends in start and end dates to be sorted into earlies to latest
-  const startUseDates = bubbleSort(startDates);
-  const endUseDates = bubbleSort(endDates);
-
   console.log("startDates: " + startUseDates);
   console.log("endDates: " + endUseDates);
 
@@ -82,29 +53,29 @@ const IconRow = () => {
         <div className="iconRow-iconsContainer">
           <div className="iconRow-iconContainer">
             <img src={house} alt="House icon"></img>
-            <p className="iconRow-text">{rental.category} </p>
+            <h5 className="iconRow-text">{rental.category} </h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={dollarSign} alt="DollarSign icon"></img>
-            <p className="iconRow-text">${rental.pricePerNight}/night</p>
+            <h5 className="iconRow-text">${rental.pricePerNight}/night</h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={people} alt="People icon"></img>
-            <p className="iconRow-text">
+            <h5 className="iconRow-text">
               {rental.capacity} {rental.capacity > 1 ? "guests" : "guest"}
-            </p>
+            </h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
             <div className="iconRow-text">
               <div className="iconRow-periodContainer">
-                <p>available next: </p>
-                <p className="iconRow-startDate">{startUseDates[0]}</p>
-                <p> - </p>
-                <p className="iconRow-endDate">{endUseDates[0]}</p>
+                <h5>available next: </h5>
+                <h5 className="iconRow-startDate">{startUseDates[0]}</h5>
+                <h5> - </h5>
+                <h5 className="iconRow-endDate">{endUseDates[0]}</h5>
               </div>
             </div>
           </div>
@@ -123,3 +94,36 @@ const IconRow = () => {
   );
 };
 export default IconRow;
+
+  /* maps the avaibleperiods to start and end dates i nseprate lists
+  const endDates = availablePeriods.map((period) => period.endDate);
+  const startDates = availablePeriods.map((period) => period.startDate);*/
+
+    /* sorts dates into earliest to latest
+  function bubbleSort(dates) {
+    let sorted = false;
+
+    let counter = 0;
+
+    while (!sorted) {
+      sorted = true;
+      for (let i = 0; i < dates.length - 1 - counter; i++) {
+        if (dates[i] > dates[i + 1]) {
+          helper(i, i + 1, dates);
+          sorted = false;
+        }
+      }
+      counter++;
+    } 
+    console.log(dates);
+
+    return dates;
+  }
+
+   swap function
+  function helper(i, j, dates) {
+    return ([dates[i], dates[j]] = [dates[j], dates[i]]);
+  }
+  // sends in start and end dates to be sorted into earlies to latest
+  const startUseDates = bubbleSort(startDates);
+  const endUseDates = bubbleSort(endDates); */

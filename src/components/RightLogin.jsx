@@ -3,25 +3,32 @@ import Logo from "./Logo";
 import Button from "./Button";
 
 const RightLogin = ({
-    username, password, setUsername, setPassword, handleSubmit,
+  username,
+  password,
+  handleUsernameCheck,
+  handlePasswordCheck,
+  handleSubmit,
+  displayEmptyUsername,
+  displayEmptyPassword,
+  displayLoginError,
 }) => {
-    return (
-        <>
-        <div className="deadSpaceContainer">
+  return (
+    <>
+      <div className="deadSpaceContainer">
         <div className="deadSpace"></div>
       </div>
       <div className="iconContainer">
-        <Logo/>
+        <Logo />
       </div>
       <div className="loginRegisterContainer">
         <div className="loginRegister">
           <h3>Welcome back!</h3>
           <div className="betweenButtons">
             <Button>
-              <h4>Login</h4>
+              <h5>Login</h5>
             </Button>
             <Button>
-              <h4>Register</h4>
+              <h5>Register</h5>
             </Button>
           </div>
         </div>
@@ -38,28 +45,38 @@ const RightLogin = ({
       <div className="loginFormContainer">
         <form className="loginForm" onSubmit={handleSubmit}>
           <div className="loginFormGroup">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">
+              <h6>Username:</h6>
+            </label>
             <input
               className="inputGroup"
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => handleUsernameCheck(e.target.value)}
+              placeholder="Enter your username"
             />
           </div>
+          {displayEmptyUsername && <h6>Username can not be empty.</h6>}
+
           <div className="loginFormGroup">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">
+              <h6>Password:</h6>
+            </label>
             <input
               className="inputGroup"
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handlePasswordCheck(e.target.value)}
+              placeholder="Enter your password"
             />
           </div>
-          <Button type="submit">Login</Button>
+          {displayEmptyPassword && <h6>Password can not be empty.</h6>}
+          <Button type="submit"><h5>Login</h5></Button>
+          {displayLoginError && <h6>Incorrect username or password.</h6>}
         </form>
       </div>
-</>
-    );
+    </>
+  );
 };
 
-export default RightLogin; 
+export default RightLogin;
