@@ -2,17 +2,40 @@ import "../styles/middleProfile.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getUserProfileById } from "../api/userService";
+import { getBookingsForProfileByUserId } from "../api/bookingService";
 import Divider from "../components/Divider";
 import Button from "../components/Button";
 
 const MiddleProfile = () => {
-  const [user, setUser] = useState({});
-  const [address, setAddress] = useState({});
-  const [rating, setRating] = useState({});
+  // General States
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  //Get user
+  // User States
+  const [user, setUser] = useState({});
+  const [address, setAddress] = useState({});
+  const [rating, setRating] = useState({});
+  // Booking States
+  const [bookings, setBookings] = useState({});
+
+
+
+  // for booking
+  useEffect(() => {
+    const fetchBooking = async () => {
+      try {
+        const data = await getBookingsForProfileByUserId(id);
+        setBookings(data);
+      } catch (err) {
+        console.log("Error " + err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBooking();
+  }, []);
+
+  // for user
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -42,13 +65,12 @@ const MiddleProfile = () => {
       </div>
       <div className="middleProfile-bookingsBarContainer">
         <h3 className="middleProfile-bookingsText">My Bookings:</h3>
-        <h3 className="middleProfile-bookings">2 total bookings</h3>
+        <h3 className="middleProfile-bookings">{bookings.length} total bookings</h3>
         <Button className="middleProfile-seeMyBookingsButton">
           <h3>See my bookings</h3>
         </Button>
       </div>
 
-      
       <Divider></Divider>
     </div>
   );
