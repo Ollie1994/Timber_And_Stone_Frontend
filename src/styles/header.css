@@ -42,5 +42,21 @@
 
 /*För iPhone 12 Pro */
 @media (max-width: 390px) {
-
+.header-headerContainer {
+  display: flex;
+  flex-direction: row;
+  height: 7rem;
+  width: auto;
+}
+.header-topContainer {
+  display: flex;
+  align-items: left;
+}
+.header-logoContainer {
+  width: 20%;
+  height: auto;
+}
+.header-logoContainer h1 {
+  font-size: 15px;
+}
 }
