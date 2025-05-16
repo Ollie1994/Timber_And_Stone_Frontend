@@ -39,3 +39,8 @@
 .header-logoContainer h1 {
   margin-bottom: 0.5rem;
 }
+
+/*För iPhone 12 Pro */
+@media (max-width: 390px) {
+
+}
