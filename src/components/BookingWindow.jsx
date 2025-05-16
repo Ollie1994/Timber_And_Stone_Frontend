@@ -225,29 +225,31 @@ const BookingWindow = () => {
 
       <div className="bookingWindow-validationMessages">
         {showSuccessMessage && ( // Show guest error if not entered
-          <h4 className="bookingWindow-successMessage">
+          <h5 className="bookingWindow-successMessage">
             Your booking request has been sent to the host!
             <br />
-            Check-In: {startDate} - Check-Out: {endDate}
+            Check-In: {startDate}
+            <br />
+            Check-Out: {endDate}
             <br />
             Number of guests: {guestCount}
             <br />
             You will recieve a notification once your booking has been approved.
-          </h4>
+          </h5>
         )}
 
         {showDateError && ( // Show date error if either date has not been entered.
-          <h4>Please enter valid dates to reserve.</h4>
+          <h6>Please enter valid dates to reserve.</h6>
         )}
 
         {showGuestError && ( // Show guest error if not entered
-          <h4>Please enter amount of guests.</h4>
+          <h6>Please enter amount of guests.</h6>
         )}
 
         {showPolicyError && ( // Show policy error if not clicked
-          <h4>
+          <h6>
             Accept the policy before placing your reservation.
-          </h4>
+          </h6>
         )}
       </div>
 

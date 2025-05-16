@@ -8,6 +8,11 @@
   background-color: rgb(240, 243, 201);
 }
 
+
+.homePage-homeText p {
+  color: #7E9C67;
+}
+
 .homePage-homeText {
   text-align: center;
   margin-top: 3rem;
