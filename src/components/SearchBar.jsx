@@ -216,7 +216,7 @@ const SearchBar = ({ sendDataToParent }) => {
               </div>
               <div className="searchBar-buttonContainer">
                 <button className="searchBar-button" onClick={handleClick}>
-                  <h4>Search</h4>
+                  <h6>Search</h6>
                 </button>
               </div>
             </div>

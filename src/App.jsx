@@ -6,6 +6,8 @@ import LoginPage from "./pages/LoginPage";
 import RentalPage from "./pages/RentalPage";
 import ProfilePage from "./pages/ProfilePage";
 import { AuthProvider } from "./contexts/AuthContext";
+import '@fontsource/kufam';
+import '@fontsource/poppins'
 function App() {
   return (
     <BrowserRouter>
