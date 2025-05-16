@@ -176,7 +176,7 @@ const BookingWindow = () => {
 
   return (
     <div className="bookingWindow-bookingWindowContainer">
-      <h1>${rental?.pricePerNight}/night</h1>
+      <h2>${rental?.pricePerNight}/night</h2>
 
       {showInputForm && (
         <div className="bookingWindow-topContainer">
@@ -251,36 +251,36 @@ const BookingWindow = () => {
         )}
       </div>
 
-      <h4>You won't be charged yet.</h4>
+      <h6>You won't be charged yet.</h6>
       <div className="bookingWindow-bookingSummary bookingWindow-vertical">
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>
+            <h5>
               ${rental?.pricePerNight} x {diffDays ? diffDays : 0}:
-            </h3>
+            </h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>${totalPrice ? totalPrice : 0}</h3>
+            <h5>${totalPrice ? totalPrice : 0}</h5>
           </div>
         </div>
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>Including Service Fee:</h3>
+            <h5>Including Service Fee:</h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>${serviceFee ? serviceFee : 0}</h3>
+            <h5>${serviceFee ? serviceFee : 0}</h5>
           </div>
         </div>
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>
+            <h5>
               <strong>Total:</strong>
-            </h3>
+            </h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>
+            <h5>
               <strong>${totalPrice ? totalPrice : 0}</strong>
-            </h3>
+            </h5>
           </div>
         </div>
       </div>

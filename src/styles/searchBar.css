@@ -230,6 +230,11 @@ justify-content: center;
   height: 23px;
   background-color: rgb(60, 70, 52);
 }
+
+.searchBar-button h6 {
+  color: #FFF;
+}
+
 .searchBar-button:hover {
   cursor: pointer;
   background-color: rgb(60, 70, 52);

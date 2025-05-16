@@ -18,8 +18,8 @@ const ReviewBox = () => {
           <Review />
         </div>
       </div>
-      <Button onClick={() => setExpanded(!expanded)}>
-        <h4>{expanded ? "Show less" : "Show more"}</h4>
+      <Button onClick={() => setExpanded(!expanded)} className="reviewBox-showMore">
+        <h5>{expanded ? "Show less" : "Show more"}</h5>
       </Button>
     </div>
   );

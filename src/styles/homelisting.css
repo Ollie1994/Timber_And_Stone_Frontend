@@ -1,90 +1,86 @@
+.homeListing-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 32%;
+  height: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
 
-  .homeListing-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 32%;
-    height: 30rem;
-    border-radius: 1rem;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    position: relative;
-    transition: box-shadow 0.2s;
-  }
-  .homeListing-colCategory {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: rgb(110, 150, 110);
-    color: white;
-    width: 17%;
-    border-radius: 0.5rem;
-    text-align: center;
-  }
-  .homeListing-col img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-  }
-  .homeListing-colText {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    width: 100%;
-    object-fit: cover;
-    background-color: white;
-    text-align: left;
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-  .homeListing-colLocation {
-    display: flex;
-    color: #7e9c67;
-    font-weight: bold;
-    text-align: left;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .homeListing-colRating {
-    position: absolute;
-    top: 22rem;
-    right: 1rem;
-  }
-  .homeListing-colTitle {
-    display: flex;
-    text-align: left;
-    color: rgb(32, 43, 32);
-    font-weight: bolder;
-    font-size: 1.5rem;
-  }
-  .homeListing-colDescription {
-    /* To hide text that goes beyond white "box" from Chatgpt*/
-    overflow: hidden;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Show only 2 lines */
-    -webkit-box-orient: vertical;
-    text-align: left;
-    color: rgb(32, 43, 32);
-  }
-  /* As per chatgpt when prompted to help with hover effect */
-  .homeListing-col::before {
-    content: "";
-    position: absolute;
-    inset: 0; /* shorthand for top/right/bottom/left: 0 */
-    background: rgba(60, 140, 60, 0.2); /* your overlay color and opacity */
-    opacity: 0; /* Start invisible */
-    pointer-events: none; /* Let clicks go through */
-    transition: opacity 0.25s;
-    border-radius: inherit; /* Match parent border-radius */
-    z-index: 2;
-  }
-  .homeListing-col:hover::before {
-    opacity: 1;
-  }
-  .homeListing-col:hover {
-    cursor: pointer;
-  }
-  
+.homeListing-col Button h6{ 
+  color: #FFF;
+}
+.homeListing-col Button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: center;
+}
+
+.homeListing-col img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.homeListing-colText {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  background-color: #FFF;
+  text-align: left;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  height: fit-content;
+}
+.homeListing-colLocationRating {
+  display: flex;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.homeListing-colRating {
+  position: absolute;
+  top: 22rem;
+  right: 1rem;
+}
+.homeListing-colTitle {
+  display: flex;
+  text-align: left;
+  font-weight: bolder;
+}
+.homeListing-colDescription {
+  /* To hide text that goes beyond white "box" from Chatgpt*/
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+/* As per chatgpt when prompted to help with hover effect */
+.homeListing-col::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  background: rgba(60, 140, 60, 0.2); /* your overlay color and opacity */
+  opacity: 0; /* Start invisible */
+  pointer-events: none; /* Let clicks go through */
+  transition: opacity 0.25s;
+  border-radius: inherit; /* Match parent border-radius */
+  z-index: 2;
+}
+.homeListing-col:hover::before {
+  opacity: 1;
+}
+.homeListing-col:hover {
+  cursor: pointer;
+}

@@ -9,13 +9,12 @@
   background-position: center;
   padding: 0rem 3rem;
   color: #fff;
-  gap:14.5rem
+  gap:14.5rem;
 }
 
 .header-topContainer {
   display: flex;
   justify-content: space-between;
-
 }
 
 .link {
@@ -38,4 +37,5 @@
 
 .header-logoContainer h1 {
   margin-bottom: 0.5rem;
+  color: #fff;
 }
