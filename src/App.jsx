@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RentalPage from "./pages/RentalPage";
+import ProfilePage from "./pages/ProfilePage";
 import { AuthProvider } from "./contexts/AuthContext";
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/rentalpage/:id" element={<RentalPage />} />
+            <Route path="/profilepage/:id" element={<ProfilePage />} />
           </Routes>
         </div>
         <Footer />
