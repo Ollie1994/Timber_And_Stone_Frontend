@@ -1,3 +1,38 @@
 .profileBookingTemplate-profileBookingTemplateContainer {
+    display: flex;
+    justify-content:center;
+    padding: 0.2rem;
     
+    
+}
+
+.profileBookingTemplate-singleBookingContainer {
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+   
+}
+
+.profileBookingTemplate-bookingNumberContainer {
+    min-width: 150px;
+  
+}
+
+.profileBookingTemplate-rentalTitleContainer{
+    min-width: 310px;
+}
+
+.profileBookingTemplate-periodContainer {
+    min-width: 300px;
+}
+
+.profileBookingTemplate-isPaidContainer {
+    min-width: 130px;
+}
+.profileBookingTemplate-bookingStatusContainer {
+    min-width: 190px;
 }

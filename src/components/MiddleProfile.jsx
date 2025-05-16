@@ -18,12 +18,10 @@ const MiddleProfile = () => {
   const [address, setAddress] = useState({});
   const [rating, setRating] = useState({});
   // Booking States
-  const [bookings, setBookings] = useState({});
+  const [bookings, setBookings] = useState([]);
 
   const handleClick = () => {
-    const bookingsSorted = bookings.map((booking) =>
-      console.log(booking.createdAt)
-    );
+    const bookingsSorted = bookings.map((booking) => console.log(booking.paid));
   };
 
   // for booking
@@ -74,9 +72,26 @@ const MiddleProfile = () => {
         <h3 className="middleProfile-bookings">
           {bookings.length} total bookings
         </h3>
-        <Button className="middleProfile-seeMyBookingsButton"><h3>See my bookings</h3></Button>
+        <Button
+          onClick={() => setExpanded(!expanded)}
+          className="middleProfile-seeMyBookingsButton"
+        >
+          <h3>{expanded ? "Hide Bookings" : "Show Bookings"}</h3>
+        </Button>
       </div>
-      <div></div>
+      <div
+        className={`middleProfile-bookingPopUpContainer ${
+          expanded ? "expanded" : "collapsed"
+        }`}
+      >
+        <div>
+          <div className="middleProfile-bookingContainer">
+            {bookings.map((booking) => (
+              <ProfileBookingTemplate key={booking.id} booking={booking} />
+            ))}
+          </div>
+        </div>
+      </div>
 
       <Divider></Divider>
     </div>

@@ -13,7 +13,7 @@ const ReviewBox = () => {
           <h2>Latest Reviews:</h2>
         </div>
         <div
-          className={`reviewBox-reviewContainer ${expanded ? "expanded" : "collapsed"}`}
+         
         >
           <Review />
         </div>
