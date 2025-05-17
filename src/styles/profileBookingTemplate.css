@@ -18,16 +18,16 @@
 }
 
 .profileBookingTemplate-bookingNumberContainer {
-    min-width: 150px;
+    min-width: 130px;
   
 }
 
 .profileBookingTemplate-rentalTitleContainer{
-    min-width: 310px;
+    min-width: 240px;
 }
 
 .profileBookingTemplate-periodContainer {
-    min-width: 300px;
+    min-width: 260px;
 }
 
 .profileBookingTemplate-isPaidContainer {
