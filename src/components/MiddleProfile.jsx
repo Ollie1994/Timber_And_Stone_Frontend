@@ -7,7 +7,7 @@ import { getUserProfileById } from "../api/userService";
 import { getBookingsForProfileByUserId } from "../api/bookingService";
 import Divider from "../components/Divider";
 import Button from "../components/Button";
-import ProfileBookingTemplate from "./ProfileBookingTemplate";
+import ProfileBookingsTemplate from "./ProfileBookingsTemplate";
 import { getCurrentDate } from "../helpers/HelpFunctions";
 
 const MiddleProfile = () => {
@@ -105,7 +105,7 @@ const MiddleProfile = () => {
         <div>
           <div className="middleProfile-bookingContainer">
             {activeBookings.map((activeBooking) => (
-              <ProfileBookingTemplate
+              <ProfileBookingsTemplate
                 key={activeBooking.id}
                 booking={activeBooking}
               />
