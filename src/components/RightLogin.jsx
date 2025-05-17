@@ -25,10 +25,10 @@ const RightLogin = ({
           <h3>Welcome back!</h3>
           <div className="betweenButtons">
             <Button>
-              <h4>Login</h4>
+              <h5>Login</h5>
             </Button>
             <Button>
-              <h4>Register</h4>
+              <h5>Register</h5>
             </Button>
           </div>
         </div>
@@ -45,7 +45,9 @@ const RightLogin = ({
       <div className="loginFormContainer">
         <form className="loginForm" onSubmit={handleSubmit}>
           <div className="loginFormGroup">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">
+              <h6>Username:</h6>
+            </label>
             <input
               className="inputGroup"
               type="text"
@@ -54,9 +56,12 @@ const RightLogin = ({
               placeholder="Enter your username"
             />
           </div>
-          {displayEmptyUsername && <h5>Username can not be empty.</h5>}
+          {displayEmptyUsername && <h6>Username can not be empty.</h6>}
+
           <div className="loginFormGroup">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">
+              <h6>Password:</h6>
+            </label>
             <input
               className="inputGroup"
               type="password"
@@ -65,9 +70,9 @@ const RightLogin = ({
               placeholder="Enter your password"
             />
           </div>
-          {displayEmptyPassword && <h5>Password can not be empty.</h5>}
-          <Button type="submit">Login</Button>
-          {displayLoginError && <h5>Incorrect username or password.</h5>}
+          {displayEmptyPassword && <h6>Password can not be empty.</h6>}
+          <Button type="submit"><h5>Login</h5></Button>
+          {displayLoginError && <h6>Incorrect username or password.</h6>}
         </form>
       </div>
     </>

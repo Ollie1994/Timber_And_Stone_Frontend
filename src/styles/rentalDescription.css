@@ -1,0 +1,27 @@
+.RentalDescription-descrCont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.RentalDescription-buttonCont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.collapsed-description {
+  justify-content: flex-start;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  white-space: pre-line;
+}
+
+.expanded-description {
+  justify-content: flex-start;
+  overflow-y: hidden;
+  height: fit-content;
+  white-space: pre-line;
+}

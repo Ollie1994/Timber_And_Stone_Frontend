@@ -38,7 +38,7 @@ const TitleSection = () => {
         </h2>
         <div className="titleSection-flexContainer titleSection-hLeft titleSection-hCenter">
           <img src={locationIcon} alt="Location Icon" />
-          <h4>
+          <h3 className="titleSection-addressText">
             {
               //check address exists, else check loading, else unknown if neither existing or loading.
               rental?.address?.city && rental?.address?.country
@@ -47,7 +47,7 @@ const TitleSection = () => {
                 ? "Loading..."
                 : "Unknown Location"
             }
-          </h4>
+          </h3>
         </div>
       </div>
       <Divider />

@@ -1,4 +1,4 @@
-import "../styles/bookingWindow.css"
+import "../styles/bookingWindow.css";
 import { getRentalPageById } from "../api/rentalService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -141,25 +141,24 @@ const BookingWindow = () => {
       try {
         // Values needed for our booking request in backend
         const bookingForm = {
-          rental: {id: rental.id},
+          rental: { id: rental.id },
           numberOfGuests: guestCount,
           startDate,
-          endDate
+          endDate,
         };
         // Sending the booking request to our api
         const response = await api.post("/booking", bookingForm);
-            console.log(response.data);
-    // Reset form if all fields are valid and a booking has been made
-    resetForm();
-        } catch (error) {
-          console.error("Booking failed!", error);
-        }
-    }  
+        console.log(response.data);
+        // Reset form if all fields are valid and a booking has been made
+        resetForm();
+      } catch (error) {
+        console.error("Booking failed!", error);
+      }
+    }
   };
 
   //Reset the form and show success response.
   const resetForm = () => {
-
     setShowSucccessMessage(true);
     setShowInputForm(false);
 
@@ -176,7 +175,7 @@ const BookingWindow = () => {
 
   return (
     <div className="bookingWindow-bookingWindowContainer">
-      <h1>${rental?.pricePerNight}/night</h1>
+      <h2>${rental?.pricePerNight}/night</h2>
 
       {showInputForm && (
         <div className="bookingWindow-topContainer">
@@ -217,7 +216,10 @@ const BookingWindow = () => {
               <strong>Policy</strong>
             </h5>
           </label>
-          <Button className="bookingWindow-reserveButton" onClick={handleReserve}>
+          <Button
+            className="bookingWindow-reserveButton"
+            onClick={handleReserve}
+          >
             <h4>RESERVE</h4>
           </Button>
         </div>
@@ -225,62 +227,62 @@ const BookingWindow = () => {
 
       <div className="bookingWindow-validationMessages">
         {showSuccessMessage && ( // Show guest error if not entered
-          <h4 className="bookingWindow-successMessage">
+          <h5 className="bookingWindow-successMessage">
             Your booking request has been sent to the host!
             <br />
-            Check-In: {startDate} - Check-Out: {endDate}
+            Check-In: {startDate}
+            <br />
+            Check-Out: {endDate}
             <br />
             Number of guests: {guestCount}
             <br />
             You will recieve a notification once your booking has been approved.
-          </h4>
+          </h5>
         )}
 
         {showDateError && ( // Show date error if either date has not been entered.
-          <h4>Please enter valid dates to reserve.</h4>
+          <h6>Please enter valid dates to reserve.</h6>
         )}
 
         {showGuestError && ( // Show guest error if not entered
-          <h4>Please enter amount of guests.</h4>
+          <h6>Please enter amount of guests.</h6>
         )}
 
         {showPolicyError && ( // Show policy error if not clicked
-          <h4>
-            Accept the policy before placing your reservation.
-          </h4>
+          <h6>Accept the policy before placing your reservation.</h6>
         )}
       </div>
 
-      <h4>You won't be charged yet.</h4>
+      <h6>You won't be charged yet.</h6>
       <div className="bookingWindow-bookingSummary bookingWindow-vertical">
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>
+            <h5>
               ${rental?.pricePerNight} x {diffDays ? diffDays : 0}:
-            </h3>
+            </h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>${totalPrice ? totalPrice : 0}</h3>
+            <h5>${totalPrice ? totalPrice : 0}</h5>
           </div>
         </div>
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>Including Service Fee:</h3>
+            <h5>Including Service Fee:</h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>${serviceFee ? serviceFee : 0}</h3>
+            <h5>${serviceFee ? serviceFee : 0}</h5>
           </div>
         </div>
         <div className="bookingWindow-flexContainer">
           <div className="bookingWindow-fee">
-            <h3>
+            <h5>
               <strong>Total:</strong>
-            </h3>
+            </h5>
           </div>
           <div className="bookingWindow-sum">
-            <h3>
+            <h5>
               <strong>${totalPrice ? totalPrice : 0}</strong>
-            </h3>
+            </h5>
           </div>
         </div>
       </div>
