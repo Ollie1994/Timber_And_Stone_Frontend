@@ -52,3 +52,36 @@
   width: 15rem;
   height: 1.5rem;
 }
+@Media (max-width: 390px) {
+  .rightLogin-rightLoginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightLogin-rightLoginContainer h3 {
+    font-size: 15px;
+    width: 20rem;
+  }
+  .rightLogin-rightLoginContainer p {
+   font-size: 12px; 
+   margin-top: 0.5rem;
+  }
+  .rightLogin-loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightLogin-loginForm h6 {
+    font-size: 12px;
+  }
+  .rightLogin-inputGroup {
+    font-size: 12px;
+  }
+  .rightLogin-loginForm button {
+    align-self: center;
+  }
+  .rightLogin-loginForm h5 {
+    font-size: 10px;
+    transform: translate(-0.6rem, -0.35rem);
+  }
+}

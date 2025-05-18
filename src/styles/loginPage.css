@@ -20,9 +20,6 @@ flex-direction: column;
 gap: 1rem;
 
 }
-
-
-
 .loginPage-betweenButtons {
   display: flex;
   gap: 0.5rem;
@@ -50,4 +47,39 @@ gap: 1rem;
 }
 .loginPage-registerPopUpContainer.collapsed {
   display: none;
+}
+.loginPage-h5-register {
+
+}
+@Media (max-width: 390px) {
+  .loginPage-leftContainer, 
+  .loginPage-iconContainer
+  {
+    display: none;
+  }
+  .loginPage-loginPageContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .loginPage-rightContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .loginPage-welcomeBack {
+    font-size: 20px;
+    padding-top: 1rem;
+  }
+  .loginPage-betweenButtons button {
+    width: 4rem;
+  }
+  .loginPage-betweenButtons h5 {
+    font-size: 10px;
+    padding-right: 4rem;
+    margin-bottom: 2rem;
+    transform: translateY(-0.35rem);
+  }
+  .loginPage-h5-register {
+   margin: 0;
+  }
+  
 }
