@@ -9,7 +9,7 @@
   background-position: center;
   padding: 0rem 3rem;
   color: #fff;
-  gap:14.5rem;
+  gap: 14.5rem;
 }
 
 .header-topContainer {
@@ -21,10 +21,8 @@
   align-self: flex-start;
 }
 
-
 .header-buttonContainer {
   padding-top: 2.7rem;
-  
 }
 
 .header-logoContainer {
@@ -33,6 +31,7 @@
   align-self: flex-start;
   gap: 1rem;
   padding-top: 1rem;
+  cursor: pointer;
 }
 
 .header-logoContainer h1,

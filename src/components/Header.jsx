@@ -20,12 +20,15 @@ const Header = () => {
   const handleNavigate = async () => {
     navigate(`/profilepage/${currentUser.id}`);
   };
+  const handleLogo = async () => {
+    navigate("/");
+  };
 
   return (
     <div className="header-headerContainer">
       <div className="header-topContainer">
-        <div className="header-logoContainer">
-          <Logo color="white" />
+        <div className="header-logoContainer" onClick={handleLogo}>
+          <Logo color="white"/>
           <h1>TIMBER + STONE</h1>
         </div>
         {isLoggedIn ? (
