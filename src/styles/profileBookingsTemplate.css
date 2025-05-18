@@ -63,8 +63,8 @@ Button h6 {
 .profileBookingsTemplate-bookingPopUpContainer {
   display: flex;
   flex-direction: column;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 35%;
+  padding-right: 35%;
   padding-top: 0.4em;
   padding-bottom: 0.1rem;
   
