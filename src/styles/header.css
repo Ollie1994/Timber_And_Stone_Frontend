@@ -27,6 +27,7 @@
   align-self: flex-start;
   gap: 1rem;
   padding-top: 1rem;
+  cursor: pointer;
 }
 
 .header-logoContainer h1,
