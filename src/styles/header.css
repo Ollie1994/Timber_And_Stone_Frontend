@@ -21,12 +21,6 @@
   align-self: flex-start;
 }
 
-
-.header-buttonContainer {
-  padding-top: 2.7rem;
-  
-}
-
 .header-logoContainer {
   display: flex;
   align-items: flex-end;
