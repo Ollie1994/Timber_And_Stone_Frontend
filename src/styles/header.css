@@ -75,11 +75,13 @@
   align-items: flex-end;
   position: relative;
   /* perhaps not best solution, but works for now ie negative spacing */
-  right: -1rem;
+  right: -3rem;
   padding-top: 1rem;
   gap: 3rem;
 }
 .header-buttonContainer h3 {
   z-index: 1;
+  font-size: 7px;
+  text-align: center;
 }
 }

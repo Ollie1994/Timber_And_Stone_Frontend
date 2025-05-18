@@ -55,11 +55,9 @@ Button:active {
 }
 
 @media (max-width: 390px) {
-  Button {
+  button {
     display: flex;
     align-items: flex-end;
-    width: 5%;
-    height: 10%;
-    font-size: 4px;
+    width: 90%;
   }
 }

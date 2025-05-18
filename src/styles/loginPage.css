@@ -104,6 +104,52 @@
   width: 15rem;
   height: 1.5rem;
 }
+@media (max-width: 390px) {
+  .gridContainer {
+    grid-template-areas:
+      "lR lR lR"
+      "cU cU cU"
+      "lF lF lF"
+      "lF lF lF"
+      "lF lF lF";
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 0.5rem;
+  }
+
+  .pictureContainer,
+  .deadSpaceContainer,
+  .iconContainer {
+    display: none;
+  }
+
+  .loginRegisterContainer,
+  .contactUsContainer,
+  .loginFormContainer {
+    height: auto;
+  }
+  .loginRegisterContainer {
+    padding-top: 3rem;
+  }
+
+  .loginFormContainer {
+    padding-top: 5px;
+  }
+
+  .contactUsContainer,
+  .contactUs {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactUs h3 {
+    font-size: 15px;
+  }
+
+  .contactUs p {
+    font-size: 10px;
+    padding: 0 2rem;
+  }
+}
 
 /*
 .loginButton {
