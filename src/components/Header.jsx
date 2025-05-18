@@ -35,14 +35,15 @@ const Header = () => {
             </Button>
           </div>
         ) : (
-         <Button>Not logged in </Button>
+          <div className="header-buttonContainer">
+         <Button>
+          <h3>Not logged in</h3> </Button>
+          </div>
         )}
         {isLoggedIn ? (
-          <div className="header-buttonContainer">
             <Button onClick={handleLogout}>
               <h3>Log Out</h3>
             </Button>
-          </div>
         ) : (
           <Link to="/loginpage">
             <div className="header-buttonContainer">
