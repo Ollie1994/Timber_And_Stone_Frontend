@@ -1,9 +1,11 @@
 
 /*LOGIN PAGE*/
+
 .loginPage-loginPageContainer {
   background-color: rgb(240, 243, 201);
   gap: 1.5rem;
   display: flex;
+  justify-content: space-between;
   padding: 2% 6rem 2% 6rem;
   width: 100%;
   height: 750px;
@@ -15,7 +17,37 @@
 .loginPage-rightContainer{
 display: flex;
 flex-direction: column;
+gap: 1rem;
+
 }
 
 
 
+.loginPage-betweenButtons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.loginPage-welcomeBack {
+  display: flex;
+  justify-content: center;
+}
+.loginPage-iconContainer {
+  display: flex;
+  justify-content: end;
+}
+.loginPage-loginPopUpContainer {
+
+}
+.loginPage-registerPopUpContainer {
+  padding-left: 13rem;
+  padding-right: 13rem;
+  
+}
+.loginPage-loginPopUpContainer.collapsed {
+  display: none;
+}
+.loginPage-registerPopUpContainer.collapsed {
+  display: none;
+}

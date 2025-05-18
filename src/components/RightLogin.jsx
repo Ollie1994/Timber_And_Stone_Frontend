@@ -1,5 +1,5 @@
 import "../styles/rightLogin.css";
-import Logo from "./Logo";
+import Logo from "../components/Logo";
 import Button from "./Button";
 
 const RightLogin = ({
@@ -14,21 +14,8 @@ const RightLogin = ({
 }) => {
   return (
     <div className="rightLogin-rightLoginContainer">
-    
-      <div className="rightLogin-iconContainer">
-        <Logo />
-      </div>
       <div className="rightLogin-loginRegisterContainer">
         <div className="rightLogin-loginRegister">
-          <h3>Welcome back!</h3>
-          <div className="rightLogin-betweenButtons">
-            <Button>
-              <h5>Login</h5>
-            </Button>
-            <Button>
-              <h5>Register</h5>
-            </Button>
-          </div>
         </div>
       </div>
       <div className="rightLogin-contactUsContainer">
