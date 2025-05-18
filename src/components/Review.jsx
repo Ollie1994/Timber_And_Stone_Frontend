@@ -15,17 +15,31 @@ const ReviewCard = ({ username, rating, date, text }) => {
   );
 };
 
+
 // Fetching reviews from API getRentalReviewByRentalId
-const Review = () => {
+const Review = ({ sendDataToParent }) => {
   const { id: rentalId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+
+
+
+
+  // call bacj func so i can send data from child to parent
+    const [data, setData] = useState("");
+
+
+
+
+
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const data = await getRentalReviewByRentalId(rentalId);
         setReviews(data);
+        // call bacj func so i can send data from child to parent
+        sendDataToParent(data);
       } catch (err) {
         console.error("Failed to fetch reviews:", err);
       } finally {
