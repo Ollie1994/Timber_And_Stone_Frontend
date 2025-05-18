@@ -1,0 +1,52 @@
+.profileBookingTemplate-profileBookingTemplateContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.2rem;
+  }
+  
+  .profileBookingTemplate-singleBookingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .profileBookingTemplate-leftColumn {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+.profileBookingTemplate-rightColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+
+
+.profileBookingTemplate-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 50px;
+}
+.profileBookingTemplate-payButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   
+}
+  
+
+Button .h7 {
+    color: #fff;
+}

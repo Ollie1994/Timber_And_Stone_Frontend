@@ -1,0 +1,75 @@
+.profileBookingsTemplate-profileBookingsTemplateContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.2rem;
+}
+
+.profileBookingsTemplate-singleBookingContainer {
+  display: flex;
+  background-color: white;
+  border-radius: 50px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.profileBookingsTemplate-bookingNumberContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 130px;
+}
+
+.profileBookingsTemplate-rentalTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 240px;
+}
+
+.profileBookingsTemplate-periodContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 260px;
+}
+
+.profileBookingsTemplate-isPaidContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 130px;
+}
+.profileBookingsTemplate-bookingStatusContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 190px;
+}
+.profileBookingsTemplate-buttonContainer {
+display: flex;
+justify-content: right;
+min-width: 200px;
+}
+
+Button h6 {
+  color: #fff;
+  
+  
+}
+
+.profileBookingsTemplate-bookingPopUpContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 0.4em;
+  padding-bottom: 0.1rem;
+  
+}
+.profileBookingsTemplate-bookingPopUpContainer.collapsed {
+  display: none;
+}
+

@@ -41,9 +41,9 @@ const TopProfile = () => {
           ></img>
           </div>
           <div className="topProfile-userInfoContainer">
-        <h3 className="topProfile-username">Username: {user.username}</h3>
-        <h3 className="topProfile-email">Email: {user.email}</h3>
-        <h3 className="topProfile-phoneNumber">Phonenumber: {user.phoneNumber}</h3>
+        <h5 className="topProfile-username">Username: {user.username}</h5>
+        <h5 className="topProfile-email">Email: {user.email}</h5>
+        <h5 className="topProfile-phoneNumber">Phonenumber: {user.phoneNumber}</h5>
         </div>
         <Divider></Divider>
 
