@@ -44,11 +44,6 @@ const ProfileBookingTemplate = ({ booking }) => {
             </div>
           </div>
         </div>
-        <div className="profileBookingTemplate-rightColumn">
-          <div className="profileBookingTemplate-payButton">
-            <Button><div className="h7">Pay</div></Button>
-          </div>
-        </div>
       </div>
     </div>
   );
