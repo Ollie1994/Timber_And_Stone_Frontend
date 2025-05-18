@@ -1,9 +1,9 @@
-import "../styles/loginPage.css";
+import "../styles/leftLogin.css";
 
 const LeftLogin = () => {
     return (
-        <div className="pictureContainer">
-        <div className="picture"></div>
+        <div className="leftLogin-pictureContainer">
+        <div className="leftLogin-picture"></div>
       </div>
     );
 };

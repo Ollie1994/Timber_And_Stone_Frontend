@@ -20,41 +20,42 @@ const Header = () => {
   const handleNavigate = async () => {
     navigate(`/profilepage/${currentUser.id}`);
   };
+  const handleLogo = async () => {
+    navigate("/");
+  };
 
   return (
     <div className="header-headerContainer">
       <div className="header-topContainer">
-        <div className="header-logoContainer">
-          <Logo color="white" />
+        <div className="header-logoContainer" onClick={handleLogo}>
+          <Logo color="white"/>
           <h1>TIMBER + STONE</h1>
         </div>
-        {isLoggedIn ? (
-          <div className="header-buttonContainer">
-            <Button onClick={handleNavigate}>
-              <h3>Profile Page</h3>
-            </Button>
-          </div>
-        ) : (
-          <div className="header-buttonContainer">
-         <Button>
-          <h3>Not logged in</h3> </Button>
-          </div>
-        )}
-        {isLoggedIn ? (
-            <Button onClick={handleLogout}>
-              <h3>Log Out</h3>
-            </Button>
-        ) : (
-          <Link to="/loginpage">
+        <div className="header-rightContainer">
+          {isLoggedIn && (
             <div className="header-buttonContainer">
-              <Button>
-                <h3>Log In</h3>
+              <Button onClick={handleNavigate}>
+                <h4>Profile Page</h4>
               </Button>
             </div>
-          </Link>
-        )}
+          )}
+          {isLoggedIn ? (
+            <div className="header-buttonContainer">
+              <Button onClick={handleLogout}>
+                <h4>Log Out</h4>
+              </Button>
+            </div>
+          ) : (
+            <Link to="/loginpage">
+              <div className="header-buttonContainer">
+                <Button>
+                  <h4>Log In</h4>
+                </Button>
+              </div>
+            </Link>
+          )}
+        </div>
       </div>
-    
     </div>
   );
 };

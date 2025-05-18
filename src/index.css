@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #3c4634;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body,
@@ -37,6 +38,8 @@ Button {
   border-radius: 100px;
   transition: background-color 0.3s ease;
   transition: transform 0.1s ease;
+  width: fit-content;
+  height: fit-content;
 }
 
 Button:hover {
@@ -54,10 +57,68 @@ Button:active {
   width: 100%;
 }
 
-@media (max-width: 390px) {
-  button {
-    display: flex;
-    align-items: flex-end;
-    width: 90%;
+h1 {
+  font-size: 40px;
+  line-height: normal;
+  font-family: "Kufam", sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: normal;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: normal;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: normal;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: normal;
+}
+
+.h7 {
+  font-size: 14px;
+  line-height: normal;
+}
+
+p {
+  font-size: 18px;
+  line-height: normal;
+}
+
+input {
+  font-size: 18px;
+  line-height: normal;
+  border-style: none;
+  text-decoration: none;
+  border-radius: 50px;
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #7E9C67;
+}
+
+Button h5,
+Button h4 {
+  color: #FFF;
+}
+@Media (max-width: 390px) {
+  Button {
+    width: 3rem;
+    height: 1rem;
   }
 }

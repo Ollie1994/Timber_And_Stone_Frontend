@@ -30,13 +30,16 @@ const Amenities = () => {
   }, []);
 
   return (
-    <div>
-      <button className="amenities-openButton" onClick={() => setPopup("amenities-popupBlock")}>
-        Amenities
+    <div className="amenities-amentiesContainer">
+    <div className="amenities-buttonContainer">
+      <button className="amenities-openButton" onClick={() => 
+        popup === "amenities-popupBlock" ? setPopup("amenities-popupNone") :  setPopup("amenities-popupBlock")}>
+        <h5>{popup === "amenities-popupBlock" ? "Minimise Amenites" : "Expand Amenities"}</h5>
       </button>
-
+      </div>
+      <div className="amenities-listContainer">
       <div className={popup}>
-        <div className="amenities-amenitiesContainer">
+        <div className="amenities-amenitiessContainer">
           {amenities.length > 0 ? (
             amenities.map((amenity) => (
               <div key={amenity.amenityTitle}>
@@ -59,13 +62,7 @@ const Amenities = () => {
             <div>No matching amens</div>
           )}
         </div>
-
-        
-        <Button
-        type="button"
-        className="amenities-closeButton"
-        onClick={() => setPopup("amenities-popupNone")}
-        ><h5 className="amenties-h5">Close</h5></Button>
+      </div>
       </div>
     </div>
   );

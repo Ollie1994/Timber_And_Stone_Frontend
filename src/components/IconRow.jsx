@@ -53,29 +53,29 @@ const IconRow = () => {
         <div className="iconRow-iconsContainer">
           <div className="iconRow-iconContainer">
             <img src={house} alt="House icon"></img>
-            <p className="iconRow-text">{rental.category} </p>
+            <h5 className="iconRow-text">{rental.category} </h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={dollarSign} alt="DollarSign icon"></img>
-            <p className="iconRow-text">${rental.pricePerNight}/night</p>
+            <h5 className="iconRow-text">${rental.pricePerNight}/night</h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={people} alt="People icon"></img>
-            <p className="iconRow-text">
+            <h5 className="iconRow-text">
               {rental.capacity} {rental.capacity > 1 ? "guests" : "guest"}
-            </p>
+            </h5>
           </div>
 
           <div className="iconRow-iconContainer">
             <img src={calendar} alt="Calendar icon"></img>
             <div className="iconRow-text">
               <div className="iconRow-periodContainer">
-                <p>available next: </p>
-                <p className="iconRow-startDate">{startUseDates[0]}</p>
-                <p> - </p>
-                <p className="iconRow-endDate">{endUseDates[0]}</p>
+                <h5>available next: </h5>
+                <h5 className="iconRow-startDate">{startUseDates[0]}</h5>
+                <h5> - </h5>
+                <h5 className="iconRow-endDate">{endUseDates[0]}</h5>
               </div>
             </div>
           </div>

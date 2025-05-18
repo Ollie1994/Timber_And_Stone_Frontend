@@ -6,6 +6,18 @@ import "../styles/reviewBox.css"
 const ReviewBox = () => {
   // Make the reviewbox hide some reviews
   const [expanded, setExpanded] = useState(false);
+
+// call bacj func so i can send data from child to parent
+  const [dataFromChild, setDataFromChild] = useState("");
+  function handleDataFromChild(data) {
+    setDataFromChild(data);
+  }
+
+
+
+
+
+
   return (
     <div className="reviewBox-reviewsContainer">
       <div className="reviewBox-reviewContainer">
@@ -13,14 +25,18 @@ const ReviewBox = () => {
           <h2>Latest Reviews:</h2>
         </div>
         <div
-          className={`reviewBox-reviewContainer ${expanded ? "expanded" : "collapsed"}`}
+         
         >
-          <Review />
+          <Review sendDataToParent={handleDataFromChild} />
         </div>
       </div>
+      <div className={`reviewBox-buttonContainer ${
+          dataFromChild.length != 0 ? "expanded" : "collapsed"
+        }`}>
       <Button onClick={() => setExpanded(!expanded)}>
-        <h4>{expanded ? "Show less" : "Show more"}</h4>
+        <h5>{expanded ? "Show less" : "Show more"}</h5>
       </Button>
+      </div>
     </div>
   );
 };

@@ -1,3 +1,15 @@
+
+.amenities-amentiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.amenities-listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .amenities-popupNone {
   display: none;
 }
@@ -13,6 +25,10 @@
   width: 20rem;
   border-radius: 50px;
 }
+.amenities-buttonContainer {
+display: flex;
+justify-content: center;
+}
 .amenities-amenity {
   display: flex;
   flex-direction: row;
@@ -22,7 +38,7 @@
 .amenities-amenityTitle {
   font-weight: 550;
 }
-.amenities-amenitiesContainer {
+.amenities-amenitiessContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
