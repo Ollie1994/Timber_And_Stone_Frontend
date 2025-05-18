@@ -31,32 +31,30 @@ const Header = () => {
           <Logo color="white"/>
           <h1>TIMBER + STONE</h1>
         </div>
-        {isLoggedIn ? (
-          <div className="header-buttonContainer">
-            <Button onClick={handleNavigate}>
-              <h4>Profile Page</h4>
-            </Button>
-          </div>
-        ) : (
-          <Button>
-            <h4>Not logged in</h4>
-          </Button>
-        )}
-        {isLoggedIn ? (
-          <div className="header-buttonContainer">
-            <Button onClick={handleLogout}>
-              <h4>Log Out</h4>
-            </Button>
-          </div>
-        ) : (
-          <Link to="/loginpage">
+        <div className="header-rightContainer">
+          {isLoggedIn && (
             <div className="header-buttonContainer">
-              <Button>
-                <h4>Log In</h4>
+              <Button onClick={handleNavigate}>
+                <h4>Profile Page</h4>
               </Button>
             </div>
-          </Link>
-        )}
+          )}
+          {isLoggedIn ? (
+            <div className="header-buttonContainer">
+              <Button onClick={handleLogout}>
+                <h4>Log Out</h4>
+              </Button>
+            </div>
+          ) : (
+            <Link to="/loginpage">
+              <div className="header-buttonContainer">
+                <Button>
+                  <h4>Log In</h4>
+                </Button>
+              </div>
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
