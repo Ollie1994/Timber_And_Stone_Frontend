@@ -9,7 +9,7 @@
   background-position: center;
   padding: 0rem 3rem;
   color: #fff;
-  gap:14.5rem;
+  gap: 14.5rem;
 }
 
 .header-topContainer {
@@ -19,12 +19,6 @@
 
 .link {
   align-self: flex-start;
-}
-
-
-.header-buttonContainer {
-  padding-top: 2.7rem;
-  
 }
 
 .header-logoContainer {
@@ -38,4 +32,12 @@
 .header-logoContainer h1,
 .header-buttonContainer h4 {
   color: #fff;
+}
+
+.header-rightContainer {
+  padding-top: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
 }
