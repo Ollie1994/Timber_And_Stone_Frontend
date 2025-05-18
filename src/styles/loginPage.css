@@ -64,6 +64,7 @@ gap: 1rem;
   .loginPage-rightContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .loginPage-welcomeBack {
     font-size: 20px;
@@ -81,5 +82,4 @@ gap: 1rem;
   .loginPage-h5-register {
    margin: 0;
   }
-  
 }

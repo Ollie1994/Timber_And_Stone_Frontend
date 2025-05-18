@@ -28,3 +28,28 @@ gap: 1rem;
     width: 3rem;
     height: auto;
 }
+@Media (max-width: 390px) {
+    .footer-footerContainer {
+        padding: 1rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-left {
+        display: flex;
+        gap: 2rem;
+    }
+    .footer-left h6,
+    .footer-right h6 {
+    font-size: 9px;
+}
+.footer-right {
+    gap: 0;
+}
+.footer-globe {
+    width: 2rem;
+}
+.footer-secondParagraph {
+    word-spacing: 2rem;
+}
+}
