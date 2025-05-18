@@ -1,4 +1,4 @@
-import "../styles/loginPage.css";
+import "../styles/rightLogin.css";
 import Logo from "./Logo";
 import Button from "./Button";
 
@@ -13,17 +13,15 @@ const RightLogin = ({
   displayLoginError,
 }) => {
   return (
-    <>
-      <div className="deadSpaceContainer">
-        <div className="deadSpace"></div>
-      </div>
-      <div className="iconContainer">
+    <div className="rightLogin-rightLoginContainer">
+    
+      <div className="rightLogin-iconContainer">
         <Logo />
       </div>
-      <div className="loginRegisterContainer">
-        <div className="loginRegister">
+      <div className="rightLogin-loginRegisterContainer">
+        <div className="rightLogin-loginRegister">
           <h3>Welcome back!</h3>
-          <div className="betweenButtons">
+          <div className="rightLogin-betweenButtons">
             <Button>
               <h5>Login</h5>
             </Button>
@@ -33,8 +31,8 @@ const RightLogin = ({
           </div>
         </div>
       </div>
-      <div className="contactUsContainer">
-        <div className="contactUs">
+      <div className="rightLogin-contactUsContainer">
+        <div className="rightLogin-contactUs">
           <h3>Log in to book your next stay</h3>
           <p>
             Please <strong>Contact us</strong> if you have any questions about
@@ -42,14 +40,14 @@ const RightLogin = ({
           </p>
         </div>
       </div>
-      <div className="loginFormContainer">
-        <form className="loginForm" onSubmit={handleSubmit}>
-          <div className="loginFormGroup">
+      <div className="rightLogin-loginFormContainer">
+        <form className="rightLogin-loginForm" onSubmit={handleSubmit}>
+          <div className="rightLogin-loginFormGroup">
             <label htmlFor="username">
               <h6>Username:</h6>
             </label>
             <input
-              className="inputGroup"
+              className="rightLogin-inputGroup"
               type="text"
               value={username}
               onChange={(e) => handleUsernameCheck(e.target.value)}
@@ -58,12 +56,12 @@ const RightLogin = ({
           </div>
           {displayEmptyUsername && <h6>Username can not be empty.</h6>}
 
-          <div className="loginFormGroup">
+          <div className="rightLogin-loginFormGroup">
             <label htmlFor="password">
               <h6>Password:</h6>
             </label>
             <input
-              className="inputGroup"
+              className="rightLogin-inputGroup"
               type="password"
               value={password}
               onChange={(e) => handlePasswordCheck(e.target.value)}
@@ -71,11 +69,12 @@ const RightLogin = ({
             />
           </div>
           {displayEmptyPassword && <h6>Password can not be empty.</h6>}
-          <Button type="submit"><h5>Login</h5></Button>
+          <div className="rightLogin-buttonContainer">
+          <Button type="submit"><h5>Login</h5></Button></div>
           {displayLoginError && <h6>Incorrect username or password.</h6>}
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -59,8 +59,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="gridContainer">
+    <div className="loginPage-loginPageContainer">
+       <div className="loginPage-leftContainer">
       <LeftLogin />
+      </div>
+      <div className="loginPage-rightContainer">
       <RightLogin
         /* props for login form*/
         username={username}
@@ -74,6 +77,7 @@ const LoginPage = () => {
         displayEmptyPassword={displayEmptyPassword}
         displayLoginError={displayLoginError}
       />
+      </div>
     </div>
   );
 };

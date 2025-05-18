@@ -1,0 +1,65 @@
+
+.rightLogin-rightLoginContainer {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 1.5rem;
+}
+.rightLogin-iconContainer {
+    display: flex;
+    justify-content: end;
+  }
+  .rightLogin-loginRegisterContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .rightLogin-contactUsContainer {
+   
+  }
+  .rightLogin-buttonContainer {
+    display: flex;
+  }
+  .rightLogin-loginFormContainer {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .rightLogin-icon {
+    background-image: url("../assets/LOGO_CONTAINER.svg");
+    height: 5rem;
+    width: 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .rightLogin-betweenButtons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .rightLogin-loginRegister {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .rightLogin-contactUs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rightLogin-loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+  }
+  .rightLogin-loginFormGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightLogin-inputGroup {
+    width: 15rem;
+    height: 1.5rem;
+  }
+  

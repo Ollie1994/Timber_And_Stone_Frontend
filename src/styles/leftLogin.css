@@ -1,0 +1,15 @@
+.leftLogin-pictureContainer {
+  
+    height: 100%;
+    width: 36rem;
+  }
+
+  .leftLogin-picture {
+    background-image: url("../assets/loginPic3.png");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 50px;
+  }
