@@ -52,8 +52,7 @@ gap: 1rem;
 
 }
 @Media (max-width: 390px) {
-  .loginPage-leftContainer, 
-  .loginPage-iconContainer
+  .loginPage-leftContainer, .loginPage-iconContainer
   {
     display: none;
   }
@@ -62,6 +61,7 @@ gap: 1rem;
     flex-direction: column;
   }
   .loginPage-rightContainer {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,4 +82,8 @@ gap: 1rem;
   .loginPage-h5-register {
    margin: 0;
   }
+  .loginPage-registerPopUpContainer h6 {
+    font-size: 12px;
+  }
+  
 }
