@@ -8,7 +8,7 @@
   justify-content: space-between;
   padding: 2% 6rem 2% 6rem;
   width: 100%;
-  height: 750px;
+  height: 750px
 }
 .loginPage-leftContainer{
   display: flex;
@@ -20,9 +20,6 @@ flex-direction: column;
 gap: 1rem;
 
 }
-
-
-
 .loginPage-betweenButtons {
   display: flex;
   gap: 0.5rem;
@@ -50,4 +47,36 @@ gap: 1rem;
 }
 .loginPage-registerPopUpContainer.collapsed {
   display: none;
+}
+
+@Media (max-width: 390px) {
+  .loginPage-leftContainer, .loginPage-iconContainer
+  {
+    display: none;
+  }
+  .loginPage-loginPageContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .loginPage-rightContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginPage-welcomeBack {
+    font-size: 20px;
+    padding-top: 1rem;
+  }
+  .loginPage-betweenButtons button {
+    text-align: center;
+  }
+  .loginPage-betweenButtons h5 {
+    font-size: 10px;
+    width: fit-content;
+  }
+  .loginPage-registerPopUpContainer h6 {
+    font-size: 12px;
+  }
+  
 }
