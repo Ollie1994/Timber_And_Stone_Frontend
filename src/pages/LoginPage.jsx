@@ -126,7 +126,7 @@ const LoginPage = () => {
             <h5>Login</h5>
           </Button>
           <Button onClick={() => setExpandedL(false) & setExpandedR(true)}>
-            <div className="loginPage-h5-register"><h5>Register</h5></div>
+            <h5>Register</h5>
           </Button>
         </div>
         <div

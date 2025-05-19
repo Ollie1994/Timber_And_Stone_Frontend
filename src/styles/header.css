@@ -75,12 +75,10 @@
     gap: 0;
   }
   .header-rightContainer h4 {
-    font-size: 8px;
+    font-size: 10px;
     width: auto;
     white-space: nowrap;
-    text-align: left;
-    /* Not optimal perhaps, but had issues nudging text to the left...*/
-    transform: translateX(-0.5rem) translateY(-0.3rem); 
+    text-align: center
   }
 
 }

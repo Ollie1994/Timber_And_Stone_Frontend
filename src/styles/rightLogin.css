@@ -66,6 +66,12 @@
    font-size: 12px; 
    margin-top: 0.5rem;
   }
+  .rightLogin-buttonContainer button {
+   text-align: center;
+  }
+  .rightLogin-buttonContainer h5 {
+    font-size: 10px;
+  }
   .rightLogin-loginForm {
     margin-top: 2rem;
     display: flex;
@@ -77,12 +83,5 @@
   }
   .rightLogin-inputGroup {
     font-size: 12px;
-  }
-  .rightLogin-loginForm button {
-    align-self: center;
-  }
-  .rightLogin-loginForm h5 {
-    font-size: 10px;
-    transform: translate(-0.6rem, -0.35rem);
   }
 }

@@ -60,9 +60,8 @@
   }
   .rightRegister-registerForm h5 {
     font-size: 10px;
-    transform: translate(-0.5rem, -0.35rem);
   }
   .rightRegister-registerForm button {
-    width: 4rem;
+  text-align: center;
   }
 }
