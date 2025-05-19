@@ -116,9 +116,3 @@ Button h5,
 Button h4 {
   color: #FFF;
 }
-/*@Media (max-width: 390px) {
-  Button {
-    width: 3rem;
-    height: 1rem; 
-  }
-} */
