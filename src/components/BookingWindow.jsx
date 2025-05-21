@@ -170,7 +170,7 @@ const BookingWindow = () => {
       setEndDate("");
       setGuestCount("");
       setPolicyChecked(false);
-    }, 10000);
+    }, 30000);
   };
 
   return (
